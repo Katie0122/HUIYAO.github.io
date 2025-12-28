@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowUI Dashboard - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">SnowUI</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <ul>
+                        <li class="nav-item active">
+                            <a href="#">
+                                <span class="icon icon-chart-pie"></span>
+                                <span class="text">个人信息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-shopping-bag"></span>
+                                <span class="text">我的收藏</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-folder"></span>
+                                <span class="text">我的项目</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-id-badge"></span>
+                                <span class="text">我的课程</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="section-title">USER</div>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-id-card"></span>
+                                <span class="text">UserProfile</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-users"></span>
+                                <span class="text">Account</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-notebook"></span>
+                                <span class="text">Corporate</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon icon-chats"></span>
+                                <span class="text">Blog</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="images/avatar.png" alt="ByeWind" onerror="this.src='https://via.placeholder.com/24'">
+                    </div>
+                    <div class="user-info">
+                        <span class="name">ByeWind</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+                    <div class="breadcrumbs">
+                        <span class="breadcrumb-item text-muted">Pages</span>
+                        <span class="separator">/</span>
+                        <span class="breadcrumb-item text-muted">Account</span>
+                        <span class="separator">/</span>
+                        <span class="breadcrumb-item active">Settings</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="header-actions">
+                        <button class="icon-btn" aria-label="Theme"><span class="icon icon-sun"></span></button>
+                        <button class="icon-btn" aria-label="History"><span class="icon icon-clock"></span></button>
+                        <button class="icon-btn" aria-label="Notifications"><span class="icon icon-bell"></span></button>
+                        <button class="icon-btn" aria-label="Sidebar"><span class="icon icon-sidebar"></span></button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="content-body">
+                <h1 class="page-title">Settings</h1>
+                
+                <div class="settings-tabs">
+                    <a href="#" class="tab-item active">My Details</a>
+                    <a href="#" class="tab-item">Profile</a>
+                    <a href="#" class="tab-item">Password</a>
+                    <a href="#" class="tab-item">Team</a>
+                    <a href="#" class="tab-item">Plan</a>
+                    <a href="#" class="tab-item">Billing</a>
+                    <a href="#" class="tab-item">Notifications</a>
+                    <a href="#" class="tab-item">Integrations</a>
+                    <a href="#" class="tab-item">API</a>
+                </div>
+
+                <div class="settings-card">
+                    <div class="card-header">
+                        <h2>Personal Information</h2>
+                        <span class="card-subtitle">Update your personal details here.</span>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon user-icon"></span>
+                                <input type="text" value="ByeWind">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon user-icon"></span>
+                                <input type="text" value="UI/UX Designer">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Email Address</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon email-icon"></span>
+                                <input type="email" value="byewind@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Username</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon user-icon"></span>
+                                <input type="text" value="ByeWind">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Bio</label>
+                            <div class="editor-toolbar">
+                                <button class="editor-btn">B</button>
+                                <button class="editor-btn">I</button>
+                                <button class="editor-btn">U</button>
+                                <button class="editor-btn">Link</button>
+                                <button class="editor-btn">List</button>
+                            </div>
+                            <textarea rows="4">Team Manager, Lead Designer, & UI/UX Designer at SnowUI</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                     <div class="card-header">
+                        <h2>Address</h2>
+                        <span class="card-subtitle">Update your address details.</span>
+                    </div>
+                    <div class="form-grid">
+                         <div class="form-group full-width">
+                            <label>Country</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option>United States</option>
+                                    <option>China</option>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="form-group full-width">
+                            <label>City/State</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option>California, USA</option>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="form-group full-width">
+                            <label>Postal Code</label>
+                            <input type="text" value="ERT 2354">
+                        </div>
+                         <div class="form-group full-width">
+                            <label>Tax ID</label>
+                            <input type="text" value="AS564178969">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
