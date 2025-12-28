@@ -82,7 +82,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     display: flex;
     align-items: center;
     padding: 0 var(--spacing-lg);
-    border-bottom: 1px solid transparent; /* Optional separator */
+    border-bottom: 1px solid transparent;
 }
 
 .logo {
@@ -170,13 +170,13 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     margin-left: var(--sidebar-width);
     display: flex;
     flex-direction: column;
-    min-width: 0; /* Prevent flex child overflow */
+    min-width: 0;
 }
 
 /* Header */
 .top-header {
     height: var(--header-height);
-    background: var(--bg-body); /* Transparent/Body bg blend */
+    background: var(--bg-body);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -319,7 +319,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     flex-direction: column;
     justify-content: space-between;
     height: 140px;
-    background: #e3f2fd; /* Default pastel blue */
+    background: #e3f2fd;
 }
 
 .stat-card.purple { background: #f4f5fd; }
@@ -368,8 +368,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 /* Side Widget */
 .widget-section {
-    grid-column: span 4;
-    height: 360px;
+    grid-column: span 12; /* 占满整行 */
+    margin-top: 20px;
 }
 
 /* Lists */
@@ -428,15 +428,72 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .tag-progress { background: #e3f2fd; color: #1976d2; }
 .tag-done { background: #e8f5e9; color: #388e3c; }
 
-/* Mobile Menu */
-.mobile-menu-btn {
-    display: none;
-    font-size: 20px;
-    padding: 8px;
+/* My Design Section */
+.my-design-section {
+    grid-column: span 12;
+    overflow-x: auto; /* 启用横向滚动 */
+    white-space: nowrap;
+    padding: 0 16px;
+    margin-top: 20px;
 }
 
-.sidebar-overlay {
-    display: none;
+.design-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.design-item {
+    flex: none; /* 不自动拉伸 */
+    min-width: 360px; /* 增大最小宽度 */
+    max-width: 360px; /* 增大最大宽度 */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.design-image {
+    width: 100%;
+    height: 200px; /* 增高图片区域 */
+    overflow: hidden;
+}
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.design-info {
+    padding: 16px;
+    text-align: left;
+}
+
+.design-chart-container {
+    width: 100%;
+    height: 200px; /* 调整雷达图容器高度 */
+}
+
+.design-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.design-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.design-chart-container {
+    width: 100%;
+    height: 160px;
 }
 
 /* Responsive */
@@ -482,6 +539,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     }
     
     .header-right {
-        display: none; /* Simplify header on mobile */
+        display: none;
+    }
+    
+    .design-list {
+        flex-direction: column;
+    }
+    
+    .design-item {
+        max-width: none;
+        min-width: 100%;
     }
 }

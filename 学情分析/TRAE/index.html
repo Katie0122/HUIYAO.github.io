@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Dashboard - Graduation Project</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -19,7 +21,6 @@
 
             <nav class="sidebar-nav">
                 <div class="nav-section">
-                
                     <ul>
                         <li class="nav-item active">
                             <a href="#">
@@ -45,16 +46,13 @@
                                 <span class="text">我的团队</span>
                             </a>
                         </li>
-                        
                     </ul>
                 </div>
-
-              
             </nav>
 
             <div class="sidebar-footer">
                 <div class="user-profile">
-                     <div class="avatar">
+                    <div class="avatar">
                         <img src="images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
                     </div>
                     <div class="user-info">
@@ -91,8 +89,6 @@
             </header>
 
             <div class="content-body">
-               
-
                 <div class="dashboard-grid">
                     <!-- Stats Cards -->
                     <div class="card stat-card blue">
@@ -128,107 +124,106 @@
                     </div>
 
                     <!-- Main Chart Section (Weekly Progress) -->
-                    <div class="card chart-section">
-                        <div class="card-header">
-                            <div class="card-title">学习偏好</div>
-                            <div class="card-actions">
-                                <select class="select-sm"><!-- 原始的技能评估卡片结构 -->
-<div class="card widget-section">
+                    <!-- 测试累计 -->
+<!-- 测试累计 -->
+<div class="card chart-section" style="grid-column: span 6;">
+    <div class="card-header">
+        <div class="card-title">测试累计</div>
+        <div class="card-actions">
+            <select class="select-sm">
+                <option>This Month</option>
+                <option>Last Month</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart-container" id="line-chart" style="width: 100%; height: 280px;"></div>
+</div>
+
+<!-- 技能评估 -->
+<div class="card widget-section" style="grid-column: span 6;">
     <div class="card-header">
         <div class="card-title">技能评估</div>
         <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
     </div>
-    <!-- 删除原有列表内容 -->
-    <!-- <div class="list-container"> ... </div> -->
+    <div class="chart-container" id="radar-chart" style="width: 100%; height: 280px;"></div> <!-- 改为 280px，去掉 margin -->
+</div>
 
-    <!-- 插入图片 -->
-    <div class="image-placeholder" style="text-align: center; padding: 20px;">
-        <img src="images/placeholder.jpg" alt="Placeholder Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <!-- My Design Section (Moved to Bottom) -->
+                    <div class="card my-design-section">
+                        <div class="card-header">
+                            <div class="card-title">我的设计</div>
+                        </div>
+                        <div class="design-list">
+                            <!-- 单个设计项 -->
+                            <div class="design-item">
+                                <div class="design-image">
+                                    <img src="学情分析\TRAE\images\icons\我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="design-info">
+                                    <div class="design-name">名称</div>
+                                    <div class="design-date">2025/5/01</div>
+                                    <div class="design-chart-container">
+                                        <div id="radar-chart-1" style="width: 100%; height: 200px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 第二个设计项 -->
+                            <div class="design-item">
+                                <div class="design-image">
+                                    <img src="学情分析\TRAE\images\icons\我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="design-info">
+                                    <div class="design-name">名称</div>
+                                    <div class="design-date">2025/5/02</div>
+                                    <div class="design-chart-container">
+                                        <div id="radar-chart-2" style="width: 100%; height: 200px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="design-item">
+    <div class="design-image">
+        <img src="学情分析\TRAE\images\icons\我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
     </div>
-</div><!-- 新增：原始技能评估内容移到这里 -->
-<div class="moved-widget-section" style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
-    <h3>技能评估（已移动）</h3>
-    <div class="list-container">
-        <div class="list-item">
-            <div class="item-info">
-                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
-                    <img src="images/icons/book.svg" width="16" height="16">
-                </div>
-                <div class="item-text">
-                    <span class="item-title">AI in Education 2024</span>
-                    <span class="item-subtitle">Smith et al.</span>
-                </div>
-            </div>
-            <span class="tag tag-pending">To Read</span>
-        </div>
-        <div class="list-item">
-            <div class="item-info">
-                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
-                    <img src="images/icons/book.svg" width="16" height="16">
-                </div>
-                <div class="item-text">
-                    <span class="item-title">Machine Learning Basics</span>
-                    <span class="item-subtitle">Goodfellow</span>
-                </div>
-            </div>
-            <span class="tag tag-progress">Reading</span>
-        </div>
-        <div class="list-item">
-            <div class="item-info">
-                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
-                    <img src="images/icons/book.svg" width="16" height="16">
-                </div>
-                <div class="item-text">
-                    <span class="item-title">Cognitive Load Theory</span>
-                    <span class="item-subtitle">Sweller</span>
-                </div>
-            </div>
-            <span class="tag tag-done">Done</span>
-        </div>
-        <div class="list-item">
-            <div class="item-info">
-                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
-                    <img src="images/icons/book.svg" width="16" height="16">
-                </div>
-                <div class="item-text">
-                    <span class="item-title">Design Systems Guide</span>
-                    <span class="item-subtitle">Figma</span>
-                </div>
-            </div>
-            <span class="tag tag-pending">To Read</span>
+    <div class="design-info">
+        <div class="design-name">名称3</div>
+        <div class="design-date">2025/5/03</div>
+        <div class="design-chart-container">
+            <div id="radar-chart-3" style="width: 100%; height: 200px;"></div>
         </div>
     </div>
 </div>
-                                    <option>This Month</option>
-                                    <option>Last Month</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="chart-container" style="height: 280px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 20px;">
-                            <!-- CSS Bar Chart Mockup -->
-                            <div class="bar-group" style="text-align: center;">
-                                <div class="bar" style="width: 32px; height: 120px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto;"></div>
-                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">参数建模</div>
-                            </div>
-                            <div class="bar-group" style="text-align: center;">
-                                <div class="bar" style="width: 32px; height: 160px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto; opacity: 0.6;"></div>
-                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">3D打印</div>
-                            </div>
-                            <div class="bar-group" style="text-align: center;">
-                                <div class="bar" style="width: 32px; height: 140px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto; opacity: 0.8;"></div>
-                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">线控底盘</div>
-                            </div>
-                            <div class="bar-group" style="text-align: center;">
-                                <div class="bar" style="width: 32px; height: 200px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto;"></div>
-                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">仿真模拟</div>
-                            </div>
+
+<div class="design-item">
+    <div class="design-image">
+        <img src="学情分析\TRAE\images\icons\我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="design-info">
+        <div class="design-name">名称4</div>
+        <div class="design-date">2025/5/04</div>
+        <div class="design-chart-container">
+            <div id="radar-chart-4" style="width: 100%; height: 200px;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="design-item">
+    <div class="design-image">
+        <img src="学情分析\TRAE\images\icons\我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="design-info">
+        <div class="design-name">名称5</div>
+        <div class="design-date">2025/5/05</div>
+        <div class="design-chart-container">
+            <div id="radar-chart-5" style="width: 100%; height: 200px;"></div>
+        </div>
+    </div>
+</div>
                         </div>
                     </div>
-
-                    <!-- Right Widget (Tasks/Literature) -->
-                    <div class="card widget-section">
+                     <div class="card widget-section">
                         <div class="card-header">
-                            <div class="card-title">技能评估</div>
+                            <div class="card-title">历史浏览</div>
                             <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
                         </div>
                         <div class="list-container">
@@ -268,7 +263,7 @@
                                 </div>
                                 <span class="tag tag-done">Done</span>
                             </div>
-                             <div class="list-item">
+                            <div class="list-item">
                                 <div class="item-info">
                                     <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
                                         <img src="images/icons/book.svg" width="16" height="16">
@@ -286,6 +281,232 @@
             </div>
         </main>
     </div>
+
+    <script>
+        // 等待 DOM 加载完成
+        document.addEventListener('DOMContentLoaded', function () {
+            // 初始化雷达图（大图）
+            const radarChart = echarts.init(document.getElementById('radar-chart'));
+
+            const radarOption = {
+                color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+                legend: {},
+                radar: [
+                    {
+                        indicator: [
+                            { text: '参数化建模能力', max: 150 },
+                            { text: '教育小车系统搭建', max: 150 },
+                            { text: '仿真模拟实操能力', max: 150 },
+                            { text: '线控底盘应用能力', max: 120 },
+                            { text: '加工工艺实践能力', max: 108 },
+                            { text: '学习文档应用能力', max: 72 }
+                        ],
+                        center: ['50%', '50%'],
+                        radius: 80,
+                        axisName: {
+                            color: '#fff',
+                            backgroundColor: '#666',
+                            borderRadius: 3,
+                            padding: [3, 5]
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        type: 'radar',
+                        data: [
+                            {
+                                value: [120, 118, 130, 100, 99, 70],
+                                name: 'Data C',
+                                symbol: 'rect',
+                                symbolSize: 8,
+                                lineStyle: { type: 'dashed' },
+                                label: { show: false }
+                            },
+                            {
+                                value: [100, 93, 50, 90, 70, 60],
+                                name: 'Data D',
+                                areaStyle: {
+                                    color: new echarts.graphic.RadialGradient(0.1, 0.6, 1, [
+                                        { color: 'rgba(255, 145, 124, 0.1)', offset: 0 },
+                                        { color: 'rgba(255, 145, 124, 0.9)', offset: 1 }
+                                    ])
+                                },
+                                label: { show: false }
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            radarChart.setOption(radarOption);
+
+            // 初始化折线图
+            const lineChart = echarts.init(document.getElementById('line-chart'));
+
+            const lineOption = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {},
+                toolbox: {
+                    show: false
+                },
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    top: '10%',
+                    bottom: '15%'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    axisLabel: {
+                        interval: 0,
+                        rotate: 0,
+                        margin: 10
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value}',
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#eee'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '',
+                        type: 'line',
+                        data: [10, 11, 13, 11, 12, 12, 9],
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                                { type: 'min', name: 'Min' }
+                            ]
+                        },
+                        markLine: {
+                            data: [{ type: 'average', name: 'Avg' }]
+                        }
+                    }
+                ]
+            };
+
+            lineChart.setOption(lineOption);
+
+            // 初始化小型雷达图（我的设计）
+          // 初始化小型雷达图（我的设计）
+const radarCharts = [
+    echarts.init(document.getElementById('radar-chart-1')),
+    echarts.init(document.getElementById('radar-chart-2')),
+    echarts.init(document.getElementById('radar-chart-3')),
+    echarts.init(document.getElementById('radar-chart-4')),
+    echarts.init(document.getElementById('radar-chart-5'))
+];
+
+// 使用你提供的新 option
+const radarOptionSmall = {
+    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+    title: {
+        text: '',
+        textStyle: {
+            fontSize: 10,
+            fontWeight: 'normal',
+            color: '#333'
+        },
+        left: 'center',
+        top: 'top'
+    },
+    legend: {},
+    radar: [
+        {
+            indicator: [
+                { text: '动力输出平顺性' },
+                { text: '转向与过弯操控性' },
+                { text: '制动性能稳定性' },
+                { text: '场景适配实用性' },
+                { text: '行驶舒适性' }
+            ],
+            center: ['50%', '50%'], // 居中显示
+            radius: '70%', // 减小半径，避免文字重叠
+            startAngle: 90,
+            splitNumber: 4,
+            shape: 'circle',
+            axisName: {
+                formatter: '【{value}】',
+                color: '#428BD4',
+                fontSize: 10 // 缩小字体，防止标签溢出
+            },
+            splitArea: {
+                areaStyle: {
+                    color: ['#77EADF', '#26C3BE', '#64AFE9', '#428BD4'],
+                    shadowColor: 'rgba(0, 0, 0, 0.2)',
+                    shadowBlur: 10
+                }
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(211, 253, 250, 0.8)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(211, 253, 250, 0.8)'
+                }
+            }
+        }
+    ],
+    series: [
+        {
+            type: 'radar',
+            emphasis: {
+                lineStyle: {
+                    width: 4
+                }
+            },
+            data: [
+                {
+                    value: [100, 8, 0.4, -80, 2000],
+                    name: ''
+                },
+                {
+                    value: [60, 5, 0.3, -100, 1500],
+                    name: '',
+                    areaStyle: {
+                        color: 'rgba(255, 228, 52, 0.6)'
+                    }
+                }
+            ]
+        }
+    ]
+};
+// 应用配置
+radarCharts.forEach(chart => chart.setOption(radarOptionSmall));
+
+// 窗口缩放时自适应
+window.addEventListener('resize', function () {
+    radarChart.resize();
+    lineChart.resize();
+    radarCharts.forEach(chart => chart.resize());
+});
+            // 窗口缩放时自适应
+            window.addEventListener('resize', function () {
+                radarChart.resize();
+                lineChart.resize();
+                radarCharts.forEach(chart => chart.resize());
+            });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
