@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Dashboard - Graduation Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">SOPHICAR</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                
+                    <ul>
+                        <li class="nav-item active">
+                            <a href="#">
+                                <img src="images/icons/overview.svg" class="icon" alt="Overview">
+                                <span class="text">个人信息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img src="images/icons/book.svg" class="icon" alt="Literature">
+                                <span class="text">学习中心</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img src="images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+                                <span class="text">文件夹</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img src="images/icons/users.svg" class="icon" alt="Surveys">
+                                <span class="text">我的团队</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+              
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                     <div class="avatar">
+                        <img src="images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+                    </div>
+                    <div class="user-info">
+                        <span class="name">Student</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+                    <div class="breadcrumbs">
+                        <span class="breadcrumb-item text-muted">首页</span>
+                        <span class="separator">/</span>
+                        <span class="breadcrumb-item active">学情分析</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-bar">
+                        <img src="images/icons/search.svg" class="search-icon" alt="Search">
+                        <input type="text" class="search-input" placeholder="Search papers, data...">
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <img src="images/icons/bell.svg" alt="Notifications" width="20" height="20">
+                            <span class="badge"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-body">
+               
+
+                <div class="dashboard-grid">
+                    <!-- Stats Cards -->
+                    <div class="card stat-card blue">
+                        <div class="stat-label">今日积分</div>
+                        <div class="stat-value">128</div>
+                        <div class="stat-trend trend-up">
+                            <span>+12 New this week</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card stat-card purple">
+                        <div class="stat-label">累计积分</div>
+                        <div class="stat-value">13</div>
+                        <div class="stat-trend trend-up">
+                            <span>+5% vs last week</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card stat-card green">
+                        <div class="stat-label">今日测试</div>
+                        <div class="stat-value">1</div>
+                        <div class="stat-trend trend-up">
+                            <span>Target: 500</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card stat-card yellow">
+                        <div class="stat-label">累计测试</div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-trend trend-down">
+                            <span>Deadline approaching</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Chart Section (Weekly Progress) -->
+                    <div class="card chart-section">
+                        <div class="card-header">
+                            <div class="card-title">学习偏好</div>
+                            <div class="card-actions">
+                                <select class="select-sm"><!-- 原始的技能评估卡片结构 -->
+<div class="card widget-section">
+    <div class="card-header">
+        <div class="card-title">技能评估</div>
+        <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+    </div>
+    <!-- 删除原有列表内容 -->
+    <!-- <div class="list-container"> ... </div> -->
+
+    <!-- 插入图片 -->
+    <div class="image-placeholder" style="text-align: center; padding: 20px;">
+        <img src="images/placeholder.jpg" alt="Placeholder Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</div><!-- 新增：原始技能评估内容移到这里 -->
+<div class="moved-widget-section" style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+    <h3>技能评估（已移动）</h3>
+    <div class="list-container">
+        <div class="list-item">
+            <div class="item-info">
+                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                    <img src="images/icons/book.svg" width="16" height="16">
+                </div>
+                <div class="item-text">
+                    <span class="item-title">AI in Education 2024</span>
+                    <span class="item-subtitle">Smith et al.</span>
+                </div>
+            </div>
+            <span class="tag tag-pending">To Read</span>
+        </div>
+        <div class="list-item">
+            <div class="item-info">
+                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                    <img src="images/icons/book.svg" width="16" height="16">
+                </div>
+                <div class="item-text">
+                    <span class="item-title">Machine Learning Basics</span>
+                    <span class="item-subtitle">Goodfellow</span>
+                </div>
+            </div>
+            <span class="tag tag-progress">Reading</span>
+        </div>
+        <div class="list-item">
+            <div class="item-info">
+                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                    <img src="images/icons/book.svg" width="16" height="16">
+                </div>
+                <div class="item-text">
+                    <span class="item-title">Cognitive Load Theory</span>
+                    <span class="item-subtitle">Sweller</span>
+                </div>
+            </div>
+            <span class="tag tag-done">Done</span>
+        </div>
+        <div class="list-item">
+            <div class="item-info">
+                <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                    <img src="images/icons/book.svg" width="16" height="16">
+                </div>
+                <div class="item-text">
+                    <span class="item-title">Design Systems Guide</span>
+                    <span class="item-subtitle">Figma</span>
+                </div>
+            </div>
+            <span class="tag tag-pending">To Read</span>
+        </div>
+    </div>
+</div>
+                                    <option>This Month</option>
+                                    <option>Last Month</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container" style="height: 280px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 20px;">
+                            <!-- CSS Bar Chart Mockup -->
+                            <div class="bar-group" style="text-align: center;">
+                                <div class="bar" style="width: 32px; height: 120px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto;"></div>
+                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">参数建模</div>
+                            </div>
+                            <div class="bar-group" style="text-align: center;">
+                                <div class="bar" style="width: 32px; height: 160px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto; opacity: 0.6;"></div>
+                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">3D打印</div>
+                            </div>
+                            <div class="bar-group" style="text-align: center;">
+                                <div class="bar" style="width: 32px; height: 140px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto; opacity: 0.8;"></div>
+                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">线控底盘</div>
+                            </div>
+                            <div class="bar-group" style="text-align: center;">
+                                <div class="bar" style="width: 32px; height: 200px; background: var(--primary-color); border-radius: 4px 4px 0 0; margin: 0 auto;"></div>
+                                <div class="label" style="margin-top: 8px; font-size: 12px; color: var(--text-secondary);">仿真模拟</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Widget (Tasks/Literature) -->
+                    <div class="card widget-section">
+                        <div class="card-header">
+                            <div class="card-title">技能评估</div>
+                            <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+                        </div>
+                        <div class="list-container">
+                            <div class="list-item">
+                                <div class="item-info">
+                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                        <img src="images/icons/book.svg" width="16" height="16">
+                                    </div>
+                                    <div class="item-text">
+                                        <span class="item-title">AI in Education 2024</span>
+                                        <span class="item-subtitle">Smith et al.</span>
+                                    </div>
+                                </div>
+                                <span class="tag tag-pending">To Read</span>
+                            </div>
+                            <div class="list-item">
+                                <div class="item-info">
+                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                        <img src="images/icons/book.svg" width="16" height="16">
+                                    </div>
+                                    <div class="item-text">
+                                        <span class="item-title">Machine Learning Basics</span>
+                                        <span class="item-subtitle">Goodfellow</span>
+                                    </div>
+                                </div>
+                                <span class="tag tag-progress">Reading</span>
+                            </div>
+                            <div class="list-item">
+                                <div class="item-info">
+                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                        <img src="images/icons/book.svg" width="16" height="16">
+                                    </div>
+                                    <div class="item-text">
+                                        <span class="item-title">Cognitive Load Theory</span>
+                                        <span class="item-subtitle">Sweller</span>
+                                    </div>
+                                </div>
+                                <span class="tag tag-done">Done</span>
+                            </div>
+                             <div class="list-item">
+                                <div class="item-info">
+                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                        <img src="images/icons/book.svg" width="16" height="16">
+                                    </div>
+                                    <div class="item-text">
+                                        <span class="item-title">Design Systems Guide</span>
+                                        <span class="item-subtitle">Figma</span>
+                                    </div>
+                                </div>
+                                <span class="tag tag-pending">To Read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
