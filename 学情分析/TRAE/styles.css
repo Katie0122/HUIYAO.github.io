@@ -1,11 +1,12 @@
 /* SnowUI Design System - Core Styles */
 :root {
-    /* Color Palette */
-    --primary-color: #95a4fc;
-    --primary-light: #e3e8ff;
-    --primary-dark: #7682cc;
-    --accent-color: #c6c7f8;
+    /* Color Palette - 修改为克莱茵蓝主题 */
+    --primary-color: #4da6ff;      /* 深克莱茵蓝 */
+    --primary-light: #4da6ff;      /* 浅克莱茵蓝 */
+    --primary-dark: #001220;       /* 深蓝黑色 */
+    --accent-color: #0066ff;       /* 亮克莱茵蓝 */
     
+    /* 其他变量保持不变 */
     --bg-body: #f7f9fb;
     --bg-sidebar: #ffffff;
     --bg-card: #ffffff;
@@ -17,20 +18,19 @@
     --border-color: rgba(0, 0, 0, 0.05);
     --border-hover: rgba(0, 0, 0, 0.1);
     
-    /* Shadows */
+    /* 阴影和其他样式保持不变 */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
     --shadow-mobile-nav: 2px 0 10px rgba(0, 0, 0, 0.1);
     
-    /* Spacing */
+    /* 间距和其他布局变量保持不变 */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
     
-    /* Layout */
     --sidebar-width: 212px;
     --header-height: 64px;
     --border-radius: 16px;
@@ -324,8 +324,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .stat-card.purple { background: #f4f5fd; }
 .stat-card.blue { background: #e3f2fd; }
-.stat-card.green { background: #e8f5e9; }
-.stat-card.yellow { background: #fff8e1; }
+.stat-card.green { background: #e3f2fd; }
+.stat-card.yellow { background: #f4f5fd; }
 
 .stat-label {
     font-size: 14px;
