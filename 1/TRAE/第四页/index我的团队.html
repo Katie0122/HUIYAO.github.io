@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>列表 · 个人信息</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles我的团队.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="./assets/icons/logo-flower.svg" alt="Logo">
+        </div>
+        <nav class="side-nav">
+          <button class="side-item active" data-section="profile">
+            <a href="../../../学情分析/TRAE/index.html"></a>
+            <img src="./assets/icons/user.svg" alt="">
+            <span>个人信息</span>
+            
+          </button>
+          
+          <button class="side-item" data-section="analytics">
+            <img src="./assets/icons/chart.svg" alt="">
+            <span>学情分析</span>
+          </button>
+          <button class="side-item" data-section="files">
+            <img src="./assets/icons/folder.svg" alt="">
+            <span>文件夹</span>
+          </button>
+          <button class="side-item" data-section="team">
+            <img src="./assets/icons/team.svg" alt="">
+            <span>我的团队</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <h1 class="page-title">列表</h1>
+          <div class="search">
+            <img src="./assets/icons/search.svg" alt="">
+            <input id="searchInput" type="text" placeholder="Search">
+          </div>
+        </header>
+
+        <section class="list">
+          <div class="list-head">
+            <div>用户</div>
+            <div>邮箱</div>
+            <div>职位</div>
+          </div>
+          <div id="listBody" class="list-body"></div>
+          <footer class="pagination">
+            <button class="page-btn current">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+          </footer>
+        </section>
+      </main>
+
+      <aside id="drawer" class="drawer">
+        <header class="drawer-bar">
+          <div class="left-actions">
+            <button class="icon-btn" id="drawerPin" aria-label="固定">
+              <img src="./assets/icons/pin.svg" alt="">
+            </button>
+            <button class="icon-btn" id="drawerCollapse" aria-label="折叠">
+              <img src="./assets/icons/caret-down.svg" alt="">
+            </button>
+          </div>
+          <button class="icon-btn" id="drawerClose" aria-label="关闭">
+            <img src="./assets/icons/close.svg" alt="">
+          </button>
+        </header>
+
+        <div class="drawer-content">
+          <div class="drawer-title">
+            <div class="title-main">
+              <h2 id="detailName">ByeWind</h2>
+              <span id="detailId" class="muted">#CMP801</span>
+            </div>
+            <img id="detailAvatar" class="avatar-xl" src="./assets/avatars/avatar-default.svg" alt="">
+          </div>
+
+          <div class="field">
+            <label>姓名</label>
+            <input id="fieldName" type="text" value="Lihuiyao">
+          </div>
+          <div class="field">
+            <label>邮箱</label>
+            <input id="fieldEmail" type="email" value="2994287817@qq.com">
+          </div>
+          <div class="field">
+            <label>职位</label>
+            <input id="fieldRole" type="text" value="学生">
+          </div>
+          <div class="field">
+            <label>注册时间</label>
+            <div class="input-with-icon">
+              <input id="fieldDate" type="text" value="Feb 2, 2025, 8:00 AM">
+              <img src="./assets/icons/calendar.svg" alt="">
+            </div>
+          </div>
+          <div class="field">
+            <label>备注</label>
+            <textarea id="fieldNote" rows="5" placeholder="..."></textarea>
+          </div>
+        </div>
+      </aside>
+
+      <div id="drawerMask" class="drawer-mask"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

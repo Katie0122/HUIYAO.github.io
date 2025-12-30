@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ge</title>
+    <link rel="stylesheet" href="css/style第一页.css">
+</head>
+<body>
+    <div id="app" class="layout">
+       <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">SOPHICAR</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <div class="nav-section">
+            <ul>
+                <li class="nav-item active">
+                    <a href="index第一页.html">
+                        <img src="images/icons/overview.svg" class="icon" alt="Overview">
+                        <span class="text">个人信息</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+    <a href="../../../学情分析/TRAE/index.html">
+        <img src="images/icons/book.svg" class="icon" alt="Literature">
+        <span class="text">学习中心</span>
+    </a>
+</li>
+                <li class="nav-item">
+                    <a href="#">
+                        <img src="images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+                        <span class="text">文件夹</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <img src="images/icons/users.svg" class="icon" alt="Surveys">
+                        <span class="text">我的团队</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="user-profile">
+            <div class="avatar">
+                <img src="images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+            </div>
+            <div class="user-info">
+                <span class="name">Student</span>
+            </div>
+        </div>
+    </div>
+</aside>
+        <div class="content">
+            <header class="topbar d-flex justify-between align-center">
+                <div class="crumb">首页 / 个人信息</div>
+                <div class="top-actions d-flex align-center">
+                    <div class="search d-flex align-center">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="#888" stroke-width="2" fill="none"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#888" stroke-width="2"/></svg>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <button class="icon-btn">⋯</button>
+                    <button class="icon-btn">☼</button>
+                    <button class="icon-btn">⚙</button>
+                    <button class="icon-btn">🔔</button>
+                </div>
+            </header>
+            <main class="page">
+                <h2 class="page-title">设置</h2>
+                <div class="tabs-row d-flex justify-between align-center">
+                    <div class="chips d-flex align-center">
+                        <button class="chip">设置</button>
+                        <button class="chip">个人目标</button>
+                        <button class="chip chip-active">简介</button>
+                    </div>
+                    <div class="tab-actions d-flex align-center">
+                        <button class="btn ghost-btn">邀请好友</button>
+                        <button class="btn ghost-btn">添加待办</button>
+                        <button class="icon-btn">⋯</button>
+                    </div>
+                </div>
+                <div class="card profile-card">
+                    <div class="profile-left d-flex align-center">
+                        <div class="upload-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 16V8" stroke="#2B6FF7" stroke-width="2"/><path d="M8 12l4-4 4 4" stroke="#2B6FF7" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <div class="profile-info">
+                            <div class="name">Lihuiyao</div>
+                            <div class="tagline">这里是个性签名</div>
+                        </div>
+                    </div>
+                </div>
+      <div class="card group-card">
+    <div class="section-title">分类</div>
+    <div class="fields">
+        <div class="field full">
+            <div class="label">团队</div>
+            <div class="value">ZWU</div>
+        </div>
+        <div class="field full">
+            <div class="label">联系邮箱</div>
+            <div class="value">2994287817@qq.com</div>
+        </div>
+        <div class="row">
+            <div class="field half">
+                <div class="label">联系电话</div>
+                <div class="value">159245381380</div>
+            </div>
+            <div class="field half">
+                <div class="label">入学年份</div>
+                <div class="input with-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#888" fill="none"/><line x1="3" y1="9" x2="21" y2="9" stroke="#888"/></svg>
+                    <input type="text" value="Feb 1, 2025">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field half">
+                <div class="label">隐私设置</div>
+                <div class="checks d-flex align-center">
+                    <label class="check"><input type="checkbox" checked> <span>Email</span></label>
+                    <label class="check"><input type="checkbox"> <span>Phone</span></label>
+                </div>
+            </div>
+            <div class="field half">
+                <div class="label">在线状态</div>
+                <label class="switch">
+                    <input type="checkbox" id="online-switch" checked>
+                    <span class="slider"></span>
+                    <span class="switch-text">打开</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </main>
+            <footer class="content-footer">
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
