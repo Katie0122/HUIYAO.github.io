@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles文件夹.css">
+    <head>
+  <!-- ... 其他 meta 和 link -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <span class="logo-text">SOPHICAR</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <ul>
+        <li class="nav-item active">
+          <a href="../../../学情分析/TRAE/index.html">
+            <img src="../images/icons/overview.svg" class="icon" alt="Overview">
+            <span class="text">个人信息</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="../images/icons/book.svg" class="icon" alt="Literature">
+            <span class="text">学习中心</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../../../1/TRAE/第三页/index文件夹.html">
+            <img src="../images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+            <span class="text">文件夹</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+  <a href="../../../学情分析/TRAE/index.html">
+    <img src="../images/icons/overview.svg" class="icon" alt="Overview">
+    <span class="text">个人信息</span>
+  </a>
+</li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="../images/icons/users.svg" class="icon" alt="Surveys">
+            <span class="text">我的团队</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-profile">
+      <div class="avatar">
+        <img src="../images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+      </div>
+      <div class="user-info">
+        <span class="name">Student</span>
+      </div>
+    </div>
+  </div>
+</aside>
+      <main class="content">
+        <header class="page-header">
+          <h1>Projects</h1>
+        </header>
+        <section class="stats">
+          <div class="stat-card stat-blue">
+            <div class="stat-head">
+              <div class="stat-title">今日学习</div>
+              <div class="stat-trend"><img src="assets/icons/icon_trend_up.svg" alt=""><span>+11.02%</span></div>
+            </div>
+            <div class="stat-value">2</div>
+          </div>
+          <div class="stat-card stat-dark">
+            <div class="stat-head">
+              <div class="stat-title">累计学习</div>
+              <div class="stat-trend"><img src="assets/icons/icon_trend_down.svg" alt=""><span>-0.03%</span></div>
+            </div>
+            <div class="stat-value">13</div>
+          </div>
+          <div class="stat-card stat-blue">
+            <div class="stat-head">
+              <div class="stat-title">今日测试</div>
+              <div class="stat-trend"><img src="assets/icons/icon_trend_up.svg" alt=""><span>+15.03%</span></div>
+            </div>
+            <div class="stat-value">1</div>
+          </div>
+          <div class="stat-card stat-dark">
+            <div class="stat-head">
+              <div class="stat-title">累计测试</div>
+              <div class="stat-trend"><img src="assets/icons/icon_trend_up.svg" alt=""><span>+6.08%</span></div>
+            </div>
+            <div class="stat-value">16</div>
+          </div>
+        </section>
+      <section class="panels">
+  <div class="panel">
+    <div class="panel-title">收藏标签</div>
+    <div class="panel-body">
+      <div class="donut-wrap">
+        <div id="chart-container" style="width: 100%; height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+          <div class="panel">
+            <div class="panel-title">收藏</div>
+            <div class="panel-body">
+              <div class="table">
+                <div class="thead">
+                  <div>模型</div>
+                  <div>作者</div>
+                  <div>累计耗时</div>
+                  <div>Status</div>
+                </div>
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td">教程名</div>
+                    <div class="td">
+                      <div class="avatar-row">
+                        <img src="assets/avatars/a1.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="td">20min</div>
+                    <div class="td"><span class="status status-progress">In Progress</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">教程名</div>
+                    <div class="td">
+                      <div class="avatar-row">
+                        <img src="assets/avatars/a2.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="td">2h 21min</div>
+                    <div class="td"><span class="status status-complete">Complete</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">教程名</div>
+                    <div class="td">
+                      <div class="avatar-row">
+                        <img src="assets/avatars/a3.svg" alt="">
+                        <span class="more">+3</span>
+                      </div>
+                    </div>
+                    <div class="td">5min</div>
+                    <div class="td"><span class="status status-pending">Pending</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">教程名</div>
+                    <div class="td">
+                      <div class="avatar-row">
+                        <img src="assets/avatars/a4.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="td">58min</div>
+                    <div class="td"><span class="status status-approved">Approved</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">教程名</div>
+                    <div class="td">
+                      <div class="avatar-row">
+                        <img src="assets/avatars/a5.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="td">22min</div>
+                    <div class="td"><span class="status status-rejected">Rejected</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel wide">
+            <div class="panel-title row">
+              <span>历史浏览</span>
+              <button class="icon-btn"><img src="assets/icons/icon_more.svg" alt=""></button>
+            </div>
+            <div class="panel-body">
+              <div class="table simple">
+                <div class="thead">
+                  <div>分类</div>
+                  <div>日期</div>
+                  <div>进程</div>
+                </div>
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td">open source</div>
+                    <div class="td">Jun 24, 2025</div>
+                    <div class="td"><span class="pill pill-progress">进行中</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">figure</div>
+                    <div class="td">Mar 10, 2025</div>
+                    <div class="td"><span class="pill pill-complete">已完成</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">animal</div>
+                    <div class="td">Nov 10, 2025</div>
+                    <div class="td"><span class="pill pill-complete">已完成</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">plant</div>
+                    <div class="td">Dec 20, 2025</div>
+                    <div class="td"><span class="pill pill-complete">已完成</span></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">festival</div>
+                    <div class="td">Jul 25, 2025</div>
+                    <div class="td"><span class="pill pill-down">已下架</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
