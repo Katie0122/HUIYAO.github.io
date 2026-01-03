@@ -1,0 +1,110 @@
+/* sidebar.css */
+:root {
+    --primary-color: #4da6ff;      /* 深克莱茵蓝 */
+    --primary-light: #4da6ff;      /* 浅克莱茵蓝 */
+    --primary-dark: #001220;       /* 深蓝黑色 */
+    --accent-color: #0066ff;       /* 亮克莱茵蓝 */
+
+    --bg-sidebar: #ffffff;
+    --text-primary: #1c1c1c;
+    --text-secondary: #8e8e93;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --sidebar-width: 212px;
+    --header-height: 64px;
+    --border-radius-sm: 8px;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+    border-bottom: 1px solid transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 6px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: var(--spacing-md) var(--spacing-md);
+    overflow-y: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: var(--text-primary);
+}
+
+.nav-item.active {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+}
+
+.nav-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--spacing-sm);
+    opacity: 0.8;
+}
+
+.nav-item.active .icon {
+    color: var(--primary-dark);
+    opacity: 1;
+}
+
+.sidebar-footer {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.user-profile .name {
+    font-size: 14px;
+    font-weight: 500;
+}
