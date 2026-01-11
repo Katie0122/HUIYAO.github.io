@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <title>列表 · 个人信息</title>
+    <title>我的团队 · SOPHICAR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,11 +16,10 @@
           <img src="assets/icons/logo-flower.svg" alt="Logo">
         </div>
         <nav class="side-nav">
-          <button class="side-item active" data-section="profile">
+          <button class="side-item" data-section="profile">
             <a href="index第一页.html"></a>
             <img src="assets/icons/user.svg" alt="">
             <span>个人信息</span>
-            
           </button>
           
           <button class="side-item" data-section="analytics">
@@ -33,7 +32,7 @@
             <img src="assets/icons/folder.svg" alt="">
             <span>文件夹</span>
           </button>
-          <button class="side-item" data-section="team">
+          <button class="side-item active" data-section="team">
              <a href="index我的团队.html"></a>
             <img src="assets/icons/team.svg" alt="">
             <span>我的团队</span>
@@ -43,26 +42,87 @@
 
       <main class="content">
         <header class="content-header">
-          <h1 class="page-title">列表</h1>
+          <h1 class="page-title">我的团队</h1>
           <div class="search">
             <img src="assets/icons/search.svg" alt="">
-            <input id="searchInput" type="text" placeholder="Search">
+            <input id="searchInput" type="text" placeholder="搜索团队成员或任务">
           </div>
         </header>
 
+        <!-- 飞书集成按钮区域 -->
+        <div class="integration-section" style="background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 18px; margin-bottom: 18px;">
+          <div class="integration-header">
+            <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">团队任务管理</h2>
+          </div>
+          <div class="integration-buttons" style="display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+            <button id="feishu-auth-btn" class="integration-btn" style="background: #4285F4; color: white; padding: 10px 16px; border: none; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              <img src="assets/icons/feishu.svg" alt="飞书" style="width: 16px; height: 16px;">
+              授权飞书账户
+            </button>
+            <button id="feishu-btn" class="integration-btn" style="background: #4285F4; color: white; padding: 10px 16px; border: none; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              <img src="assets/icons/feishu.svg" alt="飞书" style="width: 16px; height: 16px;">
+              查看飞书任务
+              <li class="nav-item">
+    <a href="https://your-feishu-doc-link.feishu.cn" target="_blank">
+        <img src="./images/icons/document.svg" class="icon" alt="Document">
+        <span class="text">飞书文档</span>
+    </a>
+</li>
+            </button>
+          </div>
+          
+          <!-- 任务列表容器 -->
+          <div id="task-container" style="border-top: 1px solid var(--border); padding-top: 16px;">
+            <p style="text-align: center; color: var(--muted); font-style: italic;">点击上方按钮查看飞书任务</p>
+          </div>
+        </div>
+
+        <!-- 原有列表内容 -->
         <section class="list">
           <div class="list-head">
             <div>用户</div>
             <div>邮箱</div>
             <div>职位</div>
           </div>
-          <div id="listBody" class="list-body"></div>
+          <div id="listBody" class="list-body">
+            <!-- 团队成员列表 -->
+            <div class="row">
+              <div class="user">
+                <img src="assets/avatars/avatar-default.svg" alt="" class="avatar">
+                <span class="name">张三</span>
+              </div>
+              <div class="email">zhangsan@example.com</div>
+              <div class="role">项目经理</div>
+            </div>
+            <div class="row">
+              <div class="user">
+                <img src="assets/avatars/avatar-default.svg" alt="" class="avatar">
+                <span class="name">李四</span>
+              </div>
+              <div class="email">lisi@example.com</div>
+              <div class="role">设计师</div>
+            </div>
+            <div class="row">
+              <div class="user">
+                <img src="assets/avatars/avatar-default.svg" alt="" class="avatar">
+                <span class="name">王五</span>
+              </div>
+              <div class="email">wangwu@example.com</div>
+              <div class="role">开发工程师</div>
+            </div>
+            <div class="row">
+              <div class="user">
+                <img src="assets/avatars/avatar-default.svg" alt="" class="avatar">
+                <span class="name">赵六</span>
+              </div>
+              <div class="email">zhaoliu@example.com</div>
+              <div class="role">测试工程师</div>
+            </div>
+          </div>
           <footer class="pagination">
             <button class="page-btn current">1</button>
             <button class="page-btn">2</button>
             <button class="page-btn">3</button>
-            <button class="page-btn">4</button>
-            <button class="page-btn">5</button>
           </footer>
         </section>
       </main>
@@ -85,23 +145,23 @@
         <div class="drawer-content">
           <div class="drawer-title">
             <div class="title-main">
-              <h2 id="detailName">ByeWind</h2>
-              <span id="detailId" class="muted">#CMP801</span>
+              <h2 id="detailName">团队成员详情</h2>
+              <span id="detailId" class="muted">#TEAM001</span>
             </div>
             <img id="detailAvatar" class="avatar-xl" src="assets/avatars/avatar-default.svg" alt="">
           </div>
 
           <div class="field">
             <label>姓名</label>
-            <input id="fieldName" type="text" value="Lihuiyao">
+            <input id="fieldName" type="text" value="张三">
           </div>
           <div class="field">
             <label>邮箱</label>
-            <input id="fieldEmail" type="email" value="2994287817@qq.com">
+            <input id="fieldEmail" type="email" value="zhangsan@example.com">
           </div>
           <div class="field">
             <label>职位</label>
-            <input id="fieldRole" type="text" value="学生">
+            <input id="fieldRole" type="text" value="项目经理">
           </div>
           <div class="field">
             <label>注册时间</label>
@@ -112,7 +172,7 @@
           </div>
           <div class="field">
             <label>备注</label>
-            <textarea id="fieldNote" rows="5" placeholder="..."></textarea>
+            <textarea id="fieldNote" rows="5" placeholder="...">负责项目整体进度管理</textarea>
           </div>
         </div>
       </aside>
@@ -121,6 +181,99 @@
     </div>
 
     <script src="./script.js"></script>
+    
+    <script>
+      // 飞书集成相关功能
+      document.addEventListener('DOMContentLoaded', function() {
+          const feishuBtn = document.getElementById('feishu-btn');
+          const feishuAuthBtn = document.getElementById('feishu-auth-btn');
+          const taskContainer = document.getElementById('task-container');
+          
+          // 模拟存储访问令牌（实际应用中应该更安全地存储）
+          let feishuAccessToken = null;
+          
+          // 飞书授权按钮功能
+          feishuAuthBtn.addEventListener('click', function() {
+              alert('即将跳转到飞书授权页面，获取访问权限');
+              
+              // 实际应用中，这里应该跳转到你的后端授权接口
+              // window.location.href = 'https://your-server.com/api/feishu/auth';
+              
+              // 模拟授权成功后设置令牌
+              feishuAccessToken = 'mock_access_token';
+              feishuAuthBtn.innerHTML = '<img src="assets/icons/check.svg" alt="✓" style="width: 16px; height: 16px;"> 已授权';
+              feishuAuthBtn.style.background = '#10b981';
+          });
+          
+          // 飞书任务查看按钮功能
+          feishuBtn.addEventListener('click', async function() {
+              if (!feishuAccessToken) {
+                  alert('请先授权飞书账户');
+                  return;
+              }
+              
+              // 显示加载状态
+              taskContainer.innerHTML = '<p style="text-align: center;">正在获取飞书任务...</p>';
+              
+              try {
+                  // 模拟获取飞书任务的API调用
+                  // 在实际应用中，这里应该调用你的后端API
+                  // const response = await fetch('/api/feishu/tasks');
+                  // const data = await response.json();
+                  
+                  // 为了演示，我们使用模拟数据
+                  const mockTasks = [
+                      { id: 1, title: '设计系统规范', assignee: '张三', status: '进行中', deadline: '2024-12-15', priority: '高' },
+                      { id: 2, title: '前端页面开发', assignee: '李四', status: '未开始', deadline: '2024-12-20', priority: '中' },
+                      { id: 3, title: '后端API开发', assignee: '王五', status: '已完成', deadline: '2024-12-10', priority: '高' },
+                      { id: 4, title: '测试用例编写', assignee: '赵六', status: '进行中', deadline: '2024-12-18', priority: '低' },
+                      { id: 5, title: '用户手册编写', assignee: '钱七', status: '进行中', deadline: '2024-12-25', priority: '中' }
+                  ];
+                  
+                  renderTasks(mockTasks);
+              } catch (error) {
+                  console.error('获取飞书任务失败:', error);
+                  taskContainer.innerHTML = '<p style="color: #ef4444; text-align: center;">获取任务失败，请稍后重试</p>';
+              }
+          });
+          
+          // 渲染任务列表的函数
+          function renderTasks(tasks) {
+              if (!tasks || tasks.length === 0) {
+                  taskContainer.innerHTML = '<p style="text-align: center;">暂无任务数据</p>';
+                  return;
+              }
+              
+              let taskHTML = `
+                  <div class="task-list-head" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 0; padding: 14px 18px; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--border); background: #f9fafb;">
+                      <div>任务名称</div>
+                      <div>负责人</div>
+                      <div>截止日期</div>
+                      <div>状态</div>
+                  </div>
+                  <div class="task-list-body" style="display: block;">
+              `;
+              
+              tasks.forEach(task => {
+                  const statusClass = task.status === '已完成' ? 'status-complete' : 
+                                    task.status === '进行中' ? 'status-progress' : 'status-pending';
+                  
+                  taskHTML += `
+                      <div class="task-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; align-items: center; gap: 0; padding: 12px 18px; border-bottom: 1px solid #f1f5f9; background: #fff; transition: background .18s ease, box-shadow .18s ease;">
+                          <div class="task-title" style="font-weight: 500;">${task.title}</div>
+                          <div class="task-assignee">${task.assignee}</div>
+                          <div class="task-deadline">${task.deadline}</div>
+                          <div class="task-status"><span class="status ${statusClass}" style="font-size: 12px; padding: 6px 10px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px;">${task.status}</span></div>
+                      </div>
+                  `;
+              });
+              
+              taskHTML += '</div>';
+              
+              taskContainer.innerHTML = taskHTML;
+          }
+      });
+    </script>
   </body>
 </html>
 

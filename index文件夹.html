@@ -221,5 +221,149 @@
       </main>
     </div>
     <script src="script.js"></script>
+const option = {
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    top: '5%',
+    left: 'center'
+  },
+  series: [
+    {
+      name: 'Access From',
+      type: 'pie',
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: 40,
+          fontWeight: 'bold'
+        }
+      },
+      labelLine: {
+        show: false
+      },
+      data: [
+        { value: 1048, name: 'open source' },
+        { value: 735, name: 'plant' },
+        { value: 580, name: 'figure' },
+        { value: 484, name: 'Union Ads' },
+        { value: 300, name: 'Video Ads' }
+      ]
+    }
+  ]
+};
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const chartContainer = document.getElementById('chart-container');
+    const myChart = echarts.init(chartContainer);
+
+    // 数据映射：每个类别对应哪些教程
+    const dataMap = {
+      'open source': [
+        { name: '教程名', author: 'a1.svg', time: '2h 21min', status: 'Complete' }
+      ],
+      'plant': [
+        { name: '教程名', author: 'a3.svg', time: '58min', status: 'Approved' }
+      ],
+      'figure': [
+        { name: '教程名', author: 'a2.svg', time: '20min', status: 'In Progress' }
+      ],
+      'Union Ads': [
+        { name: '教程名', author: 'a4.svg', time: '5min', status: 'Pending' }
+      ],
+      'Video Ads': [
+        { name: '教程名', author: 'a5.svg', time: '22min', status: 'Rejected' }
+      ]
+    };
+
+    // 新的图表配置（你提供的）
+    const option = {
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        top: '5%',
+        left: 'center'
+      },
+      series: [
+        {
+          name: 'Access From',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          itemStyle: {
+            borderRadius: 10,
+            borderColor: '#fff',
+            borderWidth: 2
+          },
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 40,
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+            { value: 1048, name: 'open source' },
+            { value: 735, name: 'plant' },
+            { value: 580, name: 'figure' },
+            { value: 484, name: 'Union Ads' },
+            { value: 300, name: 'Video Ads' }
+          ]
+        }
+      ]
+    };
+
+    // 渲染图表
+    myChart.setOption(option);
+
+    // 点击事件处理
+    myChart.on('click', function (params) {
+      const categoryName = params.name;
+      const records = dataMap[categoryName] || [];
+
+      const tbody = document.querySelector('.table .tbody');
+      tbody.innerHTML = ''; // 清空原有内容
+
+      records.forEach(record => {
+        const tr = document.createElement('div');
+        tr.className = 'tr';
+        tr.innerHTML = `
+          <div class="td">${record.name}</div>
+          <div class="td">
+            <div class="avatar-row">
+              <img src="assets/avatars/${record.author}" alt="">
+            </div>
+          </div>
+          <div class="td">${record.time}</div>
+          <div class="td"><span class="status status-${record.status.toLowerCase().replace(/\s+/g, '-')}">${record.status}</span></div>
+        `;
+        tbody.appendChild(tr);
+      });
+    });
+
+    // 默认高亮第一个
+    
+  });
+</script>
   </body>
 </html>

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         emphasis: {
           label: {
-            show: true,
+            show: false,
             fontSize: 40,
             fontWeight: 'bold'
           }
@@ -76,4 +76,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // 使用配置项渲染图表
   myChart.setOption(option);
 });
+const dataMap = {
+  'open source': [
+    { name: '教程名', author: 'a1.svg', time: '2h 21min', status: 'Complete' }
+  ],
+  'plant': [
+    { name: '教程名', author: 'a3.svg', time: '58min', status: 'Approved' }
+  ],
+  'figure': [
+    { name: '教程名', author: 'a2.svg', time: '20min', status: 'In Progress' }
+  ],
+  'Union Ads': [
+    { name: '教程名', author: 'a4.svg', time: '5min', status: 'Pending' }
+  ],
+  'Video Ads': [
+    { name: '教程名', author: 'a5.svg', time: '22min', status: 'Rejected' }
+  ]
+};
 

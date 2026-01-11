@@ -246,3 +246,107 @@ body{
 .side-item:active,.icon-btn:active,.page-btn:active{transform: scale(.98)}
 .row:active{filter:brightness(.98)}
 
+/* 飞书集成相关样式 */
+.integration-section {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.integration-header {
+  margin-bottom: 12px;
+}
+
+.integration-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.integration-btn {
+  background: #4285F4;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.integration-btn:hover {
+  background: #3367d6;
+}
+
+.integration-btn:active {
+  transform: scale(0.98);
+}
+
+.task-list-head {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: #f9fafb;
+}
+
+.task-list-body {
+  display: block;
+}
+
+.task-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 12px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fff;
+  transition: background .18s ease, box-shadow .18s ease;
+}
+
+.task-row:hover {
+  background: #f8fafc;
+}
+
+.status {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-progress { 
+  color: #7c3aed; 
+  background: #f5f3ff 
+}
+
+.status-complete { 
+  color: #16a34a; 
+  background: #ecfdf5 
+}
+
+.status-pending { 
+  color: #2563eb; 
+  background: #eef2ff 
+}
+
+.status-approved { 
+  color: #f59e0b; 
+  background: #fff7ed 
+}
+
+.status-rejected { 
+  color: #ef4444; 
+  background: #fef2f2 
+}
