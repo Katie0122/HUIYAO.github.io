@@ -7,8 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles文件夹.css">
-     <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="styles文件夹 深色模式.css">
     <head>
   <!-- ... 其他 meta 和 link -->
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
@@ -28,25 +27,25 @@
         <div class="nav-section">
             <ul>
                 <li class="nav-item active">
-                    <a href="index第一页.html">
+                    <a href="index第一页 深色模式.html">
                         <img src="./images/icons/overview.svg" class="icon" alt="Overview">
                         <span class="text">个人信息</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="index.html">
+                <li class="nav-item active">
+                    <a href="index 深色模式.html">
                         <img src="./images/icons/book.svg" class="icon" alt="Literature">
                         <span class="text">学习中心</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index文件夹.html">
+                    <a href="index文件夹 深色模式.html">
                         <img src="./images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
                         <span class="text">文件夹</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index我的团队.html">
+                    <a href="index我的团队 深色模式.html">
                         <img src="./images/icons/users.svg" class="icon" alt="Surveys">
                         <span class="text">我的团队</span>
                     </a>
@@ -69,7 +68,7 @@
       <main class="content">
         <header class="page-header">
   <h1>Projects</h1>
-  <button class="action-btn" onclick="window.location.href='index文件夹 深色模式.html'">☼</button>
+  <button class="action-btn" onclick="window.location.href='index文件夹.html'">☼</button>
 </header>
         <section class="stats">
           <div class="stat-card stat-blue">
@@ -222,49 +221,7 @@
       </main>
     </div>
     <script src="script.js"></script>
-const option = {
-  tooltip: {
-    trigger: 'item'
-  },
-  legend: {
-    top: '5%',
-    left: 'center'
-  },
-  series: [
-    {
-      name: 'Access From',
-      type: 'pie',
-      radius: ['40%', '70%'],
-      avoidLabelOverlap: false,
-      itemStyle: {
-        borderRadius: 10,
-        borderColor: '#fff',
-        borderWidth: 2
-      },
-      label: {
-        show: false,
-        position: 'center'
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: 40,
-          fontWeight: 'bold'
-        }
-      },
-      labelLine: {
-        show: false
-      },
-      data: [
-        { value: 1048, name: 'open source' },
-        { value: 735, name: 'plant' },
-        { value: 580, name: 'figure' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
-      ]
-    }
-  ]
-};
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const chartContainer = document.getElementById('chart-container');

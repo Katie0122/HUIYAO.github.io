@@ -93,4 +93,9 @@ const dataMap = {
     { name: '教程名', author: 'a5.svg', time: '22min', status: 'Rejected' }
   ]
 };
+const radarOption = {
+    backgroundColor: '#121212',
+    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+    // ...其他配置
+};
 

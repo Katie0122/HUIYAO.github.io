@@ -1,36 +1,39 @@
 /* SnowUI Design System - Core Styles */
 :root {
-    /* Color Palette - 修改为克莱茵蓝主题 */
+    /* Color Palette - 修改为深色模式 */
     --primary-color: #4da6ff;      /* 深克莱茵蓝 */
-    --primary-light: #4da6ff;      /* 浅克莱茵蓝 */
+    --primary-light: #4da6ff;
     --primary-dark: #001220;       /* 深蓝黑色 */
+
     --accent-color: #0066ff;       /* 亮克莱茵蓝 */
-    
-    /* 其他变量保持不变 */
-    --bg-body: #f7f9fb;
-    --bg-sidebar: #ffffff;
-    --bg-card: #ffffff;
-    
-    --text-primary: #1c1c1c;
-    --text-secondary: #8e8e93;
-    --text-tertiary: #b0b0b5;
-    
-    --border-color: rgba(0, 0, 0, 0.05);
-    --border-hover: rgba(0, 0, 0, 0.1);
-    
-    /* 阴影和其他样式保持不变 */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-mobile-nav: 2px 0 10px rgba(0, 0, 0, 0.1);
-    
-    /* 间距和其他布局变量保持不变 */
+
+    /* 深色主题背景 */
+    --bg-body: #121212;
+    --bg-sidebar: #1e1e1e;
+    --bg-card: #1f1f1f;
+
+    /* 文字颜色 */
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b5;
+    --text-tertiary: #a0a0a0;
+
+    /* 边框与阴影 */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.12);
+
+    /* 阴影 */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-mobile-nav: 2px 0 10px rgba(0, 0, 0, 0.3);
+
+    /* 间距保持不变 */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
-    
+
     --sidebar-width: 212px;
     --header-height: 64px;
     --border-radius: 16px;
@@ -62,20 +65,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     min-height: 100vh;
 }
 
-.action-btn {
-    padding: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--text-secondary);
-    transition: background 0.2s ease;
-    cursor: pointer;
-}
-
-.action-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
-}
-/* Sidebar */
 .sidebar {
     width: var(--sidebar-width);
     background: var(--bg-sidebar);
@@ -149,11 +138,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     color: var(--text-primary);
 }
 
-.nav-item .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: var(--spacing-sm);
-    opacity: 0.8;
+.nav-item.active {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
 }
 
 .nav-item.active .icon {
@@ -231,7 +218,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .search-bar {
     display: flex;
     align-items: center;
-    background: rgba(0,0,0,0.04);
+    background: rgba(255, 255, 255, 0.06);
     border-radius: var(--border-radius-sm);
     padding: 6px 12px;
     width: 240px;
@@ -239,7 +226,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .search-bar:focus-within {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0 2px var(--primary-light);
     width: 280px;
 }
@@ -304,7 +291,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 
 
-/* Cards */
 .card {
     background: var(--bg-card);
     border-radius: var(--border-radius);
@@ -340,10 +326,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     padding: var(--spacing-sm); /* 调整内边距 */
 }
 
-.stat-card.purple { background: #f4f5fd; }
-.stat-card.blue { background: #e3f2fd; }
-.stat-card.green { background: #e3f2fd; }
-.stat-card.yellow { background: #f4f5fd; }
+.stat-card.purple { background: #0066ff; }
+.stat-card.blue { background: #343f46; }
+.stat-card.green { background: #343f46; }
+.stat-card.yellow { background: #0066ff; }
 
 .stat-label {
     font-size: 14px;
@@ -460,15 +446,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .design-item {
-    flex: none; /* 不自动拉伸 */
-    min-width: 380px; /* 增大最小宽度 */
-    max-width: 380px; /* 增大最大宽度 */
-    background: #fff;
+    flex: none;
+    min-width: 380px;
+    max-width: 380px;
+    background: var(--bg-card); /* 使用全局变量，保持一致性 */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.2s ease;
-    height: 500px; /* 调整为所需高度 */
+    height: 500px;
 }
 
 .design-image {
@@ -487,8 +473,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .design-info {
     padding: 16px;
     text-align: left;
+    background: transparent; /* 确保不覆盖 */
 }
-
 .design-chart-container {
     width: 100%;
     height: 200px; /* 调整雷达图容器高度 */
@@ -511,7 +497,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     width: 100%;
     height: 160px;
 }
+.icon-btn {
+    padding: 8px 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    transition: background 0.2s ease;
+}
 
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
 /* Responsive */
 @media (max-width: 1024px) {
     .stat-card { grid-column: span 6; }

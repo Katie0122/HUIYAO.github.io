@@ -1,0 +1,312 @@
+:root {
+    --bg-color: #f7f9fb;           /* 背景色：浅灰白，匹配 index.html */
+    --sidebar-width: 240px;
+    --panel-width: 320px;
+    --text-primary: #1c1c1c;       /* 主文字色：深灰黑 */
+    --text-secondary: #8e8e93;     /* 次要文字色 */
+    --accent-color: #4da6ff;       /* 主色：克莱茵蓝，来自 styles.css */
+    --hover-bg: #eef2f5;           /* 悬停背景色 */
+    --panel-bg: #ffffff;           /* 右侧面板背景：白色 */
+    --card-bg: #ffffff;            /* 卡片背景：白色 */
+    --border-color: rgba(0, 0, 0, 0.05); /* 边框色 */
+    --bg-sidebar: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: var(--bg-color);
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--bg-sidebar); /* 新增 */
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--accent-color);
+    background-color: var(--hover-bg);
+}
+.nav-item.active {
+    /* Usually has an indicator or just brighter text in this design */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-header h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    background-color: var(--bg-body);
+    border-radius: 24px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-bar i {
+    color: var(--text-secondary);
+}
+.table-container {
+    flex: 1;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 12px 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 12px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 16px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.table-row:hover {
+    background-color: var(--hover-bg);
+}
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    width: 100%;
+    max-width: 120px;
+    padding: 8px 0;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.page-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Right Panel */
+.details-panel {
+    width: var(--panel-width);
+    background-color: var(--panel-bg);
+    margin: 20px;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.selected-user {
+    margin-bottom: 24px;
+}
+
+.user-header h2 {
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-bottom: 4px;
+}
+
+.user-id {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.large-avatar {
+    width: 64px;
+    height: 64px;
+    background-color: #f7f9fb;
+    border-radius: 16px;
+    margin-top: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+.large-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.info-card label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.info-card .value {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+.action-btn {
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  transition: background 0.2s ease;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.value-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.memo-card textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    resize: none;
+    color: var(--text-primary);
+    outline: none;
+    font-size: 14px;
+}

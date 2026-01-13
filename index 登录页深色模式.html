@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 注册</title>
+    <link rel="stylesheet" href="style登录页深色模式.css">
+</head>
+<body>
+    <div class="background-container">
+        <!-- Background image will be set in CSS -->
+        <div class="overlay"></div>
+    </div>
+
+    <main class="login-card">
+        <h1 class="title">加入我们</h1>
+
+        <form class="register-form" id="registerForm">
+    <!-- 表单内容保持不变 -->
+    <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name" placeholder="输入你的姓名" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">邮箱</label>
+        <input type="email" id="email" placeholder="输入你的邮箱" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password">密码</label>
+        <input type="password" id="password" placeholder="输入你的密码" required>
+    </div>
+
+    <div class="form-group">
+        <label>角色</label>
+        <div class="role-selector">
+            <button type="button" class="role-btn active" data-role="student">学生</button>
+            <button type="button" class="role-btn" data-role="teacher">教师</button>
+        </div>
+    </div>
+
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">我同意使用协议</label>
+    </div>
+
+    <button type="submit" class="submit-btn">注册</button>
+</form>
+
+        <div class="divider">
+            <span>Or</span>
+        </div>
+
+        <div class="login-link">
+            已有账户？ <a href="#">登录</a>
+        </div>
+
+        <div class="social-login">
+            <button class="social-btn">
+                <img src="images\icons\GOOGLE.png" alt="Google">
+                <span>Google</span>
+            </button>
+            <button class="social-btn">
+                <img src="images\icons\APPLE深色模式.png" alt="Apple">
+                <span>Apple</span>
+            </button>
+            <button class="social-btn">
+                <img src="images\icons\WECHAT.png" alt="Wechat">
+                <span>Wechat</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="main登录页深色模式.js"></script>
+    <script src="main登录页深色模式.js"></script>
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // 阻止默认表单提交
+    
+    // 这里可以添加表单验证逻辑
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const terms = document.getElementById('terms').checked;
+    
+    if (!name || !email || !password || !terms) {
+        alert('请填写所有必填字段并同意使用协议');
+        return;
+    }
+    
+    // 验证通过后跳转到目标页面
+    window.location.href = 'index第一页 深色模式.html';
+});
+</script>
+</body>
+</html>
