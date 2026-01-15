@@ -80,7 +80,9 @@
     <div class="search-icon"></div>
     <input type="text" class="search-input" placeholder="Search...">
 </div>
-<button class="icon-btn" onclick="window.location.href='index.html'">☼</button>
+<button class="action-btn" onclick="window.location.href='index.html'">
+    <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
+</button>
                     <div class="header-actions">
                         <button class="action-btn">
                             <img src="./images/icons/bell.svg" alt="Notifications" width="20" height="20">
@@ -297,56 +299,113 @@
             // 初始化雷达图（大图）
             const radarChart = echarts.init(document.getElementById('radar-chart'));
 
-            const radarOption = {
-                color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
-                legend: {},
-                radar: [
-                    {
-                        indicator: [
-                            { text: '参数化建模能力', max: 150 },
-                            { text: '教育小车系统搭建', max: 150 },
-                            { text: '仿真模拟实操能力', max: 150 },
-                            { text: '线控底盘应用能力', max: 120 },
-                            { text: '加工工艺实践能力', max: 108 },
-                            { text: '学习文档应用能力', max: 72 }
-                        ],
-                        center: ['50%', '50%'],
-                        radius: 80,
-                        axisName: {
-                            color: '#fff',
-                            backgroundColor: '#666',
-                            borderRadius: 3,
-                            padding: [3, 5]
-                        }
-                    }
-                ],
-                series: [
-                    {
-                        type: 'radar',
-                        data: [
-                            {
-                                value: [120, 118, 130, 100, 99, 70],
-                                name: 'Data C',
-                                symbol: 'rect',
-                                symbolSize: 8,
-                                lineStyle: { type: 'dashed' },
-                                label: { show: false }
-                            },
-                            {
-                                value: [100, 93, 50, 90, 70, 60],
-                                name: 'Data D',
-                                areaStyle: {
-                                    color: new echarts.graphic.RadialGradient(0.1, 0.6, 1, [
-                                        { color: 'rgba(255, 145, 124, 0.1)', offset: 0 },
-                                        { color: 'rgba(255, 145, 124, 0.9)', offset: 1 }
-                                    ])
-                                },
-                                label: { show: false }
-                            }
-                        ]
-                    }
-                ]
-            };
+const radarOption = {
+  // 全局蓝色系配色，适配整个雷达图
+  color: ['#1677FF', '#40A9FF', '#69C0FF', '#91D5FF'],
+  backgroundColor: 'transparent', // ✅ 核心：设置整个图表画布为完全透明背景
+ 
+  legend: {
+     show: true,
+    type: 'plain',
+    orient: 'horizontal', // 水平排列
+    left: 'center',       // 居中对齐
+    bottom: '2%',        // 距离底部 10%，防止被容器边缘裁剪
+    textStyle: {
+        fontSize: 12,
+        color: '#ffffff'
+    },
+    data: [
+        { name: '参考数据', icon: 'rect' },
+        { name: '你的数据', icon: 'rect' }
+    ],
+    formatter: function (name) {
+        return name;
+    }
+  },
+  
+  radar: [
+    {
+      indicator: [
+        { text: '参数化建模能力', max: 150 },
+        { text: '教育小车系统搭建', max: 150 },
+        { text: '仿真模拟实操能力', max: 150 },
+        { text: '线控底盘应用能力', max: 120 },
+        { text: '加工工艺实践能力', max: 108 },
+        { text: '学习文档应用能力', max: 72 }
+      ],
+      center: ['50%', '40%'], // ✅ 优化：从75%改为正中间，单个雷达图居中显示更美观
+      radius: 100,
+      axisName: {
+        color: '#ffffff', // 标签文字黑色，无灰色背景
+        padding: [3, 5]
+      },
+      // ✅ 核心：雷达图内部分割扇形区域 完全透明
+      splitArea: {
+        areaStyle: {
+          color: 'transparent'
+        }
+      },
+      // ✅ 核心：雷达图轴线 半透明浅蓝（不突兀，不影响透明背景）
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(22, 119, 255, 0.2)'
+        }
+      },
+      // ✅ 核心：雷达图圈层分割线 半透明浅蓝
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(22, 119, 255, 0.2)'
+        }
+      }
+    }
+  ],
+  series: [
+    {
+      type: 'radar',
+      data: [
+        {
+          value: [130, 118, 130, 100, 99, 70],
+          name: '参考数据',
+          symbol: 'rect',
+
+          symbolSize: 10,
+          lineStyle: {
+            type: 'dashed'
+          },
+         
+        color: '#ffffff', // 标签文字黑色，无灰色背景
+      
+      
+          label: {
+            show: true,
+            formatter: function (params) {
+              return params.value;
+            }
+          }
+        },
+        
+        {
+          value: [100, 93, 50, 90, 70, 60],
+          name: '你的数据',
+          areaStyle: {
+            color: new echarts.graphic.RadialGradient(0.1, 0.6, 1, [
+              {
+                color: 'rgba(22, 119, 255, 0.1)',
+                offset: 0
+              },
+              {
+                color: 'rgba(22, 119, 255, 0.9)',
+                offset: 1
+              }
+            ])
+            
+          }
+        }
+      ]
+    }
+  ]
+};
+
 
             radarChart.setOption(radarOption);
 

@@ -67,7 +67,9 @@
                         <input type="text" placeholder="Search">
                     </div>
                     <button class="icon-btn">⋯</button>
-                   <button class="icon-btn" onclick="window.location.href='index第一页.html'">☼</button>
+                  <button class="icon-btn" onclick="window.location.href='index第一页.html'">
+    <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
+</button>
                     <button class="icon-btn">⚙</button>
                     <button class="icon-btn">🔔</button>
                 </div>
@@ -76,8 +78,9 @@
                 <h2 class="page-title">设置</h2>
                 <div class="tabs-row d-flex justify-between align-center">
                     <div class="chips d-flex align-center">
-                        <button class="chip">设置</button>
-                        <button class="chip">个人目标</button>
+                    
+                       <!-- 在top-actions中修改待办按钮 -->
+<button class="btn ghost-btn" onclick="openTodoModal()">待办</button>
                         <button class="chip chip-active">简介</button>
                     </div>
                     <div class="tab-actions d-flex align-center">

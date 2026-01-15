@@ -1,12 +1,12 @@
 const teamData = [
-    { name: "Natali Craig", email: "smith@kpmg.com", role: "讲师", avatar: "assets/images/user1.png" },
-    { name: "Kate Morrison", email: "melody@altbox.com", role: "讲师", avatar: "assets/images/user2.png" },
-    { name: "Drew Cano", email: "max@kt.com", role: "学生", avatar: "assets/images/user3.png" },
-    { name: "Orlando Diggs", email: "sean@dellito.com", role: "学生", avatar: "assets/images/user4.png" },
-    { name: "Andi Lane", email: "brian@exchange.com", role: "学生", avatar: "assets/images/user5.png" },
-    { name: "Natali Craig", email: "smith@kpmg.com", role: "学生", avatar: "assets/images/user1.png" },
-    { name: "Kate Morrison", email: "melody@altbox.com", role: "学生", avatar: "assets/images/user2.png" },
-    { name: "Drew Cano", email: "max@kt.com", role: "学生", avatar: "assets/images/user3.png" },
+    { name: "李明", email: "3316654@qq.com", role: "讲师", avatar: "images/icons/头像1.png" },
+    { name: "凯迪", email: "2278965@qq.com", role: "讲师", avatar: "images/icons/头像2.png" },
+    { name: "宋为", email: "29945768@kt.com", role: "学生", avatar: "images/icons/头像3.png" },
+    { name: "迈克", email: "159243817@qq.com", role: "学生", avatar: "images/icons/头像5.png" },
+    { name: "辛迪", email: "1377986@qq.com", role: "学生", avatar: "images/icons/头像4.png" },
+    { name: "威尔", email: "13429876@qq.com", role: "学生", avatar: "images/icons/头像5.png" },
+    { name: "南希", email: "1764976@altbox.com", role: "学生", avatar: "images/icons/头像1.png" },
+    { name: "史蒂夫", email: "17649754@kt.com", role: "学生", avatar: "images/icons/头像2.png" },
 ];
 
 function renderTable() {
@@ -30,7 +30,17 @@ function renderTable() {
         listContainer.appendChild(row);
     });
 }
+// 获取太阳图标元素
+const sunIcon = document.querySelector('.sun-icon');
 
+// 添加点击事件监听器
+if(sunIcon) {
+    sunIcon.addEventListener('click', function() {
+        // 跳转到浅色模式页面
+        window.location.href = 'index我的团队 浅色模式.html'; 
+        // 或者根据您的文件命名规则调整路径
+    });
+}
 document.addEventListener('DOMContentLoaded', () => {
     renderTable();
 });

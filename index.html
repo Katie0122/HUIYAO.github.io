@@ -77,10 +77,12 @@
 
                 <div class="header-right">
                     <div class="search-bar">
-    <img src="./images/icons/search.svg" class="search-icon" alt="Search">
-    <input type="text" class="search-input" placeholder="Search papers, data...">
+    <img src="./images/icons/search.svg" class="search-icon" alt="搜索功能">
+    <input type="text" class="search-input" placeholder="搜索功能">
 </div>
-<button class="action-btn" onclick="window.location.href='index 深色模式.html'">☼</button>
+<button class="action-btn" onclick="window.location.href='index 深色模式.html'">
+    <img src="images\icons\月亮浅色.png" alt="Sun Icon" width="20" height="20">
+</button>
                     <div class="header-actions">
                         <button class="action-btn">
                             <img src="./images/icons/bell.svg" alt="Notifications" width="20" height="20">
@@ -98,7 +100,7 @@
                         <div class="stat-label">今日积分</div>
                         <div class="stat-value">128</div>
                         <div class="stat-trend trend-up">
-                            <span>+12 New this week</span>
+                            <span>+12 本周</span>
                         </div>
                     </div>
                     
@@ -106,7 +108,7 @@
                         <div class="stat-label">累计积分</div>
                         <div class="stat-value">13</div>
                         <div class="stat-trend trend-up">
-                            <span>+5% vs last week</span>
+                            <span>+5% 较上周</span>
                         </div>
                     </div>
                     
@@ -114,7 +116,7 @@
                         <div class="stat-label">今日测试</div>
                         <div class="stat-value">1</div>
                         <div class="stat-trend trend-up">
-                            <span>Target: 500</span>
+                            <span>目标: 500</span>
                         </div>
                     </div>
                     
@@ -122,7 +124,7 @@
                         <div class="stat-label">累计测试</div>
                         <div class="stat-value">5</div>
                         <div class="stat-trend trend-down">
-                            <span>Deadline approaching</span>
+                            <span>较上周</span>
                         </div>
                     </div>
 
@@ -134,8 +136,8 @@
         <div class="card-title">测试累计</div>
         <div class="card-actions">
             <select class="select-sm">
-                <option>This Month</option>
-                <option>Last Month</option>
+                <option>本月</option>
+                <option>上个月</option>
             </select>
         </div>
     </div>
@@ -234,7 +236,7 @@
                      <div class="card widget-section">
                         <div class="card-header">
                             <div class="card-title">我的任务</div>
-                            <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+                            <a href="#" style="font-size: 12px; color: var(--primary-color);">查看所有</a>
                         </div>
                         <div class="list-container">
                             <div class="list-item">
@@ -243,11 +245,11 @@
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
                                     <div class="item-text">
-                                        <span class="item-title">AI in Education 2024</span>
-                                        <span class="item-subtitle">Smith et al.</span>
+                                        <span class="item-title">网页部署</span>
+                                        <span class="item-subtitle">李明</span>
                                     </div>
                                 </div>
-                                <span class="tag tag-pending">To Read</span>
+                                <span class="tag tag-pending">待办</span>
                             </div>
                             <div class="list-item">
                                 <div class="item-info">
@@ -255,11 +257,11 @@
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
                                     <div class="item-text">
-                                        <span class="item-title">Machine Learning Basics</span>
-                                        <span class="item-subtitle">Goodfellow</span>
+                                        <span class="item-title">threejs了解</span>
+                                        <span class="item-subtitle">李明</span>
                                     </div>
                                 </div>
-                                <span class="tag tag-progress">Reading</span>
+                                <span class="tag tag-progress">待办</span>
                             </div>
                             <div class="list-item">
                                 <div class="item-info">
@@ -267,11 +269,11 @@
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
                                     <div class="item-text">
-                                        <span class="item-title">Cognitive Load Theory</span>
-                                        <span class="item-subtitle">Sweller</span>
+                                        <span class="item-title">react可视化框架搭建</span>
+                                        <span class="item-subtitle">王华</span>
                                     </div>
                                 </div>
-                                <span class="tag tag-done">Done</span>
+                                <span class="tag tag-done">已提交</span>
                             </div>
                             <div class="list-item">
                                 <div class="item-info">
@@ -296,59 +298,112 @@
         // 等待 DOM 加载完成
         document.addEventListener('DOMContentLoaded', function () {
             // 初始化雷达图（大图）
-            const radarChart = echarts.init(document.getElementById('radar-chart'));
+           // 初始化雷达图（大图）
+const radarChart = echarts.init(document.getElementById('radar-chart'));
 
-            const radarOption = {
-                color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
-                legend: {},
-                radar: [
-                    {
-                        indicator: [
-                            { text: '参数化建模能力', max: 150 },
-                            { text: '教育小车系统搭建', max: 150 },
-                            { text: '仿真模拟实操能力', max: 150 },
-                            { text: '线控底盘应用能力', max: 120 },
-                            { text: '加工工艺实践能力', max: 108 },
-                            { text: '学习文档应用能力', max: 72 }
-                        ],
-                        center: ['50%', '50%'],
-                        radius: 80,
-                        axisName: {
-                            color: '#fff',
-                            backgroundColor: '#666',
-                            borderRadius: 3,
-                            padding: [3, 5]
-                        }
-                    }
-                ],
-                series: [
-                    {
-                        type: 'radar',
-                        data: [
-                            {
-                                value: [120, 118, 130, 100, 99, 70],
-                                name: 'Data C',
-                                symbol: 'rect',
-                                symbolSize: 8,
-                                lineStyle: { type: 'dashed' },
-                                label: { show: false }
-                            },
-                            {
-                                value: [100, 93, 50, 90, 70, 60],
-                                name: 'Data D',
-                                areaStyle: {
-                                    color: new echarts.graphic.RadialGradient(0.1, 0.6, 1, [
-                                        { color: 'rgba(255, 145, 124, 0.1)', offset: 0 },
-                                        { color: 'rgba(255, 145, 124, 0.9)', offset: 1 }
-                                    ])
-                                },
-                                label: { show: false }
-                            }
-                        ]
-                    }
-                ]
-            };
+const radarOption = {
+  // 全局蓝色系配色，适配整个雷达图
+  color: ['#1677FF', '#40A9FF', '#69C0FF', '#91D5FF'],
+  backgroundColor: 'transparent', // ✅ 核心：设置整个图表画布为完全透明背景
+ 
+  legend: {
+     show: true,
+    type: 'plain',
+    orient: 'horizontal', // 水平排列
+    left: 'center',       // 居中对齐
+    bottom: '2%',        // 距离底部 10%，防止被容器边缘裁剪
+    textStyle: {
+        fontSize: 12,
+        color: '#333'
+    },
+    data: [
+        { name: '参考数据', icon: 'rect' },
+        { name: '你的数据', icon: 'rect' }
+    ],
+    formatter: function (name) {
+        return name;
+    }
+  },
+  
+  radar: [
+    {
+      indicator: [
+        { text: '参数化建模能力', max: 150 },
+        { text: '教育小车系统搭建', max: 150 },
+        { text: '仿真模拟实操能力', max: 150 },
+        { text: '线控底盘应用能力', max: 120 },
+        { text: '加工工艺实践能力', max: 108 },
+        { text: '学习文档应用能力', max: 72 }
+      ],
+      center: ['50%', '40%'], // ✅ 优化：从75%改为正中间，单个雷达图居中显示更美观
+      radius: 100,
+      axisName: {
+        color: '#888888', // 标签文字黑色，无灰色背景
+        padding: [3, 5]
+      },
+      // ✅ 核心：雷达图内部分割扇形区域 完全透明
+      splitArea: {
+        areaStyle: {
+          color: 'transparent'
+        }
+      },
+      // ✅ 核心：雷达图轴线 半透明浅蓝（不突兀，不影响透明背景）
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(22, 119, 255, 0.2)'
+        }
+      },
+      // ✅ 核心：雷达图圈层分割线 半透明浅蓝
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(22, 119, 255, 0.2)'
+        }
+      }
+    }
+  ],
+  series: [
+    {
+      type: 'radar',
+      data: [
+        {
+          value: [130, 118, 130, 100, 99, 70],
+          name: '参考数据',
+          symbol: 'rect',
+          symbolSize: 10,
+          lineStyle: {
+            type: 'dashed'
+          },
+          label: {
+            show: true,
+            formatter: function (params) {
+              return params.value;
+            }
+          }
+        },
+        
+        {
+          value: [100, 93, 50, 90, 70, 60],
+          name: '你的数据',
+          areaStyle: {
+            color: new echarts.graphic.RadialGradient(0.1, 0.6, 1, [
+              {
+                color: 'rgba(22, 119, 255, 0.1)',
+                offset: 0
+              },
+              {
+                color: 'rgba(22, 119, 255, 0.9)',
+                offset: 1
+              }
+            ])
+            
+          }
+        }
+      ]
+    }
+  ]
+};
 
+radarChart.setOption(radarOption);
             radarChart.setOption(radarOption);
 
             // 初始化折线图
@@ -426,7 +481,7 @@ const radarCharts = [
 
 // 使用你提供的新 option
 const radarOptionSmall = {
-    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+    color: ['#4da6ff', '#0066ff', '#001220', '#67F9D8'],
     title: {
         text: '',
         textStyle: {

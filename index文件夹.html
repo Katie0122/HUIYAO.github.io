@@ -68,8 +68,13 @@
 </aside>
       <main class="content">
         <header class="page-header">
-  <h1>Projects</h1>
-  <button class="action-btn" onclick="window.location.href='index文件夹 深色模式.html'">☼</button>
+  <h1>文件夹</h1>
+<button class="action-btn" onclick="window.location.href='index文件夹 深色模式.html'" 
+        style="position: absolute; top: 16px; right: 16px; 
+               background: none; border: none; padding: 0; margin: 0; 
+               cursor: pointer; width: 20px; height: 20px;">
+    <img src="./images/icons/月亮浅色.png" alt="Sun Icon" width="20" height="20">
+</button>
 </header>
         <section class="stats">
           <div class="stat-card stat-blue">
@@ -106,7 +111,8 @@
     <div class="panel-title">收藏标签</div>
     <div class="panel-body">
       <div class="donut-wrap">
-        <div id="chart-container" style="width: 100%; height: 300px;"></div>
+       <!-- 修改这个div -->
+<div id="chart-container" style="width: 100%; height: 300px; max-width: 100%;"></div>
       </div>
     </div>
   </div>
@@ -118,59 +124,59 @@
                   <div>模型</div>
                   <div>作者</div>
                   <div>累计耗时</div>
-                  <div>Status</div>
+                  <div>状态</div>
                 </div>
                 <div class="tbody">
-                  <div class="tr">
+                  <div class="tr" data-category="开源资料">
                     <div class="td">教程名</div>
                     <div class="td">
                       <div class="avatar-row">
-                        <img src="assets/avatars/a1.svg" alt="">
+                        <img src="images\icons\头像1.png" alt="">
                       </div>
                     </div>
-                    <div class="td">20min</div>
-                    <div class="td"><span class="status status-progress">In Progress</span></div>
+                    <div class="td">20分</div>
+                    <div class="td"><span class="status status-progress">观看中</span></div>
                   </div>
-                  <div class="tr">
+                  <div class="tr" data-category="开源资料">
                     <div class="td">教程名</div>
                     <div class="td">
                       <div class="avatar-row">
-                        <img src="assets/avatars/a2.svg" alt="">
+                        <img src="images\icons\头像2.png" alt="">
                       </div>
                     </div>
-                    <div class="td">2h 21min</div>
-                    <div class="td"><span class="status status-complete">Complete</span></div>
+                    <div class="td">2时 21分</div>
+                    <div class="td"><span class="status status-complete">已完成</span></div>
                   </div>
-                  <div class="tr">
+                  <div class="tr" data-category="结构设计">
                     <div class="td">教程名</div>
                     <div class="td">
                       <div class="avatar-row">
-                        <img src="assets/avatars/a3.svg" alt="">
+                        <img src="images\icons\头像3.png" alt="">
                         <span class="more">+3</span>
                       </div>
                     </div>
-                    <div class="td">5min</div>
-                    <div class="td"><span class="status status-pending">Pending</span></div>
+                    <div class="td">5分</div>
+                    <div class="td"><span class="status status-pending">已完成</span></div>
                   </div>
-                  <div class="tr">
+                  <div class="tr" data-category="参数化建模">
                     <div class="td">教程名</div>
                     <div class="td">
                       <div class="avatar-row">
-                        <img src="assets/avatars/a4.svg" alt="">
+                        <img src="images\icons\头像4.png" alt="">
                       </div>
                     </div>
-                    <div class="td">58min</div>
-                    <div class="td"><span class="status status-approved">Approved</span></div>
+                    <div class="td">58分</div>
+                    <div class="td"><span class="status status-approved">已完成</span></div>
                   </div>
-                  <div class="tr">
+                  <div class="tr" data-category="网页前端">
                     <div class="td">教程名</div>
                     <div class="td">
                       <div class="avatar-row">
-                        <img src="assets/avatars/a5.svg" alt="">
+                        <img src="images\icons\头像5.png" alt="">
                       </div>
                     </div>
-                    <div class="td">22min</div>
-                    <div class="td"><span class="status status-rejected">Rejected</span></div>
+                    <div class="td">22分</div>
+                    <div class="td"><span class="status status-rejected">已过期</span></div>
                   </div>
                 </div>
               </div>
@@ -179,7 +185,7 @@
           <div class="panel wide">
             <div class="panel-title row">
               <span>历史浏览</span>
-              <button class="icon-btn"><img src="./images/icons/icon_more.svg" alt=""></button>
+              <button class="icon-btn"><img src="images\icons\更多-06.png" alt=""></button>
             </div>
             <div class="panel-body">
               <div class="table simple">
@@ -190,28 +196,28 @@
                 </div>
                 <div class="tbody">
                   <div class="tr">
-                    <div class="td">open source</div>
-                    <div class="td">Jun 24, 2025</div>
+                    <div class="td">开源资料</div>
+                    <div class="td">6 24, 2025</div>
                     <div class="td"><span class="pill pill-progress">进行中</span></div>
                   </div>
                   <div class="tr">
-                    <div class="td">figure</div>
-                    <div class="td">Mar 10, 2025</div>
+                    <div class="td">结构设计</div>
+                    <div class="td">3 10, 2025</div>
                     <div class="td"><span class="pill pill-complete">已完成</span></div>
                   </div>
                   <div class="tr">
-                    <div class="td">animal</div>
-                    <div class="td">Nov 10, 2025</div>
+                    <div class="td">网页前端</div>
+                    <div class="td">11 10, 2025</div>
                     <div class="td"><span class="pill pill-complete">已完成</span></div>
                   </div>
                   <div class="tr">
-                    <div class="td">plant</div>
-                    <div class="td">Dec 20, 2025</div>
+                    <div class="td">参数建模</div>
+                    <div class="td">12 20, 2025</div>
                     <div class="td"><span class="pill pill-complete">已完成</span></div>
                   </div>
                   <div class="tr">
-                    <div class="td">festival</div>
-                    <div class="td">Jul 25, 2025</div>
+                    <div class="td">后处理</div>
+                    <div class="td">7 25, 2025</div>
                     <div class="td"><span class="pill pill-down">已下架</span></div>
                   </div>
                 </div>
@@ -222,93 +228,37 @@
       </main>
     </div>
     <script src="script.js"></script>
-const option = {
-  tooltip: {
-    trigger: 'item'
-  },
-  legend: {
-    top: '5%',
-    left: 'center'
-  },
-  series: [
-    {
-      name: 'Access From',
-      type: 'pie',
-      radius: ['40%', '70%'],
-      avoidLabelOverlap: false,
-      itemStyle: {
-        borderRadius: 10,
-        borderColor: '#fff',
-        borderWidth: 2
-      },
-      label: {
-        show: false,
-        position: 'center'
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: 40,
-          fontWeight: 'bold'
-        }
-      },
-      labelLine: {
-        show: false
-      },
-      data: [
-        { value: 1048, name: 'open source' },
-        { value: 735, name: 'plant' },
-        { value: 580, name: 'figure' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
-      ]
-    }
-  ]
-};
+
 <script>
+  // 等待 DOM 加载完成
   document.addEventListener('DOMContentLoaded', function () {
     const chartContainer = document.getElementById('chart-container');
+    if (!chartContainer) return;
+
+    // 创建 ECharts 实例
     const myChart = echarts.init(chartContainer);
 
-    // 数据映射：每个类别对应哪些教程
-    const dataMap = {
-      'open source': [
-        { name: '教程名', author: 'a1.svg', time: '2h 21min', status: 'Complete' }
-      ],
-      'plant': [
-        { name: '教程名', author: 'a3.svg', time: '58min', status: 'Approved' }
-      ],
-      'figure': [
-        { name: '教程名', author: 'a2.svg', time: '20min', status: 'In Progress' }
-      ],
-      'Union Ads': [
-        { name: '教程名', author: 'a4.svg', time: '5min', status: 'Pending' }
-      ],
-      'Video Ads': [
-        { name: '教程名', author: 'a5.svg', time: '22min', status: 'Rejected' }
-      ]
-    };
-
-    // 新的图表配置（你提供的）
+    // 你的图表配置
     const option = {
       tooltip: {
-        trigger: 'item'
+        trigger: 'item',
+        textStyle: { color: '#888888' } // 提示框文字 中性灰
       },
       legend: {
-        top: '5%',
-        left: 'center'
+        bottom: '5%',
+        left: 'center',
+        textStyle: {
+          color: '#888888' // 图例标签文字 中性灰
+        }
       },
+      color: ['#1677FF', '#7638FC', '#69C0FF', '#A680F9', '#BAE0FF'],
       series: [
         {
           name: 'Access From',
           type: 'pie',
           radius: ['40%', '70%'],
+          bottom: '20%',
           avoidLabelOverlap: false,
-          itemStyle: {
-            borderRadius: 10,
-            borderColor: '#fff',
-            borderWidth: 2
-          },
           label: {
             show: false,
             position: 'center'
@@ -317,54 +267,58 @@ const option = {
             label: {
               show: true,
               fontSize: 40,
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              color: '#888888' // 鼠标悬浮的中心大数字 中性灰
             }
           },
           labelLine: {
             show: false
           },
           data: [
-            { value: 1048, name: 'open source' },
-            { value: 735, name: 'plant' },
-            { value: 580, name: 'figure' },
-            { value: 484, name: 'Union Ads' },
-            { value: 300, name: 'Video Ads' }
+            { value: 1048, name: '开源资料' },
+            { value: 735, name: '网页前端' },
+            { value: 580, name: '参数化建模' },
+            { value: 484, name: '结构设计' },
+            { value: 300, name: '后处理' }
           ]
         }
       ]
     };
 
-    // 渲染图表
+    // 设置图表选项
     myChart.setOption(option);
 
-    // 点击事件处理
-    myChart.on('click', function (params) {
-      const categoryName = params.name;
-      const records = dataMap[categoryName] || [];
-
-      const tbody = document.querySelector('.table .tbody');
-      tbody.innerHTML = ''; // 清空原有内容
-
-      records.forEach(record => {
-        const tr = document.createElement('div');
-        tr.className = 'tr';
-        tr.innerHTML = `
-          <div class="td">${record.name}</div>
-          <div class="td">
-            <div class="avatar-row">
-              <img src="assets/avatars/${record.author}" alt="">
-            </div>
-          </div>
-          <div class="td">${record.time}</div>
-          <div class="td"><span class="status status-${record.status.toLowerCase().replace(/\s+/g, '-')}">${record.status}</span></div>
-        `;
-        tbody.appendChild(tr);
-      });
+    // 响应式调整
+    window.addEventListener('resize', function () {
+      myChart.resize();
     });
-
-    // 默认高亮第一个
-    
   });
+  // 假设 myChart 是已创建的实例
+myChart.on('click', function (params) {
+  const categoryName = params.name; // 获取点击的分类名称，如 "开源资料"
+  
+  // 调用函数来筛选收藏列表
+  filterCollection(categoryName);
+});
+function filterCollection(categoryName) {
+  const rows = document.querySelectorAll('.panel .table .tbody .tr');
+
+  rows.forEach(row => {
+    const category = row.getAttribute('data-category');
+    if (category === categoryName || categoryName === '全部') {
+      row.style.display = 'flex';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+    filterCollection('全部');
+
+  // 响应式调整
+  window.addEventListener('resize', function () {
+    myChart.resize();
+  });
+}
+
 </script>
   </body>
 </html>

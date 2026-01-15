@@ -50,6 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 const radarOption = {
     backgroundColor: '#121212',
-    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+    color: ['#6767f9', '#4534ff', '#56A3F1', '#FF917C'],
     // ...其他配置
 };

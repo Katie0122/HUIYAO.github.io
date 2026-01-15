@@ -67,7 +67,45 @@ body {
     transition: all 0.2s;
     font-size: 14px;
 }
+.sun-icon {
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: color 0.2s ease;
+}
 
+.sun-icon:hover {
+    color: #FFD700; /* 太阳光泽效果 */
+}
+.sun-corner-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.sun-corner-btn img {
+    width: 20px;
+    height: 20px;
+    background: transparent !important; /* 强制透明背景 */
+    border: none;
+    outline: none;
+}
+.icon-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 .nav-item:hover, .nav-item.active {
     color: var(--text-primary);
 }

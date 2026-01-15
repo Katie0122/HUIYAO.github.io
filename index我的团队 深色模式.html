@@ -34,9 +34,9 @@
             </nav>
             <div class="user-profile">
                 <div class="avatar">
-                    <img src="images\avatar-placeholder.svg" alt="User">
+                    <img src="images/icons/头像1.png" alt="User">
                 </div>
-                <span>ByeWind</span>
+                <span>李慧瑶</span>
             </div>
         </aside>
 
@@ -48,7 +48,7 @@
             
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="搜索">
             </div>
 
             <div class="table-container">
@@ -73,31 +73,44 @@
 
         <!-- Right Panel -->
         <aside class="details-panel">
-            <div class="panel-header">
-                <div class="panel-controls">
-                    <i class="fa-solid fa-table-columns"></i>
-                    <i class="fa-solid fa-chevron-up"></i>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="close-btn">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
+         <div class="panel-header">
+            <header class="main-header">
+    
+    
+    <!-- 新增：太阳图标按钮 -->
+    <button class="sun-corner-btn" onclick="window.location.href='index我的团队.html'">
+        <img src="images/icons/太阳深色.png" alt="Sun Icon" width="20" height="20">
+    </button>
+</header>
+    <!-- 原有的 panel-controls 保留 -->
+    <div class="panel-controls">
+        <i class="fa-solid fa-table-columns"></i>
+        <i class="fa-solid fa-chevron-up"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <!-- 原有的 icon-actions 保留 -->
+    <div class="icon-actions">
+        <div class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+</div>
 
             <div class="selected-user">
                 <div class="user-header">
-                    <h2>ByeWind</h2>
-                    <span class="user-id">#CM9801</span>
+                    <h2>李慧瑶</h2>
+                    <span class="user-id">2022015306</span>
                 </div>
                 <div class="large-avatar">
-                    <img src="images\avatar-large-placeholder.svg" alt="Large Avatar">
+                    <img src="images/icons/头像1.png" alt="Large Avatar">
                 </div>
             </div>
 
             <div class="info-cards">
                 <div class="info-card">
                     <label>姓名</label>
-                    <div class="value">Lihuiyao</div>
+                    <div class="value">李慧瑶</div>
                 </div>
                 <div class="info-card">
                     <label>邮箱</label>
@@ -110,7 +123,7 @@
                 <div class="info-card">
                     <label>注册时间</label>
                     <div class="value-row">
-                        <span>Feb 2, 2025, 8:00 AM</span>
+                        <span>3 2, 2025, 8:00 </span>
                         <i class="fa-regular fa-calendar"></i>
                     </div>
                 </div>

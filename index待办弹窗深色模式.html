@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOPHICAR 待办弹窗 - 深色模式</title>
+  <link rel="stylesheet" href="styles待办弹窗深色模式.css">
+</head>
+<body class="app">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-mark"></div>
+        <span class="sidebar-logo-text">SOPHICAR</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-item is-active">个人信息</button>
+        <button class="sidebar-nav-item">学习分析</button>
+        <button class="sidebar-nav-item">文件库</button>
+        <button class="sidebar-nav-item">我的团队</button>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="main-header">
+        <div class="main-header-left">
+          <h1 class="main-title">设置</h1>
+          <div class="main-breadcrumb">个人信息</div>
+        </div>
+        <div class="main-header-right">
+          <div class="search-bar">
+            <span class="search-icon"></span>
+            <input class="search-input" placeholder="Search">
+          </div>
+          <button class="icon-button" aria-label="帮助"></button>
+          <button class="icon-button" aria-label="主题"></button>
+          <button class="icon-button" aria-label="通知"></button>
+          <button class="primary-chip" type="button" data-open-todo>待办</button>
+        </div>
+      </header>
+      <section class="main-grid">
+        <section class="card card-profile">
+          <div class="profile-avatar"></div>
+          <div class="profile-info">
+            <div class="profile-name">Lihuyao</div>
+            <div class="profile-subtitle">这里是个性签名占位文本</div>
+          </div>
+        </section>
+        <section class="card card-section"></section>
+        <section class="card card-section"></section>
+        <section class="card card-section"></section>
+      </section>
+    </main>
+  </div>
+  <div class="todo-modal-backdrop is-visible" data-todo-backdrop>
+    <section class="todo-modal" role="dialog" aria-modal="true" aria-labelledby="todo-title">
+      <header class="todo-modal-header">
+        <div class="todo-title-group">
+          <h2 id="todo-title" class="todo-title">待办</h2>
+        </div>
+        <button class="close-button" type="button" aria-label="关闭待办" data-close-todo></button>
+      </header>
+      <section class="todo-calendar">
+        <div class="todo-calendar-week">
+          <button class="todo-day" type="button" data-day="22">
+            <span class="todo-day-label">Su</span>
+            <span class="todo-day-number">22</span>
+          </button>
+          <button class="todo-day is-active" type="button" data-day="23">
+            <span class="todo-day-label">Mo</span>
+            <span class="todo-day-number">23</span>
+          </button>
+          <button class="todo-day" type="button" data-day="24">
+            <span class="todo-day-label">Tu</span>
+            <span class="todo-day-number">24</span>
+          </button>
+          <button class="todo-day" type="button" data-day="25">
+            <span class="todo-day-label">We</span>
+            <span class="todo-day-number">25</span>
+          </button>
+          <button class="todo-day" type="button" data-day="26">
+            <span class="todo-day-label">Th</span>
+            <span class="todo-day-number">26</span>
+          </button>
+          <button class="todo-day" type="button" data-day="27">
+            <span class="todo-day-label">Fr</span>
+            <span class="todo-day-number">27</span>
+          </button>
+          <button class="todo-day" type="button" data-day="28">
+            <span class="todo-day-label">Sa</span>
+            <span class="todo-day-number">28</span>
+          </button>
+        </div>
+      </section>
+      <section class="todo-list" data-todo-list>
+      </section>
+    </section>
+  </div>
+  <script src="script待办弹窗深色模式.js"></script>
+</body>
+</html>
+

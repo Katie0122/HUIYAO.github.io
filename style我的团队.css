@@ -110,7 +110,29 @@ body {
     height: 100%;
     object-fit: cover;
 }
+.sun-corner-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 
+.sun-corner-btn img {
+    width: 20px;
+    height: 20px;
+    background: transparent !important; /* 强制透明背景 */
+    border: none;
+    outline: none;
+}
 /* Main Content */
 .main-content {
     flex: 1;
