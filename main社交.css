@@ -1,0 +1,393 @@
+@import 'variables.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-body); /* Seems to blend with body in screenshot, or maybe white? */
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    border-right: 1px solid rgba(0,0,0,0.05); /* Subtle separator */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: var(--spacing-sm);
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent-blue); /* Placeholder */
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    text-decoration: none;
+    color: var(--text-secondary);
+    gap: var(--spacing-md);
+    transition: color 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.nav-item.active .text {
+    /* Maybe some indicator? */
+}
+
+.nav-item.active {
+    background-color: #e6e6e6; /* Active background */
+    border-radius: var(--radius-lg);
+    padding-left: var(--spacing-md);
+    margin-left: calc(var(--spacing-md) * -1);
+}
+
+
+.user-profile {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumbs .crumb.active {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.search-bar {
+    background: var(--bg-white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.header-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Kanban Board */
+.kanban-board {
+    display: flex;
+    gap: var(--spacing-xl);
+    height: 100%;
+    overflow-x: auto;
+}
+
+.kanban-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.todo { background-color: var(--status-todo); }
+.status-dot.done { background-color: var(--status-done); }
+.status-dot.expired { background-color: var(--status-expired); }
+
+.column-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.count {
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+/* Cards */
+.task-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-float);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.card-users {
+    display: flex;
+}
+
+.user-avatar.small {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    border: 2px solid var(--bg-white);
+    margin-right: -8px;
+}
+
+.card-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 380px;
+    height: 600px;
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.chat-header {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.chat-body {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: #f0f2f5;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.message {
+    display: flex;
+    gap: var(--spacing-sm);
+    max-width: 85%;
+}
+
+.message.sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ccc;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message .bubble {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+}
+
+.message.sent .bubble {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    border-top-right-radius: 0;
+}
+
+.message .time {
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.message.sent .time {
+    color: rgba(255,255,255,0.7);
+}
+
+.chat-footer {
+    padding: var(--spacing-md);
+    background: var(--bg-white);
+    border-top: 1px solid #eee;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    padding: 4px 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+.input-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.input-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}

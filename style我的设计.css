@@ -1,0 +1,447 @@
+:root {
+    --bg-color: #F7F9FB;
+    --sidebar-bg: #F7F9FB;
+    --white: #FFFFFF;
+    --text-primary: #1C1C1E;
+    --text-secondary: #8E8E93;
+    --accent-color: #1890FF;
+    --border-color: #E5E5EA;
+    --hover-bg: #E4E5E7;
+    --nav-active-bg: #E6F1FF; /* Light blue for active state if needed, but design shows greyish? */
+    --nav-active-bg-design: #E8E8E8; /* Looks like a subtle grey in the design for "Learning Center" */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px; /* Slightly wider */
+    background-color: transparent; /* Blends with body */
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    padding-left: 12px;
+}
+
+.logo-icon {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.logo-text {
+    color: #333;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: var(--text-primary);
+}
+
+.nav-item.active {
+    background-color: var(--white);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+/* Header */
+.top-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.breadcrumbs i {
+    font-size: 16px;
+    color: var(--text-primary); /* Icons seem darker */
+}
+
+.crumb.active {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #EAECEF;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 200px;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-bar .shortcut-hint {
+    font-size: 12px;
+    background: rgba(0,0,0,0.1);
+    padding: 0 6px;
+    border-radius: 4px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Content Body */
+.content-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 40px;
+}
+
+/* Banner */
+.banner-section {
+    width: 100%;
+    height: 360px;
+    background-color: #ddd;
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    position: relative;
+    background-image: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Placeholder gradient */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Mocking the blurry background image look */
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* In a real scenario, this would be the image */
+    background: url('../assets/banner_placeholder.jpg') center/cover; 
+    filter: blur(20px); /* Just to mimic the blur if no image */
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* If we don't have an image, we can just use a color block, but let's try to be fancy with CSS if possible or just rely on the placeholder.
+   The design shows a 3D car model or something similar on a blurred background. 
+   I'll just put a solid color or gradient for now as I don't have the asset. 
+*/
+.banner-section {
+    width: 100%;
+    height: 480px;
+    background-image: url('../images/icons/我的设计图.png'); /* 修改路径 */
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgba(0,0,0,0.1); /* Slight darken */
+}
+
+.banner-actions {
+    display: flex;
+    gap: 80px; /* Wide gap */
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.action-btn i {
+    font-size: 32px;
+    border: 2px solid white;
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.project-info {
+    margin-bottom: 24px;
+}
+
+.project-info h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 参数评价 : 教师评语 = 1:2 */
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.chart-container {
+  width: 100%;
+  height: 320px; /* 增大高度以容纳完整雷达图 */
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 居中图表 */
+}
+.info-card .card-content {
+  min-height: 320px; /* 与雷达图高度一致 */
+  max-height: 320px;
+  overflow-y: auto; /* 内容多时滚动 */
+}
+.card-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  min-height: 320px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: 100%; /* 显式设置宽度 */
+}
+.info-card .card-header {
+    margin-bottom: 16px;
+}
+
+.info-card .card-header h3 {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.chart-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-title.green {
+    color: #4ADE80; /* Greenish */
+}
+
+.chart-title.red {
+    color: #FF4D4F; /* Reddish */
+}
+
+.more-btn {
+    background: #F5F5F5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Radar Mockup */
+.radar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.radar-chart-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.radar-mockup {
+    width: 200px;
+    height: 200px;
+}
+
+.radar-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.chart-labels .label {
+    position: absolute;
+    font-size: 10px;
+    color: #1890FF;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Positioning labels roughly */
+.label.top { top: 10%; left: 50%; transform: translateX(-50%); }
+.label.right-top { top: 30%; right: 10%; }
+.label.right-bottom { bottom: 30%; right: 10%; }
+.label.left-bottom { bottom: 30%; left: 10%; }
+.label.left-top { top: 30%; left: 10%; }
+
+/* Comments */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%; /* 确保填满父容器 */
+}
+
+.comments-list p {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

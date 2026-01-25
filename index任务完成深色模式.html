@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOPHICAR - 任务完成</title>
+
+    <!-- 引入深色模式变量 -->
+    <link rel="stylesheet" href="variables任务完成深色模式.css">
+
+    <!-- 替换为深色模式样式表 -->
+    <link rel="stylesheet" href="style任务完成深色模式.css"> <!-- ✅ 关键：使用深色模式CSS -->
+
+    <!-- 其他样式保持不变 -->
+    <link rel="stylesheet" href="animations任务完成.css">
+    <link rel="stylesheet" href="widget任务完成.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-area">
+ <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span class="logo-text">SOPHICAR</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index第一页 深色模式.html" class="nav-item">
+  <img src="./images/icons/overview.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>个人信息</span>
+                </a>
+                <a href="index 深色模式.html" class="nav-item active">
+  <img src="./images/icons/book.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>学情分析</span>
+                </a>
+                <a href="index文件夹 深色模式.html" class="nav-item">
+  <img src="./images/icons/chart-pie.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>文件夹</span>
+                </a>
+                <a href="index我的团队深色模式.html" class="nav-item">
+  <img src="./images/icons/users.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>我的团队</span>
+                </a>
+            </nav>
+
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="images\icons\头像1.png" alt="User" id="user-avatar">
+                </div>
+                <span class="user-name">李明</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="breadcrumbs">
+<a href="index 深色模式.html" class="crumb" style="color: #8E8E93; text-decoration: none;">学情分析</a>
+    <span class="separator">/</span>
+    <span class="crumb active">任务完成</span>
+</div>
+
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="搜索">
+                      
+                    </div>
+<button class="icon-btn" onclick="window.location.href='index任务完成.html'">
+    <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
+</button>
+                    <button class="icon-btn history-btn" onclick="window.location.href='index历史浏览深色模式.html'">
+                        <i class="ph ph-clock-counter-clockwise"></i>
+                    </button>
+
+                </div>
+            </header>
+
+            <!-- Kanban Board -->
+            <div class="kanban-board">
+                <!-- Column: Pending -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot pending"></span>
+                        <h3>待完成</h3>
+                        <span class="count">6</span>
+                    </div>
+                    <div class="card-list" id="pending-list">
+                        <!-- Card 1 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像1.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                         <div class="task-card">
+                            <div class="card-tag">网页前端</div>
+                            <h4 class="card-title">Github部署</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像1.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="task-card">
+                            <div class="card-tag">品牌设计</div>
+                            <h4 class="card-title">品牌标志</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像2.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                    <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="task-card">
+                            <div class="card-tag">毕业设计</div>
+                            <h4 class="card-title">开题报告优化</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像3.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column: Completed -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot completed"></span>
+                        <h3>已完成</h3>
+                        <span class="count">4</span>
+                    </div>
+                    <div class="card-list" id="completed-list">
+                         <!-- Card 1 -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像4.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar-group">
+                                    <img src="images\icons\头像1.png" alt="Avatar">
+                                    <span class="avatar-more">+1</span>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像5.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Card 4 -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像5.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                  <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column: Expired -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot expired"></span>
+                        <h3>已过期</h3>
+                        <span class="count">8</span>
+                    </div>
+                    <div class="card-list" id="expired-list">
+                         <!-- Card 1 -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像2.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                    <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像2.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                   <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像4.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                    <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-avatar">
+                                    <img src="images\icons\头像3.png" alt="Avatar">
+                                </div>
+                                <div class="card-meta">
+                                    <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
+                                    <span class="meta-item">
+  <a href="index标记链接深色模式.html" style="text-decoration: none; color: inherit;">
+    <i class="ph ph-paperclip"></i>
+  </a>
+</span>
+                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="app-footer">
+                <span class="copyright">© 2026 SOPHICAR</span>
+                <div class="footer-links">
+                    <a href="#">关于我们</a>
+                  
+                    <a href="#">联系我们</a>
+                </div>
+            </footer>
+            <!-- 在 <main> 的末尾添加 -->
+<div class="chat-trigger" onclick="toggleChat()">
+    <i class="ph ph-chat-circle-text"></i>
+    <span>SOPHICAR小助手</span>
+</div>
+
+<!-- 聊天弹窗（默认隐藏） -->
+<div class="chat-popup" id="chatPopup" style="display: none;">
+    <div class="chat-header">
+        <div class="chat-avatar">
+            <img src="images\icons\logo 扣.png" alt="Assistant">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">SOPHICAR小助手</span>
+            <i class="ph ph-caret-down"></i>
+        </div>
+        <button class="close-chat-btn" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-body">
+        <!-- 消息列表 -->
+        <!-- 对方消息 -->
+<div class="message received">
+    <div class="avatar">
+        <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+    </div>
+    <div class="bubble">
+        接下来专注于figma 优化，优化完后再处理web部署
+        <div class="time">8:00 PM</div>
+    </div>
+</div>
+
+<!-- 我的消息 -->
+<div class="message sent">
+    <div class="avatar">
+        <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+    </div>
+    <div class="bubble">
+        好的老师，我现在在静态页面部署了不能帮我看看问题吗
+        <div class="time">8:04 PM</div>
+    </div>
+</div>
+<div class="message received">
+    <div class="avatar">
+        <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+    </div>
+    <div class="bubble">
+        我发你几个教程你看看，不行的话再沟通
+        <div class="time">8:00 PM</div>
+    </div>
+</div>
+
+<!-- 我的消息 -->
+<div class="message sent">
+    <div class="avatar">
+        <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+    </div>
+    <div class="bubble">
+        收到，已经完成部署了谢谢老师。
+        <div class="time">8:04 PM</div>
+    </div>
+</div>
+    <div class="chat-footer">
+        <div class="input-container">
+            <input type="text" placeholder="输入信息" id="chatInput">
+            <div class="input-actions">
+                <button class="send-btn">➡️</button>
+                <button class="attach-btn">📎</button>
+            </div>
+        </div>
+    </div>
+</div>
+        </main>
+
+        <!-- Chat Widget -->
+       
+    <script>
+function toggleChat() {
+    const chatPopup = document.getElementById('chatPopup');
+    if (chatPopup.style.display === 'none' || !chatPopup.style.display) {
+        chatPopup.style.display = 'flex';
+    } else {
+        chatPopup.style.display = 'none';
+    }
+}
+
+</script>
+    <script src="main任务完成.js"></script>
+    <!-- 弹窗 -->
+<div class="modal" id="taskModal">
+  <div class="overlay"></div>
+  <div class="dialog">
+    <div class="dialog-body">
+      <div class="left">
+        <div class="list-header">
+          <span>任务</span>
+          <span>日期</span>
+        </div>
+        <ul class="task-list">
+          <!-- 示例任务项 -->
+          <li class="task-item">
+            <span class="task-name">参数建模</span>
+            <span class="status pill purple">进行中</span>
+          </li>
+          <li class="task-item">
+            <span class="task-name">github部署</span>
+            <span class="status pill purple">进行中</span>
+          </li>
+          <li class="task-item">
+            <span class="task-name">高保真优化</span>
+            <span class="status pill green">已完成</span>
+          </li>
+          <li class="task-item">
+            <span class="task-name">高保真优化</span>
+            <span class="status pill green">已完成</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <div class="upload-section">
+          <h3>设计稿件</h3>
+          <button class="primary">上传文件</button>
+          <div class="file-list">
+            <div class="file-row">
+              <span class="file-name">设计1.pdf</span>
+              <span class="file-meta">10.2MB</span>
+              <button class="file-remove">删除</button>
+            </div>
+          </div>
+          <div class="hint error">
+            上传新文件时需要先点击删除按钮，删除之前上传的文件，再重新上传。请上传格式为：pdf/jpg/mov/mp4的文件。文件大小不超过50M。
+          </div>
+        </div>
+
+        <div class="upload-section">
+          <h3>文字稿件</h3>
+          <button class="primary">上传文件</button>
+          <div class="file-list">
+            <div class="file-row">
+              <span class="file-name">设计1.doc</span>
+              <span class="file-meta">8.7MB</span>
+              <button class="file-remove">删除</button>
+            </div>
+          </div>
+          <div class="hint error">
+            上传新文件时需要先点击删除按钮，删除之前上传的文件，再重新上传。请上传格式为：pdf/jpg/docs/docx的文件。文件大小不超过50M。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog-footer">
+      <button class="ghost">取消</button>
+      <button class="secondary">暂存</button>
+      <button class="primary">确定</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -13,37 +13,37 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="logo">              
-                    <div class="logo-icon"></div>
-                    <span class="logo-text">SOPHICAR</span>
-                </div>
+                <div class="logo">
+    <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
+    <span class="logo-text">SOPHICAR</span>
+</div>
             </div>
 
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <ul>
-                       <li class="nav-item active">
+                       <li class="nav-item">
     <a href="index第一页 深色模式.html">
-        <img src="./images/icons/overview.svg" class="icon" alt="Overview">
+         <img src="./images/icons/overview.svg" class="icon" alt="Literature" style="filter: invert(1);">
         <span class="text">个人信息</span>
     </a>
 </li>
                         <li class="nav-item active">
                             <a href="#index 深色模式.html">
-                                <img src="./images/icons/book.svg" class="icon" alt="Literature">
+                                <img src="./images/icons/book.svg" class="icon" alt="Literature" style="filter: invert(1);">
                                 <span class="text">学习中心</span>
                             </a>
                         </li>
                       
                         <li class="nav-item">
   <a href="index文件夹 深色模式.html">
-    <img src="./images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+     <img src="./images/icons/chart-pie.svg" class="icon" alt="Literature" style="filter: invert(1);">
     <span class="text">文件夹</span>
   </a>
 </li>
                         <li class="nav-item">
   <a href="index我的团队 深色模式.html">
-    <img src="./images/icons/users.svg" class="icon" alt="Surveys">
+ <img src="./images/icons/users.svg" class="icon" alt="Literature" style="filter: invert(1);">
     <span class="text">我的团队</span>
   </a>
 </li>
@@ -54,10 +54,10 @@
             <div class="sidebar-footer">
                 <div class="user-profile">
                     <div class="avatar">
-                        <img src="./images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+                        <img src="./images/icons/头像3.png" alt="User Avatar" style="width: 24px; height: 24px; border-radius: 50%;">
                     </div>
                     <div class="user-info">
-                        <span class="name">Student</span>
+                        <span class="name">李华</span>
                     </div>
                 </div>
             </div>
@@ -68,27 +68,22 @@
             <header class="top-header">
                 <div class="header-left">
                     <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
-                    <div class="breadcrumbs">
-                        <span class="breadcrumb-item text-muted">首页</span>
-                        <span class="separator">/</span>
-                        <span class="breadcrumb-item active">学情分析</span>
-                    </div>
+                <div class="breadcrumbs">
+<a href="index第一页 深色模式.html" class="crumb" style="color: #8E8E93; text-decoration: none;">首页</a>
+    <span class="separator">/</span>
+    <span class="crumb active">学情分析</span>
+</div>
                 </div>
 
                 <div class="header-right">
                     <div class="search-bar">
     <div class="search-icon"></div>
-    <input type="text" class="search-input" placeholder="Search...">
+    <input type="text" class="search-input" placeholder="搜索">
 </div>
 <button class="action-btn" onclick="window.location.href='index.html'">
     <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
 </button>
-                    <div class="header-actions">
-                        <button class="action-btn">
-                            <img src="./images/icons/bell.svg" alt="Notifications" width="20" height="20">
-                            <span class="badge"></span>
-                        </button>
-                    </div>
+                   
                 </div>
             </header>
 
@@ -99,7 +94,7 @@
                         <div class="stat-label">今日积分</div>
                         <div class="stat-value">128</div>
                         <div class="stat-trend trend-up">
-                            <span>+12 New this week</span>
+                            <span>+12 本周</span>
                         </div>
                     </div>
                     
@@ -107,7 +102,7 @@
                         <div class="stat-label">累计积分</div>
                         <div class="stat-value">13</div>
                         <div class="stat-trend trend-up">
-                            <span>+5% vs last week</span>
+                            <span>+5% 较上周</span>
                         </div>
                     </div>
                     
@@ -115,7 +110,7 @@
                         <div class="stat-label">今日测试</div>
                         <div class="stat-value">1</div>
                         <div class="stat-trend trend-up">
-                            <span>Target: 500</span>
+                            <span>目标: 500</span>
                         </div>
                     </div>
                     
@@ -123,7 +118,7 @@
                         <div class="stat-label">累计测试</div>
                         <div class="stat-value">5</div>
                         <div class="stat-trend trend-down">
-                            <span>Deadline approaching</span>
+                            <span>较上周</span>
                         </div>
                     </div>
 
@@ -135,8 +130,8 @@
         <div class="card-title">测试累计</div>
         <div class="card-actions">
             <select class="select-sm">
-                <option>This Month</option>
-                <option>Last Month</option>
+                <option>本月</option>
+                <option>上月</option>
             </select>
         </div>
     </div>
@@ -147,7 +142,7 @@
 <div class="card widget-section" style="grid-column: span 6;">
     <div class="card-header">
         <div class="card-title">技能评估</div>
-        <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+        <a href="#" style="font-size: 12px; color: var(--primary-color);"></a>
     </div>
     <div class="chart-container" id="radar-chart" style="width: 100%; height: 280px;"></div> <!-- 改为 280px，去掉 margin -->
 </div>
@@ -161,8 +156,9 @@
     <div class="design-list">
         <!-- 第一个设计项 -->
         <div class="design-item">
-            <div class="design-image">
-                <img src="./images/icons/我的设计图.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+             <div class="design-image">
+               <img src="./images/icons/我的设计图.png" alt="我的设计" class="design-image"
+     onclick="window.location.href='index我的设计深色模式.html'">
             </div>
             <div class="design-info">
                 <div class="design-name">名称</div>
@@ -175,8 +171,9 @@
 
         <!-- 第二个设计项 -->
         <div class="design-item">
-            <div class="design-image">
-                <img src="./images/icons/我的设计图6.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+             <div class="design-image">
+               <img src="./images/icons/我的设计图6.png" alt="我的设计" class="design-image"
+     onclick="window.location.href='index我的设计深色模式.html'">
             </div>
             <div class="design-info">
                 <div class="design-name">名称</div>
@@ -189,8 +186,9 @@
 
         <!-- 第三个设计项 -->
         <div class="design-item">
-            <div class="design-image">
-                <img src="./images/icons/我的设计图3.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+           <div class="design-image">
+               <img src="./images/icons/我的设计图3.png" alt="我的设计" class="design-image"
+     onclick="window.location.href='index我的设计深色模式.html'">
             </div>
             <div class="design-info">
                 <div class="design-name">名称3</div>
@@ -203,8 +201,9 @@
 
         <!-- 第四个设计项 -->
         <div class="design-item">
-            <div class="design-image">
-                <img src="./images/icons/我的设计图4.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+<div class="design-image">
+               <img src="./images/icons/我的设计图4.png" alt="我的设计" class="design-image"
+     onclick="window.location.href='index我的设计深色模式.html'">
             </div>
             <div class="design-info">
                 <div class="design-name">名称4</div>
@@ -217,8 +216,9 @@
 
         <!-- 第五个设计项 -->
         <div class="design-item">
-            <div class="design-image">
-                <img src="./images/icons/我的设计图5.png" alt="My Design" style="width: 100%; height: auto; border-radius: 8px;">
+<div class="design-image">
+               <img src="./images/icons/我的设计图5.png" alt="我的设计" class="design-image"
+     onclick="window.location.href='index我的设计深色模式.html'">
             </div>
             <div class="design-info">
                 <div class="design-name">名称5</div>
@@ -235,56 +235,65 @@
                      <div class="card widget-section">
                         <div class="card-header">
                             <div class="card-title">我的任务</div>
-                            <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+                            <a href="#" style="font-size: 12px; color: var(--primary-color);">查看全部</a>
                         </div>
                         <div class="list-container">
                             <div class="list-item">
+
                                 <div class="item-info">
-                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
-                                    <div class="item-text">
-                                        <span class="item-title">AI in Education 2024</span>
-                                        <span class="item-subtitle">Smith et al.</span>
-                                    </div>
-                                </div>
-                                <span class="tag tag-pending">To Read</span>
+    <div class="item-text">
+        <a href="index任务完成深色模式.html" class="item-title-link">
+            <span class="item-title">网页部署</span>
+        </a>
+        <span class="item-subtitle">李明</span>
+    </div>
+</div>
+                                <span class="tag tag-pending">待办</span>
                             </div>
                             <div class="list-item">
-                                <div class="item-info">
-                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                                               <div class="item-info">
+    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
-                                    <div class="item-text">
-                                        <span class="item-title">Machine Learning Basics</span>
-                                        <span class="item-subtitle">Goodfellow</span>
-                                    </div>
-                                </div>
-                                <span class="tag tag-progress">Reading</span>
+    <div class="item-text">
+        <a href="index任务完成深色模式.html" class="item-title-link">
+            <span class="item-title">threejs了解</span>
+        </a>
+        <span class="item-subtitle">李明</span>
+    </div>
+</div>
+                                <span class="tag tag-progress">待办</span>
                             </div>
                             <div class="list-item">
-                                <div class="item-info">
-                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                                               <div class="item-info">
+    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
-                                    <div class="item-text">
-                                        <span class="item-title">Cognitive Load Theory</span>
-                                        <span class="item-subtitle">Sweller</span>
-                                    </div>
-                                </div>
-                                <span class="tag tag-done">Done</span>
+    <div class="item-text">
+        <a href="index任务完成深色模式.html" class="item-title-link">
+            <span class="item-title">高保真优化</span>
+        </a>
+        <span class="item-subtitle">李明</span>
+    </div>
+</div>
+                                <span class="tag tag-done">已提交</span>
                             </div>
                             <div class="list-item">
-                                <div class="item-info">
-                                    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
+                                                                <div class="item-info">
+    <div class="item-icon-box" style="width: 32px; height: 32px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-dark);">
                                         <img src="./images/icons/book.svg" width="16" height="16">
                                     </div>
-                                    <div class="item-text">
-                                        <span class="item-title">Design Systems Guide</span>
-                                        <span class="item-subtitle">Figma</span>
-                                    </div>
-                                </div>
-                                <span class="tag tag-pending">To Read</span>
+    <div class="item-text">
+        <a href="index任务完成深色模式.html" class="item-title-link">
+            <span class="item-title">react可视化框架搭建</span>
+        </a>
+        <span class="item-subtitle">李明</span>
+    </div>
+</div>
+                                <span class="tag tag-pending">待办</span>
                             </div>
                         </div>
                     </div>

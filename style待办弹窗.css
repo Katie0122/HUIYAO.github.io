@@ -1,0 +1,232 @@
+:root {
+  --bg-body: #ffffff;
+  --bg-card: #f9f9f9;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --border-color: #e0e0e0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --text-muted: #999;
+  --primary-color: #2f80ff;
+  --primary-hover: #1a73e8;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.app {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.todo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.todo-modal-backdrop.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.todo-modal {
+  width: min(520px, 90vw);
+  max-width: 600px;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.todo-modal-backdrop.is-visible .todo-modal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.todo-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.close-button::before,
+.close-button::after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background: var(--text-primary);
+  position: absolute;
+}
+
+.close-button::before {
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
+}
+
+.todo-calendar {
+  padding-top: 8px;
+}
+
+.todo-calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.todo-day {
+  padding: 8px 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.todo-day:hover {
+  background: var(--bg-card);
+  color: var(--primary-color);
+}
+
+.todo-day.is-active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.todo-day-label {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.todo-day-number {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.todo-list {
+  max-height: 280px;
+  overflow-y: auto;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  padding: 12px 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item:hover {
+  background: var(--bg-overlay);
+}
+
+.todo-item-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-icon-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todo-icon-button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.todo-icon-button[data-action="edit"]::before {
+  content: "✏️";
+  font-size: 14px;
+}
+
+.todo-icon-button[data-action="delete"]::before {
+  content: "🗑️";
+  font-size: 14px;
+}
+
+.todo-empty {
+  padding: 20px;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 14px;
+}

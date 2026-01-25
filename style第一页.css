@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item a {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 0px 10px;
     border-radius: var(--radius-sm);
     transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -140,14 +140,6 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
 }
 
-.sidebar {
-    width: 300px;
-    background: #f5f6f8;
-    padding: 16px 16px 24px;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #eaedf2;
-}
 
 .brand {
     gap: 8px;
@@ -158,12 +150,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.side-nav {
-    margin-top: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
 
 .nav-link {
     padding: 10px 12px;
@@ -296,11 +282,14 @@ h1, h2, h3, h4, h5, h6 {
     place-items: center;
     margin-right: 12px;
 }
-
-.name {
-    font-weight: 600;
-    margin-bottom: 2px;
+.nav-item .icon {
+    display: inline-block; /* ✅ 推荐 */
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    opacity: 0.8;
 }
+
 
 .tagline {
     color: #666;
@@ -564,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-item {
     display: flex;
     align-items: center;
-    padding: 10px 12px;
+    padding: 10px 4px;
     margin-bottom: 4px;
     border-radius: 8px;
     color: #8e8e93;

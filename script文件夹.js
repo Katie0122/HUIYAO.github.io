@@ -72,7 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     ]
   };
+// 在 myChart.setOption(option) 前添加：
+myChart.on('click', function (params) {
+  const categoryName = params.name; // 获取点击的分类名，如 "开源资料"
+  console.log('点击了:', categoryName);
 
+  // 调用函数过滤右侧表格数据
+  filterCollection(categoryName);
+});
   // 使用配置项渲染图表
   myChart.setOption(option);
 });
@@ -98,4 +105,16 @@ const radarOption = {
     color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
     // ...其他配置
 };
+function filterCollection(category) {
+  const tbody = document.querySelector('.table tbody');
+  const rows = tbody.querySelectorAll('.tr');
 
+  rows.forEach(row => {
+    const modelName = row.querySelector('.td:nth-child(1)').textContent;
+    if (modelName === category) {
+      row.style.display = ''; // 显示
+    } else {
+      row.style.display = 'none'; // 隐藏
+    }
+  });
+}

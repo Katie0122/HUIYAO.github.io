@@ -1,0 +1,360 @@
+:root {
+    /* 深色主题变量 */
+    --bg-body: #121212;
+    --bg-sidebar: #1e1e1e;
+    --bg-card: #1f1f1f;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b5;
+    --text-tertiary: #a0a0a0;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.12);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --accent-color: #4da6ff;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* 重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    padding-left: 12px;
+}
+
+.logo-icon {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.logo-text {
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+.nav-item.active {
+    background-color: var(--accent-color);
+    color: var(--bg-body);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 40px;
+    background-color: var(--bg-body);
+}
+
+/* Header */
+.top-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.breadcrumbs i {
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.crumb.active {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 200px;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    color: var(--text-primary);
+}
+
+.search-bar .shortcut-hint {
+    font-size: 12px;
+    background: rgba(0,0,0,0.3);
+    padding: 0 6px;
+    border-radius: 4px;
+    color: var(--text-secondary);
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Content Body */
+.content-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    background-color: var(--bg-body);
+}
+
+/* Banner */
+.banner-section {
+    background-image: url('../images/icons/我的设计图.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(0.8);
+    height: 480px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-actions {
+    display: flex;
+    gap: 80px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.action-btn i {
+    font-size: 32px;
+    border: 2px solid white;
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0,0,0,0.3);
+}
+
+.project-info {
+    margin-bottom: 24px;
+}
+
+.project-info h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Grid Layout */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+/* 自定义 .my-design-section 的滚动条样式 */
+.my-design-section::-webkit-scrollbar {
+    height: 8px; /* 滚动条高度 */
+    width: 8px;
+}
+
+.my-design-section::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06); /* 轨道背景，深灰半透明 */
+    border-radius: 4px;
+}
+
+.my-design-section::-webkit-scrollbar-thumb {
+    background: #444; /* 深灰色拇指 */
+    border-radius: 4px;
+}
+
+.my-design-section::-webkit-scrollbar-thumb:hover {
+    background: #666; /* 悬停时稍亮 */
+}
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-card .card-content {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    min-height: 320px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    width: 100%;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.chart-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-title.green {
+    color: #4da6ff;
+}
+
+.chart-title.red {
+    color: #6155F5;
+}
+
+.more-btn {
+    background: var(--hover-bg);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments-list p {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.5;
+    width: 100%;
+}
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%; /* 确保填满父容器 */
+}

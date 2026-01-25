@@ -38,10 +38,19 @@ body {
   gap: 0;
   min-height: 100vh;
 }
+.sidebar-nav {
+    flex: auto;
+    padding: 10px 0.1px; /* 减少顶部和底部间距 */
+    overflow-y: auto;.nav-item.active {
+  background-color: #4da6ff;
+  color: white;
+  border-radius: 8px;
+}
+}
 
 .sidebar {
   background: #000000;
-  padding: 24px 16px;
+  padding: 24px 0.1px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -56,24 +65,56 @@ body {
   height: 44px;
   border-radius: 50%;
 }
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 10px;
-  border-radius: 12px;
-  color: var(--text);
-  text-decoration: none;
-  transition: 180ms ease;
+  padding: 10px 12px; /* 保持与 index.html 一致 */
+  margin-bottom: 4px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  font-size: 14px;
 }
-.nav-item img { width: 20px; height: 20px }
-.nav-item:hover { background: #e8ebef }
-.nav-item.active { background: #ffffff; box-shadow: var(--shadow) }
+
+.nav-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--spacing-sm);
+    opacity: 0.4;
+}
+
+/* 确保所有 nav-item 内的 a 标签无下划线 */
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  
+}
+.nav-item .text {
+  color: var(--muted); /* 未激活时为灰色 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-item.active .text {
+  color: white; /* 激活时为白色 */
+}
+/* 设置激活状态背景为蓝色 */
+.nav-item.active {
+  background-color: #4da6ff; /* 使用你的克莱茵蓝主题色 */
+  color: white;
+  border-radius: 8px;
+}
+
+/* 悬停时也保持无下划线 */
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--text-primary);
+}
+/* 确保导航项文本为黑色，无下划线 */
 
 .content {
   padding: 24px;
@@ -100,7 +141,17 @@ body {
   font-weight: 700;
   margin: 0;
 }
-
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  margin-top: 8px; /* 微调向上 */
+}
+.user-profile .name {
+    font-size: 14px;
+    font-weight: 500;
+}
 .stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

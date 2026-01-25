@@ -1,0 +1,57 @@
+/* Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-color: var(--bg-surface);
+    padding: 8px 16px 8px 8px;
+    border-radius: 40px; /* Pill shape */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1000;
+    border: 1px solid var(--border-color);
+}
+
+.chat-widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chat-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 8px;
+}
+
+.chat-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.chat-info i {
+    font-size: 14px;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,66 @@
+:root {
+  /* Colors */
+  --bg-page: #F5F6FA;
+  --bg-surface: #FFFFFF;
+  --bg-sidebar: #F9FAFB;
+  
+--bg-primary: #f8f9fa; 
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #D1D5DB;
+  
+  --color-brand: #3B82F6;
+  --color-brand-light: #EFF6FF;
+  
+  --status-pending: #F59E0B;
+  --status-pending-bg: #FFFBEB;
+  --status-completed: #10B981;
+  --status-completed-bg: #ECFDF5;
+  --status-expired: #8B5CF6;
+  --status-expired-bg: #F5F3FF;
+  
+  --border-color: #E6E8F0;
+      --border-light: #e9ecef;  
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Layout */
+  --sidebar-width: 260px;
+  --header-height: 80px;
+  --card-radius: 12px;
+  --btn-radius: 8px;
+  
+  /* Shadows */
+  
+ --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}

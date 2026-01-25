@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOPHICAR · 任务完成</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style交作业.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#E6F4FF"/><path d="M16 6c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8S11.582 6 16 6z" fill="#1677FF"/></svg>
+        <span>SOPHICAR</span>
+      </div>
+      <nav class="menu">
+        <a class="menu-item active">个人信息</a>
+        <a class="menu-item">学情分析</a>
+        <a class="menu-item">文件夹</a>
+        <a class="menu-item">我的团队</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="tabs">
+          <button class="tab">学情分析</button>
+          <button class="tab active">任务完成</button>
+        </div>
+        <div class="actions">
+          <div class="search">
+            <input type="text" placeholder="Search">
+          </div>
+          <button class="icon-btn" id="themeToggle" aria-label="切换主题">🌙</button>
+          <button class="icon-btn" aria-label="通知">🔔</button>
+        </div>
+      </header>
+
+      <section class="board">
+        <div class="board-header">
+          <h1>Table</h1>
+          <div class="board-tabs">
+            <button class="board-tab active"><span class="dot green"></span>已完成 4</button>
+            <button class="board-tab"><span class="dot blue"></span>待完成 6</button>
+            <button class="board-tab"><span class="dot purple"></span>已过期 8</button>
+          </div>
+          <div class="bar-actions">
+            <button id="openModal" class="primary">打开上传弹窗</button>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-header">
+              <img class="avatar" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='16' cy='16' r='16' fill='%23E6F4FF'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' fill='%231677FF'>B</text></svg>">
+              <div class="card-title">开题报告优化</div>
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>简单思维逻辑并公开部署至github</li>
+                <li>聚焦于figma优化</li>
+              </ol>
+            </div>
+            <div class="card-footer">
+              <button class="ghost">查看</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-header">
+              <img class="avatar" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='16' cy='16' r='16' fill='%23FFF1F0'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' fill='%23FF4D4F'>C</text></svg>">
+              <div class="card-title">用参数据模型驱动结构尺寸</div>
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>整理并驱动结构尺寸</li>
+                <li>完善数据源</li>
+              </ol>
+            </div>
+            <div class="card-footer">
+              <button class="ghost">查看</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-header">
+              <img class="avatar" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='16' cy='16' r='16' fill='%23F6FFED'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' fill='%2352C41A'>A</text></svg>">
+              <div class="card-title">资料整理</div>
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>归档现有文档</li>
+                <li>更新版本记录</li>
+              </ol>
+            </div>
+            <div class="card-footer">
+              <button class="ghost">查看</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="uploadModal" aria-hidden="true">
+    <div class="overlay"></div>
+    <div class="dialog">
+      <div class="dialog-body">
+        <div class="left">
+          <div class="list-header">
+            <div>任务</div>
+            <div>日期</div>
+          </div>
+          <ul class="task-list">
+            <li class="task-item">
+              <div class="task-name">参数建模</div>
+              <div class="status pill purple">进行中</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">github部署</div>
+              <div class="status pill gray">进行中</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+            <li class="task-item">
+              <div class="task-name">高保真优化</div>
+              <div class="status pill green">已完成</div>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <section class="upload-section" id="designUpload">
+            <h3>设计稿件</h3>
+            <button class="primary" data-target="design">上传文件</button>
+            <div class="file-list" data-role="list"></div>
+            <div class="hint error">上传新文件时需要先点击删除按钮，删除之前上传的文件，再重新上传。请上传格式为：pdf/jpg/mov/mp4的文件。文件大小不超过50M。</div>
+          </section>
+          <section class="upload-section" id="docUpload">
+            <h3>文字稿件</h3>
+            <button class="primary" data-target="doc">上传文件</button>
+            <div class="file-list" data-role="list"></div>
+            <div class="hint error">上传新文件时需要先点击删除按钮，删除之前上传的文件，再重新上传。请上传格式为：pdf/jpg/docs/docx的文件。文件大小不超过50M。</div>
+          </section>
+        </div>
+      </div>
+      <footer class="dialog-footer">
+        <button class="primary">确定</button>
+        <button class="secondary">暂存</button>
+        <button class="ghost" id="closeModal">取消</button>
+      </footer>
+      <input type="file" id="fileInput" hidden>
+    </div>
+  </div>
+
+  <script src="app交作业.js" defer></script>
+</body>
+</html>

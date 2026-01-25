@@ -19,6 +19,7 @@
     <div class="sidebar-header">
         <div class="logo">
             <div class="logo-icon"></div>
+            <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
             <span class="logo-text">SOPHICAR</span>
         </div>
     </div>
@@ -26,27 +27,27 @@
     <nav class="sidebar-nav">
         <div class="nav-section">
             <ul>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="index第一页 深色模式.html">
-                        <img src="./images/icons/overview.svg" class="icon" alt="Overview">
+                        <img src="./images/icons/overview.svg" class="icon" alt="Literature" style="filter: invert(1);">
                         <span class="text">个人信息</span>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="index 深色模式.html">
-                        <img src="./images/icons/book.svg" class="icon" alt="Literature">
+                        <img src="./images/icons/book.svg" class="icon" alt="Literature" style="filter: invert(1);">
                         <span class="text">学习中心</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="index文件夹 深色模式.html">
-                        <img src="./images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+                         <img src="./images/icons/chart-pie.svg" class="icon" alt="Literature" style="filter: invert(1);">
                         <span class="text">文件夹</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="index我的团队 深色模式.html">
-                        <img src="./images/icons/users.svg" class="icon" alt="Surveys">
+                       <img src="./images/icons/users.svg" class="icon" alt="Surveys" style="filter: invert(1);">
                         <span class="text">我的团队</span>
                     </a>
                 </li>
@@ -57,10 +58,10 @@
     <div class="sidebar-footer">
         <div class="user-profile">
             <div class="avatar">
-                <img src="./images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+                <img src="./images/icons/头像2.png" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
             </div>
             <div class="user-info">
-                <span class="name">Student</span>
+                <span class="name">李华</span>
             </div>
         </div>
     </div>
@@ -124,58 +125,67 @@
           <div>累计耗时</div>
           <div>状态</div>
         </div>
-        <div class="tbody">
-          <div class="tr">
-            <div class="td">教程名</div>
-            <div class="td">
-              <div class="avatar-row">
-                <img src="images\icons\头像1.png" alt="">
-              </div>
-            </div>
-            <div class="td">20分</div>
-            <div class="td"><span class="status status-progress">观看中</span></div>
-          </div>
-          <div class="tr">
-            <div class="td">教程名</div>
-            <div class="td">
-              <div class="avatar-row">
-                <img src="images\icons\头像2.png" alt="">
-              </div>
-            </div>
-            <div class="td">2时 21分</div>
-            <div class="td"><span class="status status-complete">已完成</span></div>
-          </div>
-          <div class="tr">
-            <div class="td">教程名</div>
-            <div class="td">
-              <div class="avatar-row">
-                <img src="images\icons\头像3.png" alt="">
-                <span class="more">+3</span>
-              </div>
-            </div>
-            <div class="td">5分</div>
-            <div class="td"><span class="status status-pending">已完成</span></div>
-          </div>
-          <div class="tr">
-            <div class="td">教程名</div>
-            <div class="td">
-              <div class="avatar-row">
-                <img src="images\icons\头像4.png" alt="">
-              </div>
-            </div>
-            <div class="td">58分</div>
-            <div class="td"><span class="status status-approved">已完成</span></div>
-          </div>
-          <div class="tr">
-            <div class="td">教程名</div>
-            <div class="td">
-              <div class="avatar-row">
-                <img src="images\icons\头像5.png" alt="">
-              </div>
-            </div>
-            <div class="td">22分</div>
-            <div class="td"><span class="status status-rejected">已过期</span></div>
-          </div>
+      <div class="tbody">
+  <div class="tr" data-category="开源资料">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像1.png" alt="">
+      </div>
+    </div>
+    <div class="td">20分</div>
+    <div class="td"><span class="status status-progress">观看中</span></div>
+  </div>
+          <div class="tr" data-category="开源资料">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像2.png" alt="">
+      </div>
+    </div>
+    <div class="td">2时20分</div>
+    <div class="td"><span class="status status-complete">已完成</span></div>
+  </div>
+                   <div class="tr" data-category="网页前端">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像2.png" alt="">
+      </div>
+    </div>
+    <div class="td">2时20分</div>
+    <div class="td"><span class="status status-complete">已完成</span></div>
+  </div>
+                   <div class="tr" data-category="开源资料">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像3.png" alt="">
+      </div>
+    </div>
+    <div class="td">2时20分</div>
+    <div class="td"><span class="status status-complete">已完成</span></div>
+  </div>
+                    <div class="tr" data-category="网页前端">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像4.png" alt="">
+      </div>
+    </div>
+    <div class="td">2时20分</div>
+    <div class="td"><span class="status status-complete">已完成</span></div>
+  </div>
+          <div class="tr" data-category="开源资料">
+    <div class="td">教程名</div>
+    <div class="td">
+      <div class="avatar-row">
+        <img src="images\icons\头像2.png" alt="">
+      </div>
+    </div>
+    <div class="td">2时20分</div>
+    <div class="td"><span class="status status-rejected">已过期</span></div>
+  </div>
         </div>
       </div>
     </div>
@@ -194,27 +204,27 @@
         </div>
         <div class="tbody">
           <div class="tr">
-            <div class="td">开源资料</div>
+          <div class="td" onclick="window.location.href='index历史浏览深色模式.html'">开源资料</div>
             <div class="td">6 24, 2025</div>
             <div class="td"><span class="pill pill-progress">进行中</span></div>
           </div>
           <div class="tr">
-            <div class="td">结构设计</div>
+        <div class="td" onclick="window.location.href='index历史浏览深色模式.html'">结构设计</div>
             <div class="td">3 10, 2025</div>
             <div class="td"><span class="pill pill-complete">已完成</span></div>
           </div>
           <div class="tr">
-            <div class="td">网页前端</div>
+     <div class="td" onclick="window.location.href='index历史浏览深色模式.html'">网页前端</div>
             <div class="td">11 10, 2025</div>
             <div class="td"><span class="pill pill-complete">已完成</span></div>
           </div>
           <div class="tr">
-            <div class="td">参数建模</div>
+      <div class="td" onclick="window.location.href='index历史浏览深色模式.html'">参数建模</div>
             <div class="td">12 20, 2025</div>
             <div class="td"><span class="pill pill-complete">已完成</span></div>
           </div>
           <div class="tr">
-            <div class="td">后处理</div>
+        <div class="td" onclick="window.location.href='index历史浏览深色模式.html'">后处理</div>
             <div class="td">7 25, 2025</div>
             <div class="td"><span class="pill pill-down">已下架</span></div>
           </div>
@@ -225,7 +235,7 @@
 </section>
       </main>
     </div>
-    <script src="script.js"></script>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -281,7 +291,14 @@
         }
       ]
     };
+// 在 myChart.setOption(option) 前添加：
+myChart.on('click', function (params) {
+  const categoryName = params.name; // 获取点击的分类名，如 "开源资料"
+  console.log('点击了:', categoryName);
 
+  // 调用函数过滤右侧表格数据
+  filterCollection(categoryName);
+});
     // 设置图表选项
     myChart.setOption(option);
 
@@ -290,6 +307,19 @@
       myChart.resize();
     });
   });
+  function filterCollection(category) {
+  const tbody = document.querySelector('.table tbody');
+  const rows = tbody.querySelectorAll('.tr');
+
+  rows.forEach(row => {
+    const modelName = row.querySelector('.td:nth-child(1)').textContent;
+    if (modelName === category) {
+      row.style.display = ''; // 显示
+    } else {
+      row.style.display = 'none'; // 隐藏
+    }
+  });
+}
 </script>
   </body>
 </html>

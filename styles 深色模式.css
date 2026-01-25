@@ -350,7 +350,25 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     align-items: center;
     gap: 4px;
 }
+/* 自定义 .my-design-section 的滚动条样式 */
+.my-design-section::-webkit-scrollbar {
+    height: 8px; /* 滚动条高度 */
+    width: 8px;
+}
 
+.my-design-section::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06); /* 轨道背景，深灰半透明 */
+    border-radius: 4px;
+}
+
+.my-design-section::-webkit-scrollbar-thumb {
+    background: #444; /* 深灰色拇指 */
+    border-radius: 4px;
+}
+
+.my-design-section::-webkit-scrollbar-thumb:hover {
+    background: #666; /* 悬停时稍亮 */
+}
 .trend-up { color: #4caf50; }
 .trend-down { color: #f44336; }
 
@@ -425,9 +443,29 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     font-weight: 500;
 }
 
-.tag-pending { background: #fff8e1; color: #fbc02d; }
-.tag-progress { background: #e3f2fd; color: #1976d2; }
-.tag-done { background: #e8f5e9; color: #388e3c; }
+.tag-pending {
+    background: rgba(255, 255, 234, 0.7); /* 黄色半透明 */
+    color: #fbc02d;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 8px;
+    font-weight: 500;
+}
+.tag-progress {  background: rgba(255, 255, 234, 0.7); /* 黄色半透明 */
+    color: #fbc02d;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 8px;
+    font-weight: 500;
+}
+.tag-done {
+    background: rgba(232, 245, 233, 0.6); /* 绿色半透明 */
+    color: #388e3c;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 8px;
+    font-weight: 500;
+}
 
 /* My Design Section */
 .my-design-section {

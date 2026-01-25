@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ge</title>
     <link rel="stylesheet" href="style第一页.css">
+    <script src="script待办弹窗浅色模式.js"></script>
+    
 </head>
 <body>
     <div id="app" class="layout">
        <aside class="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <div class="logo-icon"></div>
-            <span class="logo-text">SOPHICAR</span>
-        </div>
+                <div class="logo">
+    <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
+    <span class="logo-text">SOPHICAR</span>
+</div>
     </div>
 
     <nav class="sidebar-nav">
@@ -26,11 +28,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-    <a href="index.html">
-        <img src="./images/icons/book.svg" class="icon" alt="Literature">
-        <span class="text">学习中心</span>
-    </a>
-</li>
+                    <a href="index.html">
+                        <img src="./images/icons/book.svg" class="icon" alt="Literature">
+                        <span class="text">学习中心</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="index文件夹.html">
                         <img src="./images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
@@ -50,42 +52,44 @@
     <div class="sidebar-footer">
         <div class="user-profile">
             <div class="avatar">
-                <img src="./images/avatar.svg" alt="User" style="width: 24px; height: 24px; border-radius: 50%;">
+                <img src="./images/icons/头像3.png" alt="User Avatar" style="width: 24px; height: 24px; border-radius: 50%;">
             </div>
             <div class="user-info">
-                <span class="name">Student</span>
+                <span class="name">李华</span>
             </div>
         </div>
     </div>
 </aside>
         <div class="content">
             <header class="topbar d-flex justify-between align-center">
-                <div class="crumb">首页 / 个人信息</div>
+                                <div class="breadcrumbs">
+<a href="index.html" class="crumb" style="color: #8E8E93; text-decoration: none;">首页</a>
+    <span class="separator">/</span>
+    <span class="crumb active">个人信息</span>
+</div>
                 <div class="top-actions d-flex align-center">
                     <div class="search d-flex align-center">
                         <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="#888" stroke-width="2" fill="none"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#888" stroke-width="2"/></svg>
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="搜索">
                     </div>
-                    <button class="icon-btn">⋯</button>
+                
                      <button class="icon-btn" onclick="window.location.href='index第一页 深色模式.html'">
     <img src="images\icons\月亮浅色.png" alt="Sun Icon" width="20" height="20">
 </button>
-                    <button class="icon-btn">⚙</button>
-                    <button class="icon-btn">🔔</button>
+
                 </div>
             </header>
             <main class="page">
                 <h2 class="page-title">设置</h2>
                 <div class="tabs-row d-flex justify-between align-center">
                     <div class="chips d-flex align-center">
-                        <button class="chip">设置</button>
-                        <button class="chip">个人目标</button>
+
                         <button class="chip chip-active">简介</button>
                     </div>
                     <div class="tab-actions d-flex align-center">
                         <button class="btn ghost-btn">邀请好友</button>
-                        <button class="btn ghost-btn">添加待办</button>
-                        <button class="icon-btn">⋯</button>
+                        <button class="btn ghost-btn" onclick="openTodoModal()">添加待办</button>
+
                     </div>
                 </div>
                 <div class="card profile-card">
@@ -119,7 +123,7 @@
                 <div class="label">入学年份</div>
                 <div class="input with-icon">
                     <svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#888" fill="none"/><line x1="3" y1="9" x2="21" y2="9" stroke="#888"/></svg>
-                    <input type="text" value="Feb 1, 2025">
+                    <input type="text" value="2，1, 2025">
                 </div>
             </div>
         </div>
@@ -127,8 +131,8 @@
             <div class="field half">
                 <div class="label">隐私设置</div>
                 <div class="checks d-flex align-center">
-                    <label class="check"><input type="checkbox" checked> <span>Email</span></label>
-                    <label class="check"><input type="checkbox"> <span>Phone</span></label>
+                    <label class="check"><input type="checkbox" checked> <span>邮箱</span></label>
+                    <label class="check"><input type="checkbox"> <span>电话</span></label>
                 </div>
             </div>
             <div class="field half">
@@ -146,9 +150,9 @@
             </main>
             <footer class="content-footer">
                 <div class="footer-links">
-                    <a href="#">About</a>
-                    <a href="#">Support</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#">关于我们</a>
+
+                    <a href="#">联系我们</a>
                 </div>
             </footer>
         </div>

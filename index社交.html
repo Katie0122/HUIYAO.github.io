@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOPHICAR Task Management</title>
+    <link rel="stylesheet" href="variables社交.css">
+    <link rel="stylesheet" href="main社交.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon"></div> <!-- Placeholder for logo -->
+                <span class="logo-text">SOPHICAR</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <span class="icon">👤</span>
+                            <span class="text">个人信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item active">
+                            <span class="icon">📊</span>
+                            <span class="text">学情分析</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <span class="icon">📁</span>
+                            <span class="text">文件夹</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <span class="icon">👥</span>
+                            <span class="text">我的团队</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="" alt="ByeWind" class="avatar-img"> <!-- Placeholder -->
+                </div>
+                <span class="username">ByeWind</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="breadcrumbs">
+                    <span class="crumb">学情分析</span>
+                    <span class="separator">/</span>
+                    <span class="crumb active">任务完成</span>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search" />
+                        <span class="shortcut-hint">/</span>
+                    </div>
+                    <button class="theme-toggle">☀️</button>
+                    <button class="history-btn">⏱️</button>
+                    <button class="notifications-btn">🔔</button>
+                </div>
+            </header>
+
+            <div class="kanban-board">
+                <!-- Column 1: To Do -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot todo"></span>
+                        <h3 class="column-title">待完成 <span class="count">6</span></h3>
+                    </div>
+                    <div class="card-list">
+                        <!-- Card 1 -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> 6</span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="task-card">
+                            <div class="card-tag">网页前端</div>
+                            <h4 class="card-title">Github部署</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> 9</span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="task-card">
+                            <div class="card-tag">品牌设计</div>
+                            <h4 class="card-title">Branding Logo</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> 6</span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Card 4 -->
+                         <div class="task-card">
+                            <div class="card-tag">毕业设计</div>
+                            <h4 class="card-title">开题报告优化</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> 8</span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Completed -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot done"></span>
+                        <h3 class="column-title">已完成 <span class="count">4</span></h3>
+                    </div>
+                    <div class="card-list">
+                         <!-- Card -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> </span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                    <div class="user-avatar small">+1</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> </span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> </span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Card -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <p class="card-desc">简单原型搭建并公开部署至github接下来专注于figma 优化，...</p>
+                            <div class="card-footer">
+                                <div class="card-users">
+                                    <div class="user-avatar small">👤</div>
+                                </div>
+                                <div class="card-meta">
+                                    <span class="attachment"><span class="icon">📎</span> </span>
+                                    <span class="comment"><span class="icon">💬</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Expired -->
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <span class="status-dot expired"></span>
+                        <h3 class="column-title">已过期 <span class="count">8</span></h3>
+                    </div>
+                    <div class="card-list">
+                         <!-- Card -->
+                         <div class="task-card">
+                            <div class="card-tag">参数建模</div>
+                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
+                            <!-- Content truncated in design, but follows pattern -->
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat Overlay -->
+        <div class="chat-widget">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="toggle-icon">⬇️</span>
+                    <span class="text">SOPHICAR小助手</span>
+                </div>
+                <div class="chat-actions">
+                    <!-- Actions like close or more -->
+                </div>
+            </div>
+            <div class="chat-body">
+                <div class="message received">
+                    <div class="avatar">👤</div>
+                    <div class="bubble">
+                        接下来专注于figma 优化，优化完后再处理web部署
+                        <div class="time">8:00 PM</div>
+                    </div>
+                </div>
+                <div class="message sent">
+                    <div class="avatar">👤</div>
+                    <div class="bubble">
+                        好的老师，我现在在静态页面部署了不能帮我看看问题吗
+                        <div class="time">8:04 PM</div>
+                    </div>
+                </div>
+                <div class="message received">
+                    <div class="avatar">👤</div>
+                    <div class="bubble">
+                        我发你几个教程你看看，不行的话再沟通
+                        <div class="time">8:10 PM</div>
+                    </div>
+                </div>
+                <div class="message sent">
+                    <div class="avatar">👤</div>
+                    <div class="bubble">
+                        收到，已经完成部署了谢谢老师。
+                        <div class="time">10:00 PM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="input-container">
+                    <input type="text" placeholder="Digite a mensagem" value="">
+                    <div class="input-actions">
+                        <button class="send-btn">➡️</button>
+                        <button class="attach-btn">📎</button>
+                        <button class="check-btn">✔️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app社交.js"></script>
+</body>
+</html>

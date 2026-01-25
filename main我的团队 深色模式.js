@@ -10,25 +10,24 @@ const teamData = [
 ];
 
 function renderTable() {
-    const listContainer = document.getElementById('team-list');
-    listContainer.innerHTML = '';
+  const listContainer = document.getElementById('team-list');
+  listContainer.innerHTML = '';
 
-    teamData.forEach(user => {
-        const row = document.createElement('div');
-        row.className = 'table-row';
-        row.innerHTML = `
-            <div class="user-cell">
-                <div class="avatar" style="width: 24px; height: 24px;">
-                    <!-- Placeholder for now -->
-                    <div style="width:100%; height:100%; background:#555; border-radius:50%"></div>
-                </div>
-                <span>${user.name}</span>
-            </div>
-            <div class="email-cell">${user.email}</div>
-            <div class="role-cell">${user.role}</div>
-        `;
-        listContainer.appendChild(row);
-    });
+  teamData.forEach(user => {
+    const row = document.createElement('div');
+    row.className = 'table-row';
+    row.innerHTML = `
+      <div class="user-cell">
+        <div class="avatar" style="width: 24px; height: 24px;">
+          <img src="${user.avatar}" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <span>${user.name}</span>
+      </div>
+      <div class="email-cell">${user.email}</div>
+      <div class="role-cell">${user.role}</div>
+    `;
+    listContainer.appendChild(row);
+  });
 }
 // 获取太阳图标元素
 const sunIcon = document.querySelector('.sun-icon');

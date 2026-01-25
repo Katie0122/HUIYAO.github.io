@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的设计 - SOPHICAR</title>
+    <link rel="stylesheet" href="style我的设计深色模式.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-area">
+ <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span class="logo-text">SOPHICAR</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="index第一页 深色模式.html" class="nav-item">
+  <img src="./images/icons/overview.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>个人信息</span>
+                </a>
+                <a href="index深色模式.html" class="nav-item active">
+ <img src="./images/icons/book.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>学习中心</span>
+                </a>
+                <a href="index文件夹深色模式.html" class="nav-item">
+ <img src="./images/icons/chart-pie.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>文件夹</span>
+                </a>
+                                <a href="index我的团队深色模式.html" class="nav-item">
+ <img src="./images/icons/users.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                    <span>我的团队</span>
+                </a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+<div class="breadcrumbs">
+<a href="index 深色模式.html" class="crumb" style="color: #8E8E93; text-decoration: none;">学情分析</a>
+    <span class="separator">/</span>
+    <span class="crumb active">我的设计</span>
+</div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="搜索">
+                        <span class="shortcut-hint">/</span>
+                    </div>
+                    <button class="icon-btn" onclick="window.location.href='index我的设计.html'">
+                        <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
+                    </button>
+                    <button class="icon-btn"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+                </div>
+            </header>
+
+            <!-- Content Body -->
+            <div class="content-body">
+                <!-- Banner Section -->
+                <section class="banner-section">
+                    <div class="banner-overlay">
+                        <div class="banner-actions">
+                            <button class="action-btn">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                                <span>编辑</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span>导出</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project Title -->
+                <div class="project-info">
+                    <h1>名称</h1>
+                </div>
+
+                <!-- Info Blocks Grid -->
+                <div class="info-grid">
+                    <!-- Radar Chart Block -->
+                    <div class="info-card">
+                        <div class="card-content radar-container">
+                            <div class="chart-header">
+                                <span class="chart-title green">参数评价</span>
+                                <button class="more-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                            </div>
+                            <div class="card widget-section">
+                                <div class="chart-container" id="param-radar-chart" style="width: 100%; height: 280px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Block -->
+                    <div class="info-card">
+                        <div class="card-content">
+                            <div class="chart-header">
+                                <span class="chart-title red">教师评语</span>
+                                <button class="more-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                            </div>
+                            <div class="comments-list">
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                 <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                 <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p>技术实现有难点，可从xxxxxx考虑</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const radarChart = echarts.init(document.getElementById('param-radar-chart'), 'dark');
+
+            const option = {
+                color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C'],
+                title: { text: '' },
+                legend: {},
+                radar: [
+                    {
+                        indicator: [
+                            { text: '通过性能' },
+                            { text: '运动性能' },
+                            { text: '防倾倒' },
+                            { text: '载重能力' },
+                            { text: '安全与可行性' }
+                        ],
+                        center: ['50%', '50%'],
+                        radius: '60%',
+                        startAngle: 90,
+                        splitNumber: 4,
+                        shape: 'circle',
+                        axisName: {
+                            formatter: '【{value}】',
+                            color: '#428BD4',
+                            fontSize: 12,
+                            rotate: 0
+                        },
+                        splitArea: {
+                            areaStyle: {
+                                color: ['#77EADF', '#26C3BE', '#64AFE9', '#428BD4'],
+                                shadowColor: 'rgba(0, 0, 0, 0.2)',
+                                shadowBlur: 10
+                            }
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: 'rgba(211, 253, 250, 0.8)'
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: 'rgba(211, 253, 250, 0.8)'
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        type: 'radar',
+                        emphasis: {
+                            lineStyle: {
+                                width: 4
+                            }
+                        },
+                        data: [
+                            {
+                                value: [100, 8, 0.4, -80, 2000],
+                                name: '你的设计'
+                            },
+                            {
+                                value: [60, 5, 0.3, -100, 1500],
+                                name: '标准设计',
+                                areaStyle: {
+                                    color: 'rgba(255, 228, 52, 0.6)'
+                                }
+                            }
+                        ]
+                    }
+                ],
+                backgroundColor: 'transparent'
+            };
+
+            radarChart.setOption(option);
+
+            window.addEventListener('resize', function () {
+                radarChart.resize();
+            });
+        });
+    </script>
+    <script src="script我的设计.js"></script>
+</body>
+</html>

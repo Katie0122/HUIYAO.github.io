@@ -5,47 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ge</title>
     <link rel="stylesheet" href="style第一页 深色模式.css">
+     <link rel="stylesheet" href="styles待办弹窗深色模式.css">
 </head>
 <body>
+    <!-- 弹窗容器 -->
+<div class="todo-modal-backdrop" id="todo-backdrop">
+  <section class="todo-modal" role="dialog" aria-modal="true" aria-labelledby="todo-title">
+    <header class="todo-modal-header">
+      <div class="todo-title-group">
+        <h2 id="todo-title" class="todo-title">待办</h2>
+      </div>
+      <button class="close-button" type="button" aria-label="关闭待办" onclick="closeTodoModal()">×</button>
+    </header>
+    <section class="todo-calendar">
+      <div class="todo-calendar-week">
+  <button class="todo-day" type="button" data-day="22">
+    <span class="todo-day-label">Su</span>
+    <span class="todo-day-number">22</span>
+  </button>
+  <button class="todo-day is-active" type="button" data-day="23">
+    <span class="todo-day-label">Mo</span>
+    <span class="todo-day-number">23</span>
+  </button>
+  <button class="todo-day" type="button" data-day="24">
+    <span class="todo-day-label">Tu</span>
+    <span class="todo-day-number">24</span>
+  </button>
+  <button class="todo-day" type="button" data-day="25">
+    <span class="todo-day-label">We</span>
+    <span class="todo-day-number">25</span>
+  </button>
+  <button class="todo-day" type="button" data-day="26">
+    <span class="todo-day-label">Th</span>
+    <span class="todo-day-number">26</span>
+  </button>
+  <button class="todo-day" type="button" data-day="27">
+    <span class="todo-day-label">Fr</span>
+    <span class="todo-day-number">27</span>
+  </button>
+  <button class="todo-day" type="button" data-day="28">
+    <span class="todo-day-label">Sa</span>
+    <span class="todo-day-number">28</span>
+  </button>
+</div>
+    </section>
+    <section class="todo-list" id="todo-list"></section>
+  </section>
+</div>
     <div id="app" class="layout">
        <aside class="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <div class="logo-icon"></div>
-            <span class="logo-text">SOPHICAR</span>
-        </div>
+                <div class="logo">
+    <img src="./images/icons/logo 扣.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px; margin-right: 8px;">
+    <span class="logo-text">SOPHICAR</span>
+</div>
     </div>
 
     <nav class="sidebar-nav">
         <div class="nav-section">
             <ul>
                 <li class="nav-item active">
-                    <a href="index第一页 深色模式.html">
-                        <img src="./images/icons/overview.svg" class="icon" alt="Overview">
-                        <span class="text">个人信息</span>
+<a href="index第一页.html" class="nav-link">
+    <img src="./images/icons/overview.svg" class="icon" alt="Overview" style="filter: invert(1);">
+    <span class="text">个人信息</span>
+</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index 深色模式.html" class="nav-link">
+                        <img src="./images/icons/book.svg" class="icon" alt="Literature" style="filter: invert(1);">
+                        <span class="text">学习中心</span>
                     </a>
                 </li>
                 <li class="nav-item">
-    <a href="index 深色模式.html">
-        <img src="./images/icons/book.svg" class="icon" alt="Literature">
-        <span class="text">学习中心</span>
-    </a>
-</li>
-                <li class="nav-item">
-                    <a href="index文件夹 深色模式.html">
-                        <img src="./images/icons/chart-pie.svg" class="icon" alt="Data Analysis">
+                    <a href="index文件夹 深色模式.html" class="nav-link">
+                        <img src="./images/icons/chart-pie.svg" class="icon" alt="Literature" style="filter: invert(1);">
                         <span class="text">文件夹</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index我的团队 深色模式.html">
-                        <img src="./images/icons/users.svg" class="icon" alt="Surveys">
+                    <a href="index我的团队 深色模式.html" class="nav-link">
+                       <img src="./images/icons/users.svg" class="icon" alt="Literature" style="filter: invert(1);">
                         <span class="text">我的团队</span>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <div class="sidebar-footer">
+        <div class="user-profile">
+            <div class="avatar">
+                <img src="./images/icons/头像3.png" alt="User Avatar" style="width: 24px; height: 24px; border-radius: 50%;">
+            </div>
+            <div class="user-info">
+                <span class="name">李华</span>
+            </div>
+        </div>
+    </div>
+</aside>
 
     <div class="sidebar-footer">
         <div class="user-profile">
@@ -60,18 +117,21 @@
 </aside>
         <div class="content">
             <header class="topbar d-flex justify-between align-center">
-                <div class="crumb">首页 / 个人信息</div>
+                <div class="breadcrumbs">
+<a href="index深色模式.html" class="crumb" style="color: #8E8E93; text-decoration: none;">首页</a>
+    <span class="separator">/</span>
+    <span class="crumb active">个人信息</span>
+</div>
                 <div class="top-actions d-flex align-center">
                     <div class="search d-flex align-center">
                         <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="#888" stroke-width="2" fill="none"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#888" stroke-width="2"/></svg>
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="搜索">
                     </div>
-                    <button class="icon-btn">⋯</button>
+
                   <button class="icon-btn" onclick="window.location.href='index第一页.html'">
     <img src="images\icons\太阳深色.png" alt="Sun Icon" width="20" height="20">
 </button>
-                    <button class="icon-btn">⚙</button>
-                    <button class="icon-btn">🔔</button>
+
                 </div>
             </header>
             <main class="page">
@@ -85,7 +145,8 @@
                     </div>
                     <div class="tab-actions d-flex align-center">
                         <button class="btn ghost-btn">邀请好友</button>
-                        <button class="btn ghost-btn">添加待办</button>
+                        <button class="btn ghost-btn" onclick="openTodoModal()">添加待办</button>
+                        
                         <button class="icon-btn">⋯</button>
                     </div>
                 </div>
@@ -95,7 +156,7 @@
                             <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 16V8" stroke="#2B6FF7" stroke-width="2"/><path d="M8 12l4-4 4 4" stroke="#2B6FF7" stroke-width="2" fill="none"/></svg>
                         </div>
                         <div class="profile-info">
-                            <div class="name">Lihuiyao</div>
+                            <div class="name">李明</div>
                             <div class="tagline">这里是个性签名</div>
                         </div>
                     </div>
@@ -120,7 +181,7 @@
                 <div class="label">入学年份</div>
                 <div class="input with-icon">
                     <svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#888" fill="none"/><line x1="3" y1="9" x2="21" y2="9" stroke="#888"/></svg>
-                    <input type="text" value="Feb 1, 2025">
+                    <input type="text" value="2，1, 2025">
                 </div>
             </div>
         </div>
@@ -147,13 +208,104 @@
             </main>
             <footer class="content-footer">
                 <div class="footer-links">
-                    <a href="#">About</a>
-                    <a href="#">Support</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#">关于我们</a>
+
+                    <a href="#">联系我们</a>
                 </div>
             </footer>
         </div>
     </div>
+<script>
+    // 假设这是你的任务数据
+// 假设你有如下数据结构：按日期分组的待办事项
+const todoItemsByDate = {
+  "22": [
+    { text: "学习前端基础", action: "edit" }
+  ],
+  "23": [
+    { text: "结构学习", action: "edit" },
+    { text: "网页部署", action: "edit" }
+  ],
+  "24": [
+    { text: "复习 CSS", action: "edit" }
+  ],
+  "25": [],
+  "26": [
+    { text: "完成项目文档", action: "edit" }
+  ],
+  "27": [],
+  "28": [
+    { text: "准备下周会议", action: "edit" }
+  ]
+};
+
+// 获取 DOM 元素
+const todoDays = document.querySelectorAll('.todo-day');
+const todoList = document.getElementById('todo-list');
+
+// 默认选中今天（比如 23）
+let currentDay = '23';
+
+// 渲染指定日期的待办事项
+function renderTodoList(date) {
+  const items = todoItemsByDate[date] || [];
+  todoList.innerHTML = '';
+
+  if (items.length === 0) {
+    todoList.innerHTML = '<div class="todo-empty">暂无待办事项</div>';
+    return;
+  }
+
+  items.forEach(item => {
+    const itemEl = document.createElement('div');
+    itemEl.className = 'todo-item';
+    itemEl.innerHTML = `
+      <span class="todo-item-text">${item.text}</span>
+      <div class="todo-item-actions">
+        <button class="todo-icon-button" data-action="edit"></button>
+        <button class="todo-icon-button" data-action="delete"></button>
+      </div>
+    `;
+    todoList.appendChild(itemEl);
+  });
+}
+
+// 切换日期并更新列表
+todoDays.forEach(dayBtn => {
+  dayBtn.addEventListener('click', () => {
+    // 移除所有 active 类
+    todoDays.forEach(btn => btn.classList.remove('is-active'));
+    // 添加当前 active 类
+    dayBtn.classList.add('is-active');
+    
+    // 更新当前日期
+    currentDay = dayBtn.dataset.day;
+    // 渲染对应日期的待办事项
+    renderTodoList(currentDay);
+  });
+});
+
+// 初始化：默认渲染当前日期（23）
+renderTodoList(currentDay);
+// 在打开弹窗时调用
+function openTodoModal() {
+  const backdrop = document.getElementById('todo-backdrop');
+  backdrop.classList.add('is-visible');
+  renderTodoList(); // 渲染任务列表
+}
+function openTodoModal() {
+  const backdrop = document.getElementById('todo-backdrop');
+  backdrop.classList.add('is-visible');
+  renderTodoList(currentDay); // 初始加载
+}
+
+function closeTodoModal() {
+  const backdrop = document.getElementById('todo-backdrop');
+  backdrop.classList.remove('is-visible');
+  window.location.href = 'index第一页 深色模式.html'; // 返回首页
+}
+
+</script>
     <script src="js/script.js"></script>
 </body>
 </html>

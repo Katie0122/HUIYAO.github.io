@@ -327,12 +327,14 @@ body.app {
   justify-content: center;
   padding: 16px;
   background: radial-gradient(circle at 50% 10%, rgba(47, 128, 255, 0.28), transparent 60%), rgba(0, 0, 0, 0.68);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px); /* 模糊背景 */
   opacity: 0;
   visibility: hidden;
   transition: opacity 200ms ease, visibility 200ms ease;
 }
-
+.todo-modal-backdrop {
+  z-index: 9999; /* 确保高于所有其他元素 */
+}
 .todo-modal-backdrop.is-visible {
   opacity: 1;
   visibility: visible;
@@ -340,6 +342,7 @@ body.app {
 
 .todo-modal {
   width: min(520px, 100%);
+  max-width: 600px;
   border-radius: 32px;
   background: radial-gradient(circle at 0 0, rgba(47, 128, 255, 0.12), transparent 52%), radial-gradient(circle at 100% 100%, rgba(64, 93, 230, 0.24), transparent 60%), #050509;
   box-shadow: var(--color-shadow-strong);
