@@ -17,7 +17,9 @@
     left: 0;
     top: 0;
 }
-
+:root {
+    --status-pending: #a0d1ff; /* 浅蓝色 */
+}
 .logo-area {
     display: flex;
     align-items: center;
@@ -36,7 +38,18 @@
     justify-content: center;
     font-size: 20px;
 }
+.assistant-img {
+    width: 80px; /* 放大到 80px */
+    height: 80px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
+.assistant-img:hover {
+    transform: scale(1.1); /* 悬停放大 10% */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 .logo-text {
     font-weight: 700;
     font-size: var(--font-size-lg);
@@ -229,12 +242,13 @@
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color:#0088ff;
+    background-color: #0088ff;
     color: var(--text-primary);
     border: 0.3px solid var(--border-color);
     border-radius: 12px;
-    padding: 12px 16px;
+    padding: 8px 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     cursor: pointer;
@@ -242,7 +256,6 @@
     box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
 }
-
 .chat-trigger:hover {
     background-color: rgba(255,255,255,0.05);
     transform: scale(1.02);
@@ -267,7 +280,8 @@
 /* 聊天弹窗 */
 .chat-popup {
     position: fixed;
-    bottom: 80px;
+    top: auto;
+    bottom: 160px; /* 固定底部距离 */
     right: 20px;
     width: 460px;
     height: 690px;
@@ -275,10 +289,11 @@
     border-radius: 16px;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    z-index: 1001;
+    z-index: 600;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+    transform: translateY(0);
 }
 
 /* 聊天头部 */

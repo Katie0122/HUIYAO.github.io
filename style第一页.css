@@ -504,7 +504,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* 从styles.css复制的侧边栏样式 */
 .sidebar {
-    width: 212px;
+    width: 200px; /* 减少到 200px */
     background: #ffffff;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-left: 212px; /* 与侧边栏宽度匹配 */
+    margin-left: 200px; /* 与 sidebar 宽度一致 */
 }
 /* 新增的CSS样式 */
 /* 新增的CSS样式 */
@@ -633,4 +633,143 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     background: transparent;
     font-weight: 500;
+}
+.chat-popup {
+    position: fixed;
+    top: auto;
+    bottom: 160px; /* 固定底部距离 */
+    right: 20px;
+    width: 460px;
+    height: 690px;
+    background-color: #ffffff; /* 改为白色背景 */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 600;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+/* 聊天头部 */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #2a2a32;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.close-chat-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #2a2a32;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* 聊天主体 */
+.chat-body {
+    flex: 1;
+    padding: 16px;
+    background-color: #2a2a32;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.message {
+    display: flex;
+    gap: 8px;
+    max-width: 85%;
+}
+
+.message.received {
+    align-self: flex-start;
+}
+
+.message.sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ccc;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message.received .bubble {
+    background-color: var(--bg-surface);
+    border: 2px solid #0088ff;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.message.sent .bubble {
+    background-color: #0088ff;
+    color: white;
+    border-radius: 12px;
+    border-top-right-radius: 0;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.message .time {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+    text-align: right;
+}
+
+.message.sent .time {
+    color: rgba(255,255,255,0.7);
+}
+
+/* 聊天底部 */
+.chat-footer {
+    padding: 12px;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
 }

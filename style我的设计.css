@@ -365,11 +365,11 @@ body {
 }
 
 .chart-title.green {
-    color: #4ADE80; /* Greenish */
+    color: #6eb2ff; /* Greenish */
 }
 
 .chart-title.red {
-    color: #FF4D4F; /* Reddish */
+    color: #744dff; /* Reddish */
 }
 
 .more-btn {

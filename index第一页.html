@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ge</title>
     <link rel="stylesheet" href="style第一页.css">
+    <link rel="stylesheet" href="variables任务完成.css">
+<link rel="stylesheet" href="chat-widget.css">
+<link rel="stylesheet" href="animations任务完成.css">
+<link rel="stylesheet" href="widget任务完成.css">
     <script src="script待办弹窗浅色模式.js"></script>
     
 </head>
@@ -98,17 +102,18 @@
                             <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 16V8" stroke="#2B6FF7" stroke-width="2"/><path d="M8 12l4-4 4 4" stroke="#2B6FF7" stroke-width="2" fill="none"/></svg>
                         </div>
                         <div class="profile-info">
-                            <div class="name">Lihuiyao</div>
+                            <div class="name">李华</div>
                             <div class="tagline">这里是个性签名</div>
                         </div>
                     </div>
                 </div>
+                
       <div class="card group-card">
     <div class="section-title">分类</div>
     <div class="fields">
         <div class="field full">
             <div class="label">团队</div>
-            <div class="value">ZWU</div>
+            <div class="value">浙江万里学院</div>
         </div>
         <div class="field full">
             <div class="label">联系邮箱</div>
@@ -158,5 +163,88 @@
         </div>
     </div>
     <script src="js/script.js"></script>
+    <!-- 聊天触发按钮 -->
+<div class="chat-trigger" onclick="toggleChat()" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <img src="./images/IP改-02.png" alt="SOPHICAR小助手" class="assistant-img" style="width: 80px; height: 80px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="ph ph-chat-centered-dots" style="font-size: 20px;"></i>
+        <span>聊天小助手</span>
+    </div>
+</div>
+
+<!-- 聊天弹窗（默认隐藏） -->
+<div class="chat-popup" id="chatPopup" style="display: none;">
+    <div class="chat-header">
+        <div class="chat-avatar">
+            <img src="images\IP改-02.png" alt="Assistant">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">SOPHICAR小助手</span>
+            <i class="ph ph-caret-down"></i>
+        </div>
+        <button class="close-chat-btn" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-body">
+        <!-- 消息列表 -->
+        <div class="message received">
+            <div class="avatar">
+                <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                接下来专注于figma 优化，优化完后再处理web部署
+                <div class="time">8:00 PM</div>
+            </div>
+        </div>
+
+        <div class="message sent">
+            <div class="avatar">
+                <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                好的老师，我现在在静态页面部署了不能帮我看看问题吗
+                <div class="time">8:04 PM</div>
+            </div>
+        </div>
+
+        <div class="message received">
+            <div class="avatar">
+                <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                我发你几个教程你看看，不行的话再沟通
+                <div class="time">8:00 PM</div>
+            </div>
+        </div>
+
+        <div class="message sent">
+            <div class="avatar">
+                <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                收到，已经完成部署了谢谢老师。
+                <div class="time">8:04 PM</div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <div class="input-container">
+            <input type="text" placeholder="输入信息" id="chatInput">
+            <div class="input-actions">
+                <button class="send-btn">➡️</button>
+                <button class="attach-btn">📎</button>
+            </div>
+        </div>
+    </div>
+</div><script>
+function toggleChat() {
+    const chatPopup = document.getElementById('chatPopup');
+    if (chatPopup.style.display === 'none' || !chatPopup.style.display) {
+        chatPopup.style.display = 'flex';
+    } else {
+        chatPopup.style.display = 'none';
+    }
+}
+</script>
+<script src="chat-widget.js"></script>
 </body>
 </html>

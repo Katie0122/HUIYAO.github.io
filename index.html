@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Dashboard - Graduation Project</title>
     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="variables任务完成.css">
+<link rel="stylesheet" href="chat-widget.css">
+<link rel="stylesheet" href="animations任务完成.css">
+<link rel="stylesheet" href="widget任务完成.css">
     <!-- 引入 ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
@@ -143,7 +147,7 @@
 <div class="card widget-section" style="grid-column: span 6;">
     <div class="card-header">
         <div class="card-title">技能评估</div>
-        <a href="#" style="font-size: 12px; color: var(--primary-color);">View All</a>
+        <a href="#" style="font-size: 12px; color: var(--primary-color);">查看所有</a>
     </div>
     <div class="chart-container" id="radar-chart" style="width: 100%; height: 280px;"></div> <!-- 改为 280px，去掉 margin -->
 </div>
@@ -307,6 +311,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             // 初始化雷达图（大图）
            // 初始化雷达图（大图）
+           console.log("DOM loaded");
+console.log(document.getElementById('line-chart')); // 应该返回一个元素
+console.log(document.getElementById('radar-chart')); // 同上
 const radarChart = echarts.init(document.getElementById('radar-chart'));
 
 const radarOption = {
@@ -412,7 +419,7 @@ const radarOption = {
 };
 
 radarChart.setOption(radarOption);
-            radarChart.setOption(radarOption);
+           
 
             // 初始化折线图
             const lineChart = echarts.init(document.getElementById('line-chart'));
@@ -437,7 +444,7 @@ radarChart.setOption(radarOption);
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,
-                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    data: ['一月', '二月', '三月', '四月', '五月', '六月'],
                     axisLabel: {
                         interval: 0,
                         rotate: 0,
@@ -582,5 +589,79 @@ window.addEventListener('resize', function () {
     </script>
 
     <script src="script.js"></script>
+    <script src="chat-widget.js"></script>
+    <!-- 聊天触发按钮 -->
+<div class="chat-trigger" onclick="toggleChat()" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <img src="./images/IP改-02.png" alt="SOPHICAR小助手" class="assistant-img" style="width: 80px; height: 80px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="ph ph-chat-centered-dots" style="font-size: 20px;"></i>
+        <span>聊天小助手</span>
+    </div>
+</div>
+
+<!-- 聊天弹窗（默认隐藏） -->
+<div class="chat-popup" id="chatPopup" style="display: none;">
+    <div class="chat-header">
+        <div class="chat-avatar">
+            <img src="images\IP改-02.png" alt="Assistant">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">SOPHICAR小助手</span>
+            <i class="ph ph-caret-down"></i>
+        </div>
+        <button class="close-chat-btn" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-body">
+        <!-- 消息列表 -->
+        <div class="message received">
+            <div class="avatar">
+                <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                接下来专注于figma 优化，优化完后再处理web部署
+                <div class="time">8:00 PM</div>
+            </div>
+        </div>
+
+        <div class="message sent">
+            <div class="avatar">
+                <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                好的老师，我现在在静态页面部署了不能帮我看看问题吗
+                <div class="time">8:04 PM</div>
+            </div>
+        </div>
+
+        <div class="message received">
+            <div class="avatar">
+                <img src="images\icons\头像2.png" alt="Assistant" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                我发你几个教程你看看，不行的话再沟通
+                <div class="time">8:00 PM</div>
+            </div>
+        </div>
+
+        <div class="message sent">
+            <div class="avatar">
+                <img src="images\icons\头像3.png" alt="Me" style="border-radius: 50%;">
+            </div>
+            <div class="bubble">
+                收到，已经完成部署了谢谢老师。
+                <div class="time">8:04 PM</div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <div class="input-container">
+            <input type="text" placeholder="输入信息" id="chatInput">
+            <div class="input-actions">
+                <button class="send-btn">➡️</button>
+                <button class="attach-btn">📎</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

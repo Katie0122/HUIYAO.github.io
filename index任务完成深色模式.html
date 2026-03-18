@@ -365,10 +365,14 @@
                 </div>
             </footer>
             <!-- 在 <main> 的末尾添加 -->
-<div class="chat-trigger" onclick="toggleChat()">
-    <i class="ph ph-chat-circle-text"></i>
-    <span>SOPHICAR小助手</span>
+<div class="chat-trigger" onclick="toggleChat()" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <img src="./images/IP改-02.png" alt="SOPHICAR小助手" class="assistant-img" style="width: 80px; height: 80px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="ph ph-chat-centered-dots" style="font-size: 20px;"></i>
+        <span>聊天小助手</span>
+    </div>
 </div>
+
 
 <!-- 聊天弹窗（默认隐藏） -->
 <div class="chat-popup" id="chatPopup" style="display: none;">

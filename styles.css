@@ -1,7 +1,7 @@
 /* SnowUI Design System - Core Styles */
 :root {
     /* Color Palette - 修改为克莱茵蓝主题 */
-    --primary-color: #4da6ff;      /* 深克莱茵蓝 */
+    --primary-color: #914dff;      /* 深克莱茵蓝 */
     --primary-light: #4da6ff;      /* 浅克莱茵蓝 */
     --primary-dark: #001220;       /* 深蓝黑色 */
     --accent-color: #0066ff;       /* 亮克莱茵蓝 */
@@ -365,8 +365,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     gap: 4px;
 }
 
-.trend-up { color: #4caf50; }
-.trend-down { color: #f44336; }
+.trend-up { color: #38a5ff; }
+.trend-down { color: #3688f4; }
 
 /* 修改两个卡片的样式 */
 .chart-section,
@@ -379,7 +379,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .chart-container {
     flex: 1;
     width: 100%;
-    height: 100%;
+    height:200px;
     position: relative;
     background: transparent;
 }
@@ -451,15 +451,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .tag-pending {
-    background: rgba(255, 255, 234, 0.7); /* 黄色半透明 */
-    color: #fbc02d;
+    background: rgba(217, 244, 255, 0.7); /* 黄色半透明 */
+    color: #2d7cfb;
     border-radius: 4px;
     font-size: 11px;
     padding: 2px 8px;
     font-weight: 500;
 }
-.tag-progress {  background: rgba(255, 255, 234, 0.7); /* 黄色半透明 */
-    color: #fbc02d;
+.tag-progress {  background: rgba(217, 244, 255, 0.7); /* 黄色半透明 */
+    color: #2d7cfb;
     border-radius: 4px;
     font-size: 11px;
     padding: 2px 8px;
