@@ -41,19 +41,34 @@ body {
 
 .app {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  display: flex;
   padding: 18px;
   gap: 18px;
 }
 
 .sidebar {
-  border-radius: 30px;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  border-radius: 0;
   background: linear-gradient(145deg, #f9fafb, #e5e7eb);
   padding: 24px 22px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  z-index: 100; /* 确保在其他元素之上 */
+}
+
+.main {
+  flex: 1;
+  border-radius: 32px;
+  background: rgba(248, 250, 252, 0.96);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  padding: 20px 24px 18px;
+  overflow-y: auto; /* 启用滚动 */
+  margin-left: 260px; /* 避免被 sidebar 遮挡 */
 }
 
 .brand {
@@ -79,7 +94,21 @@ body {
   letter-spacing: 0.14em;
   font-size: 11px;
 }
+/* 1. 设置 page-title 的字体大小和间距 */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 0; /* 缩小上下边距 */
+  color: var(--text-main);
+}
 
+/* 2. 确保 card-grid 显示为单列 */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 改为单列 */
+  gap: 22px;
+  padding: 8px 2px 18px;
+}
 .nav {
   display: flex;
   flex-direction: column;

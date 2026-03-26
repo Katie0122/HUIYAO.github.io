@@ -80,9 +80,19 @@
                 </div>
 
                 <div class="header-right">
-                    <div class="search-bar">
+                  <div class="search-bar">
     <img src="./images/icons/search.svg" class="search-icon" alt="搜索功能">
     <input type="text" class="search-input" placeholder="搜索">
+    <ul class="dropdown-menu" id="searchDropdown">
+        <li class="dropdown-item" data-target="my-design">我的设计</li>
+        <li class="dropdown-item" data-target="task-upload">任务上传</li>
+        <li class="dropdown-item" data-target="design-export">设计导出</li>
+        <li class="dropdown-item" data-target="my-tasks">我的任务</li>
+        <li class="dropdown-item" data-target="mark-link">标记链接</li>
+        <li class="dropdown-item" data-target="favorites">收藏</li>
+        <li class="dropdown-item" data-target="history">历史浏览</li>
+        <li class="dropdown-item" data-target="contact-team">联系团队</li>
+    </ul>
 </div>
 <button class="action-btn" onclick="window.location.href='index 深色模式.html'">
     <img src="images\icons\月亮浅色.png" alt="Sun Icon" width="20" height="20">
@@ -154,7 +164,7 @@
 
                     <!-- My Design Section (Moved to Bottom) -->
                     <!-- 我的设计 -->
-<div class="card my-design-section">
+<div class="card my-design-section" id="my-design">
     <div class="card-header">
         <div class="card-title">我的设计</div>
     </div>
@@ -237,7 +247,7 @@
 </div>
                         </div>
                     </div>
-                     <div class="card widget-section">
+                     <div class="card widget-section" id="my-tasks">
                         <div class="card-header">
                             <div class="card-title">我的任务</div>
                             <a href="#" style="font-size: 12px; color: var(--primary-color);">查看所有</a>
@@ -308,6 +318,88 @@
 
     <script>
         // 等待 DOM 加载完成
+// 等待 DOM 加载完成
+document.addEventListener('DOMContentLoaded', function () {
+// 获取元素
+const searchInput = document.querySelector('.search-input');
+const searchDropdown = document.getElementById('searchDropdown');
+
+// 显示/隐藏下拉菜单
+searchInput.addEventListener('focus', () => {
+    searchDropdown.style.display = 'block';
+});
+
+document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+        searchDropdown.style.display = 'none';
+    }
+});
+
+// 下拉项点击事件
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function () {
+        const target = this.getAttribute('data-target');
+        const text = this.textContent;
+
+        // 设置搜索框内容
+        searchInput.value = text;
+
+        // 隐藏下拉菜单
+        searchDropdown.style.display = 'none';
+
+        // 执行跳转或定位逻辑
+        handleNavigation(target, text);
+    });
+});
+
+// 跳转逻辑函数
+function handleNavigation(target, text) {
+    switch (target) {
+        case 'my-design':
+            const myDesign = document.getElementById('my-design');
+            if (myDesign) {
+                myDesign.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            break;
+
+        case 'my-tasks':
+            const myTasks = document.getElementById('my-tasks');
+            if (myTasks) {
+                myTasks.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            break;
+
+        case 'task-upload':
+            window.location.href = 'index任务完成.html'; // 假设存在此页面
+            break;
+
+        case 'design-export':
+            window.location.href = 'index我的设计.html';
+            break;
+
+        case 'mark-link':
+            window.location.href = 'index标记链接.html';
+            break;
+
+        case 'favorites':
+            window.location.href = 'index文件夹.html';
+            break;
+
+        case 'history':
+            window.location.href = 'index历史浏览.html';
+            break;
+
+        case 'contact-team':
+            window.location.href = 'index我的团队.html';
+            break;
+
+        default:
+            console.warn(`未定义的目标: ${target}`);
+    }
+}
+    // 其他初始化代码...
+});
+        // 等待 DOM 加载完成
         document.addEventListener('DOMContentLoaded', function () {
             // 初始化雷达图（大图）
            // 初始化雷达图（大图）
@@ -318,7 +410,7 @@ const radarChart = echarts.init(document.getElementById('radar-chart'));
 
 const radarOption = {
   // 全局蓝色系配色，适配整个雷达图
-  color: ['#1677FF', '#40A9FF', '#69C0FF', '#91D5FF'],
+  color: ['#8E2DE2', '#1677ff', '#69C0FF', '#91D5FF'],
   backgroundColor: 'transparent', // ✅ 核心：设置整个图表画布为完全透明背景
  
   legend: {
@@ -387,6 +479,7 @@ const radarOption = {
           symbolSize: 10,
           lineStyle: {
             type: 'dashed'
+            
           },
           label: {
             show: true,
@@ -478,6 +571,15 @@ radarChart.setOption(radarOption);
                         markLine: {
                             data: [{ type: 'average', name: 'Avg' }]
                         }
+                        ,
+                        itemStyle: {
+                            normal: {
+                                color: '#1679ff',
+                                lineStyle: {
+                                    color: '#4da6ff'
+                                }
+                            }
+                        }
                     }
                 ]
             };
@@ -563,7 +665,7 @@ const radarOptionSmall = {
                     value: [60, 5, 0.3, -100, 1500],
                     name: '',
                     areaStyle: {
-                        color: 'rgba(255, 228, 52, 0.6)'
+                        color: 'rgba(155, 89, 182, 0.1)'
                     }
                 }
             ]

@@ -61,7 +61,36 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     display: flex;
     min-height: 100vh;
 }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 从底部开始 */
+    left: 0; /* 与搜索框左对齐 */
+    width: 100%; /* 与搜索框同宽 */
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
 
+    /* 新增：增加与搜索框的距离 */
+    margin-top: 8px; /* 增加垂直间距 */
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
 .action-btn {
     padding: 8px;
     border-radius: 50%;
@@ -229,6 +258,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .search-bar {
+    position: relative; /* 关键：作为定位参考 */
     display: flex;
     align-items: center;
     background: rgba(0,0,0,0.04);

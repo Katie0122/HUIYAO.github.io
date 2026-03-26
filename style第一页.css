@@ -583,7 +583,67 @@ h1, h2, h3, h4, h5, h6 {
     color: #001220;
     opacity: 1;
 }
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.04);
+    border-radius: var(--border-radius-sm);
+    padding: 6px 12px;
+    width: 240px;
+    transition: width 0.3s ease, background 0.2s;
+}
 
+.search-bar:focus-within {
+    background: #fff;
+    box-shadow: 0 0 0 2px var(--primary-light);
+    width: 280px;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--text-secondary);
+    margin-right: var(--spacing-sm);
+}
+
+.search-input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    color: var(--text-primary);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 8px; /* 增加与搜索框的距离 */
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
 .sidebar-footer {
     padding: 24px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);

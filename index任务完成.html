@@ -21,7 +21,11 @@
   justify-content: center;
   z-index: 20;
 }
-
+/* 放大并设置颜色为蓝色的图标样式 */
+.meta-item i {
+  font-size: 18px; /* 原来是 16px 或更小，放大到 18px */
+  color: #007bff !important; /* 设置为蓝色，!important 确保覆盖默认样式 */
+}
 .modal.active {
   display: flex;
 }
@@ -298,304 +302,430 @@
             </header>
 
             <!-- Kanban Board -->
-            <div class="kanban-board">
-                <!-- Column: Pending -->
-                <div class="kanban-column">
-                    <div class="column-header">
-                        <span class="status-dot pending"></span>
-                        <h3>待完成</h3>
-                        <span class="count">6</span>
-                    </div>
-                    <div class="card-list" id="pending-list">
-                        <!-- Card 1 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像1.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-<span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                         <div class="task-card">
-                            <div class="card-tag">网页前端</div>
-                            <h4 class="card-title">Github部署</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像1.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                   <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                  <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="task-card">
-                            <div class="card-tag">品牌设计</div>
-                            <h4 class="card-title">品牌标志</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像2.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                    <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="task-card">
-                            <div class="card-tag">毕业设计</div>
-                            <h4 class="card-title">开题报告优化</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像3.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           <div class="kanban-board">
+  <!-- Column: Pending -->
+  <div class="kanban-column">
+    <div class="column-header">
+      <span class="status-dot pending"></span>
+      <h3>待完成</h3>
+      <span class="count">10</span>
+    </div>
+    <div class="card-list" id="pending-list">
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">转弯平顺性实验</h4>
+        <p class="card-desc">设置弯道参数，分析侧倾角与驾驶舒适性关系。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像1.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">基础认知</div>
+        <h4 class="card-title">平台功能初体验</h4>
+        <p class="card-desc">完成1次基础参数建模，截图并说明关键操作步骤。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像1.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">Skate Chassis基础建模</h4>
+        <p class="card-desc">完成底盘轴距/轮距参数配置，输出合规性校验结果。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">动力参数基础设置</h4>
+        <p class="card-desc">设置教育车辆电机功率，对比2组数值性能差异。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">转向系统参数练习</h4>
+        <p class="card-desc">调整转向传动比，验证对转弯平顺性的影响。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">转弯平顺性实验</h4>
+        <p class="card-desc">设置弯道参数，分析侧倾角与驾驶舒适性关系。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像1.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">制动性能参数建模</h4>
+        <p class="card-desc">配置100-0km/h制动距离，满足安全标准要求。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">项目实践</div>
+        <h4 class="card-title">小型建模项目实践</h4>
+        <p class="card-desc">完成完整车型建模，提交参数配置表与结果预览。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">项目实践</div>
+        <h4 class="card-title">参数优化方案设计</h4>
+        <p class="card-desc">针对1项性能短板，提出参数优化方案并验证。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像1.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">自动驾驶</div>
+        <h4 class="card-title">自动驾驶参数调试</h4>
+        <p class="card-desc">配置传感器参数，验证导航车辆定位精度效果。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                <!-- Column: Completed -->
-                <div class="kanban-column">
-                    <div class="column-header">
-                        <span class="status-dot completed"></span>
-                        <h3>已完成</h3>
-                        <span class="count">4</span>
-                    </div>
-                    <div class="card-list" id="completed-list">
-                         <!-- Card 1 -->
-                         <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像4.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                 <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar-group">
-                                    <img src="images\icons\头像1.png" alt="Avatar">
-                                    <span class="avatar-more">+1</span>
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                    <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像5.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                 <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                         <!-- Card 4 -->
-                         <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像5.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Column: Completed -->
+  <div class="kanban-column">
+    <div class="column-header">
+      <span class="status-dot completed"></span>
+      <h3>已完成</h3>
+      <span class="count">10</span>
+    </div>
+    <div class="card-list" id="completed-list">
+      <div class="task-card">
+        <div class="card-tag">基础认知</div>
+        <h4 class="card-title">学习文档导航练习</h4>
+        <p class="card-desc">找出3类用户核心学习资源，标注路径与位置。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">基础认知</div>
+        <h4 class="card-title">参数建模概念梳理</h4>
+        <p class="card-desc">用思维导图总结参数驱动结构尺寸的核心逻辑。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像5.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">车身结构强度建模</h4>
+        <p class="card-desc">设置关键部位抗拉强度，对照标准判断合规性。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">底盘模块化设计练习</h4>
+        <p class="card-desc">完成底盘模块与上装车型的适配建模任务。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像5.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">动力性能模拟分析</h4>
+        <p class="card-desc">模拟0-100km/h加速，输出性能数据并完成分析。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">能耗与续航测算</h4>
+        <p class="card-desc">配置电耗参数，计算综合工况续航并对比标准。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像5.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">结构安全合规性验证</h4>
+        <p class="card-desc">对照GB标准，验证车身关键参数是否满足要求。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">项目实践</div>
+        <h4 class="card-title">学习文档应用作业</h4>
+        <p class="card-desc">结合文档解决建模中遇到的一个实际问题。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像5.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">项目实践</div>
+        <h4 class="card-title">学情数据可视化练习</h4>
+        <p class="card-desc">用雷达图展示个人5项核心技能掌握情况。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">项目实践</div>
+        <h4 class="card-title">建模项目复盘总结</h4>
+        <p class="card-desc">总结建模错误与改进点，完成300字复盘报告。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像5.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                <!-- Column: Expired -->
-                <div class="kanban-column">
-                    <div class="column-header">
-                        <span class="status-dot expired"></span>
-                        <h3>已过期</h3>
-                        <span class="count">8</span>
-                    </div>
-                    <div class="card-list" id="expired-list">
-                         <!-- Card 1 -->
-                         <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像2.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像2.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                  <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                   <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像4.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta">
-                                 <span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span>
-                                  <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="task-card">
-                            <div class="card-tag">参数建模</div>
-                            <h4 class="card-title">用参数模型驱动结构尺寸</h4>
-                            <p class="card-desc">1. 简单原型搭建并公开部署至github接下来专注于 figma 优化，...</p>
-                            <div class="card-footer">
-                                <div class="card-avatar">
-                                    <img src="images\icons\头像3.png" alt="Avatar">
-                                </div>
-                                <div class="card-meta"><span class="meta-item" onclick="showModal()">
-  <i class="ph ph-pencil-simple"></i>
-</span> <span class="meta-item"><i class="ph ph-pencil-simple"></i></span>
-                                    <span class="meta-item">
-  <a href="index标记链接.html" style="text-decoration: none; color: inherit;">
-    <i class="ph ph-paperclip"></i>
-  </a>
-</span>
-                                    <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Column: Expired -->
+  <div class="kanban-column">
+    <div class="column-header">
+      <span class="status-dot expired"></span>
+      <h3>已过期</h3>
+      <span class="count">10</span>
+    </div>
+    <div class="card-list" id="expired-list">
+      <div class="task-card">
+        <div class="card-tag">基础认知</div>
+        <h4 class="card-title">界面认知作业</h4>
+        <p class="card-desc">标注平台5个核心功能模块，理解页面结构布局。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">悬挂参数配置作业</h4>
+        <p class="card-desc">设置舒适/运动模式刚度，分析对操控性影响。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">尺寸约束参数练习</h4>
+        <p class="card-desc">设置车辆长宽高，验证是否符合设计规范要求。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">材料参数基础应用</h4>
+        <p class="card-desc">选择2种车身材料，对比对结构强度的影响。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">参数建模</div>
+        <h4 class="card-title">参数联动逻辑练习</h4>
+        <p class="card-desc">验证轴距对空间与稳定性的联动影响关系。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">制动热衰退模拟</h4>
+        <p class="card-desc">模拟连续制动，分析性能衰减率与安全风险。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">能量回收效率测试</h4>
+        <p class="card-desc">设置回收系数，测算不同工况能量回收效率。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">极端环境性能模拟</h4>
+        <p class="card-desc">模拟高低温环境，分析动力性能衰减情况。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像2.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">操控稳定性实验</h4>
+        <p class="card-desc">完成蛇形绕桩模拟，输出侧偏角与稳定性数据。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像4.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="task-card">
+        <div class="card-tag">性能实验</div>
+        <h4 class="card-title">NVH性能基础分析</h4>
+        <p class="card-desc">设置振动频率，分析噪声与乘坐舒适性关系。</p>
+        <div class="card-footer">
+          <div class="card-avatar"><img src="images\icons\头像3.png" alt="Avatar"></div>
+          <div class="card-meta">
+            <span class="meta-item" onclick="showModal()"><i class="ph ph-pencil-simple"></i></span>
+            <span class="meta-item"><a href="index标记链接.html" style="text-decoration:none;color:inherit;"><i class="ph ph-paperclip"></i></a></span>
+            <span class="meta-item"><i class="ph ph-chat-centered-dots"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- Footer -->
             <footer class="app-footer">
