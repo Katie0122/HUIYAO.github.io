@@ -753,3 +753,7 @@
         grid-template-columns: 1fr;
     }
 }
+.status.pill.green {
+  background: #e6f7ff; /* 浅蓝色背景 */
+  color: #1677ff;     /* 蓝色文字 */
+}

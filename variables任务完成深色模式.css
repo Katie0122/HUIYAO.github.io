@@ -36,7 +36,11 @@
   margin: 0;
   padding: 0;
 }
-
+:root {
+  --color-green: #2196F3; /* 改为蓝色 */
+  --color-red: #2196F3;   /* 改为蓝色 */
+  --color-blue: #2196F3;
+}
 body {
   font-family: var(--font-family);
   background-color: var(--bg-page);
@@ -44,4 +48,15 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+.status.pill.green,
+.status.pill.red {
+  background-color: #2196F3;
+  color: white;
+}
+:root {
+  --color-primary: #2196F3;
+}
+.hint.error {
+  color: #2196F3;
 }

@@ -702,8 +702,8 @@
     --status-pending: #7abfff; /* 浅蓝色 */
 }
 .status.pill.green {
-  background: rgba(246, 255, 237, 0.8); /* 原来是 #f6ffed → 改为半透明 */
-  color: #52c41a;
+  background: rgba(222, 227, 255, 0.8); /* 原来是 #f6ffed → 改为半透明 */
+  color: #1a5ec4;
 }
 .status.pill.gray {
   background: #f5f5f5;
@@ -756,7 +756,7 @@
 .file-remove {
   border: none;
   background: transparent;
-  color: #ff4d4f;
+  color: #4d74ff;
   cursor: pointer;
   font-size: 12px;
 }
@@ -768,7 +768,7 @@
 }
 
 .hint.error {
-  color: #ff4d4f;
+  color: #8eb9ff;
 }
 
 /* 按钮样式 - 深色主题 */
